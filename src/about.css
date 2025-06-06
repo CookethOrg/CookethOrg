@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -59,86 +58,6 @@ nav {
 .nav-links li a:hover {
   color: #4a00e0;
 }
-
-/* Hero */
-.hero {
-  padding: 6rem 2rem;
-  background-color: #FDE2CF;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #1c1c1c;
-}
-
-/* Introduction */
-.introduction {
-  padding: 2rem;
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Services */
-.services {
-  padding: 3rem 2rem;
-  background-color: #FDE2CF;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.services ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-}
-
-.services li {
-  background-color: #FDE2CF;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  font-weight: 500;
-}
-
-/* Team */
-.team {
-  padding: 3rem 2rem;
-  background-color: #fff;
-  text-align: center;
-}
-
-.team h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.team-member {
-  display: inline-block;
-  margin: 1rem;
-  text-align: center;
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-}
-
 /* Footer */
 footer {
   background-color:#1E1A16;
@@ -171,18 +90,5 @@ footer {
 
   .nav-links li {
     text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .services ul {
-    flex-direction: column;
-  }
-
-  .team-member {
-    display: block;
-    margin: 2rem auto;
   }
 }
