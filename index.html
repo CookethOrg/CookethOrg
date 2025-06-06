@@ -1,30 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CookethOrg | Home</title>
-  <link rel="stylesheet" href="/src/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooketh Company</title>
+  <link rel="icon" type="image/png" href="./public/icon.png" />
+  <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
-  
-  <!-- Placeholder for header -->
-  <header>
-    <div id="header"></div>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="./index.html"><img class="nav_logo" src="./navlogo.png" alt="logo" /></a>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Turning 'what if' into 'heck yeah' since whenever.</h1>
   </header>
-  
-  <!-- Main content -->
-  <main>
-    <h1>Welcome to CookethOrg</h1>
-    
-  </main>
 
-  <!-- Placeholder for footer -->
+  <!-- Introduction -->
+  <section class="introduction">
+    <p>We craft killer digital vibes for any screen, using top-notch tools and smart coding to keep it smooth and scalable. See how our squad sets you up to win.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>What we do?</h2>
+    <ul>
+      <li>Brand Strategy</li>
+      <li>Website Design</li>
+      <li>Logo Redesign</li>
+      <li>Web Development</li>
+      <li>App Development</li>
+    </ul>
+  </section>
+
+  <!-- Team -->
+  <section class="team">
+    <h2>Our Team</h2>
+    <div class="team-member">
+      <img src="/navlogo.png" alt="Antara Paul" />
+      <p>Antara Paul<br/>Designer</p>
+    </div>
+    <div class="team-member">
+      <img src="/navlogo.png" alt="Subroto Banerjee" />
+      <p>Subroto Banerjee<br/>Developer</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <div id="footer"></div>
+    <p>&copy; 2025 All rights reserved.</p>
   </footer>
-  
 
-  <!-- Load header/footer dynamically -->
-  <script type="module" src="/src/main.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>
