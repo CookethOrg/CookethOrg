@@ -6,7 +6,7 @@ import { setupCounter } from './counter.js'
 
 
 // Load header
-fetch('./partial_hf/header.html')
+fetch('/CookethOrg/partial_hf/header.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('header').innerHTML = data;
