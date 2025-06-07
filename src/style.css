@@ -75,7 +75,7 @@ nav {
 
 /* Hero */
 .hero {
-  padding: 6rem 2rem;
+  padding-top: 2rem;
   background-color: #FDE2CF;
   text-align: center;
 }
@@ -94,8 +94,29 @@ nav {
   text-align: center;
   max-width: 700px;
   margin: auto;
-  font-size: 1.2rem;
-  color: #333;
+  font-weight: 600;
+  font-size: 10px;
+  color: #642714;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.introduction button{
+  margin-left: 15%;
+  width: 150px;
+  border-width: 0px;
+  height: 50px;
+  background-color: rgba(237,99,37,1);
+  color: #FDE2CF;
+  font-weight: 600;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
+  transition: box-shadow 0.35s;
+}
+.introduction button:hover{
+  box-shadow: 0 0 0 0;
+  
 }
 
 /* Services */
@@ -150,6 +171,7 @@ nav {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+  background-color:  rgba(237,99,37,1);
  
 }
 .xlogo img {
@@ -284,7 +306,18 @@ nav {
   .hero h1 {
     font-size: 2rem;
   }
+  .hero img{
+    padding-left: 0;
+    width: 150px;
+  }
 
+  .introduction{
+    display: flex;
+    flex-direction: column;
+  }
+  .introduction button {
+    margin-left: 0%;
+  }
   .services ul {
     flex-direction: column;
   }
