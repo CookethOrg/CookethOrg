@@ -6,32 +6,65 @@
   <title>Cooketh Company</title>
   <link rel="icon" type="image/png" href="./public/icon.png" />
   <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" href="./src/contact.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="./index.html"><img class="nav_logo" src="./public/navlogo.png" alt="logo" /></a>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./service.html">Services</a></li>
-        <li class="thispagebutton"><a href="./contact.html">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Contact -->
+   <section class="contact">
+    <div class="contact-left">
+      <h1>CONNECT WITH US</h1>
+
+      <p>Whether you&apos;ve got a fully-baked product roadmap or just a wild idea scribbled on a napkin, we&apos;re down to build it with you. Got questions that slipped past the FAQs? Or maybe you just really love us and want to drop a few kind words (we won&apos;t stop you). Either way, our inbox is open and we&apos;re all ears.</p>
+
+      <p>Or, you can also reach out to us at <b>cookethcompany@gmail.com</b></p>
     </div>
-  </nav>
-<a style="background-color: rgb(123, 23, 23);">
-    contentsd,bnsndfs kndfskm dfkjldfk idfsjk idg
 
-</a>
+    <div class="contact-right">
+      <input type="text" name="name" id="name" placeholder="Name">
+      <input type="text" name="email" id="email" placeholder="Email">
+      <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+      <button class="submitBtn">Submit</button>
+    </div>
+   </section>
+
+   <!-- FAQs -->
+    <section class="faq">
+      <div style="display: flex; justify-content: space-between; width: 100%;">
+        <h2>FAQs</h2>
+
+        <div class="faqAns">
+          <div class="faqItem">
+            <p>What services does Cooketh Company offer?</p>
+
+            <span>+</span>
+          </div>
+          <div class="faqItem">
+            <p>How does your process work?</p>
+
+            <span>+</span>
+          </div>
+          <div class="faqItem">
+            <p>What makes Cooketh Company different?</p>
+
+            <span>+</span>
+          </div>
+          <div class="faqItem">
+            <p>How can I start a project with you?</p>
+
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+    </section>
   
-
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 All rights reserved.</p>
-  </footer>
+   <div id="footer"></div>
 
-  <script src="./src/main.js"></script>
+   <script src="./src/main.js"></script>
+   <script src="./components/script.js"></script>
+   <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,178 @@
+/* Tech Stack */
+.tech {
+  padding: 16vh 2rem 6vh 2rem;
+  margin-bottom: 0px;
+  background-color: #fde2cf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech h1 {
+    color: #1e1a16;
+    font-size: 72px;
+    line-height: 1.1em;
+    letter-spacing: -3px;
+    margin-bottom: 0.8em;
+}
+
+.techSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 92vw;
+  height: fit-content;
+  gap: 2em;
+}
+
+.techContainer {
+    background: #ed6325;
+    min-height: 260px;
+    width: 38%;
+    border-radius: 1em;
+    padding: 2em 3em;
+}
+
+.techContainer h2 {
+    width: 100%;
+    text-align: left;
+    color: #fde2cf;
+    font-size: 35px;
+    letter-spacing: -1.25px;
+    margin-bottom: 0.7em;
+}
+
+.techContainer li {
+    color: #ffd2b2;
+    font-size: 26px;
+    letter-spacing: -1.25px;
+    line-height: 1.4em;
+}
+
+.techContainer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    gap: 1em;
+    width: 80%;
+}
+
+/* Detailed Services */
+.detailServices {
+  padding: 16vh 2rem 6vh 2rem;
+  margin-bottom: 0px;
+  background-color: #fde2cf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailServices h1 {
+    color: #1e1a16;
+    font-size: 80px;
+    line-height: 1.1em;
+    letter-spacing: -3px;
+}
+
+.serviceItem {
+    width: 72vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 2em 0;
+}
+
+.serviceItem h2 {
+    color: #642714;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: -1.25px;
+}
+
+.serviceItemList {
+    color: #8e2121;
+    margin: 0 6.5em;
+}
+
+.serviceItemList li {
+    text-align: left;
+    margin: 0.5em 0;
+}
+
+.serviceItemList h3 {
+    font-size: 25px;
+}
+
+.serviceItemList p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* CTA */
+.cta {
+  margin: 6vh 2rem 3vh 2rem;
+  padding: 7em 11em;
+  background-color: #f8a720;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  justify-self: center;
+  align-items: start;
+  min-height: 90vh;
+  height: fit-content;
+  width: 92vw;
+  border-radius: 10px;
+}
+
+.cta h1{
+    color: #8f2121;
+    font-size: 72px;
+    line-height: 1.1em;
+    letter-spacing: -5px;
+    margin-bottom: 0.3em;
+}
+
+.cta p, .cta ul {
+    color: #642714;
+    font-size: 18px;
+    letter-spacing: -0.18px;
+}
+
+.cta ul {
+    list-style: decimal;
+    margin: 0.5em 1.2em;
+    font-size: 18px;
+}
+
+.cta ul h3 {
+    font-weight: 600;
+}
+
+.ctaBtn {
+  width: fit-content;
+  border-width: 0px;
+  height: fit-content;
+  background-color: rgba(237, 99, 37, 1);
+  color: #fde2cf;
+  font-weight: 600;
+  border-radius: 86px;
+  font-size: 24px;
+  letter-spacing: -1px;
+  box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
+  transition: box-shadow 0.35s;
+  padding: 1em 1.5em;
+  margin-top: 2em;
+}
+.ctaBtn:hover {
+  box-shadow: 0 0 0 0;
+}

@@ -1,117 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cooketh Company</title>
-  <link rel="icon" type="image/png" href="./public/icon.png" />
-  <link rel="stylesheet" href="./src/style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="./index.html"><img class="nav_logo" src="./public/navlogo.png" alt="logo" /></a>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li class="thispagebutton"><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./service.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooketh Company</title>
+    <link rel="icon" type="image/png" href="./public/icon.png" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="navbar"></div>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div style="display: flex; justify-content: center; align-items:center;">
+    <!-- Hero -->
+    <section class="hero">
+      <div style="display: flex; justify-content: start; align-items: center; padding-left: 10em;">
+        <div>
+          <h1>Turning<span style="font-style: italic">'what if'</span></h1>
+        </div>
+
+        <div style="margin-top: 1.5em;">
+          <img style="width: 75%; margin-left: 0em;" src="./public/landing1.png" alt="img" />
+        </div>
+      </div>
+
       <div>
-      <h1 style="">Turning <span style="font-style: italic;">'what if'</span></h1>
+        <h1 style="padding-left: 15%">
+          int<img src="./public/heroSmiley.png" alt="" style="width: 3.8%;"><span style="font-style: italic">'heck yeah'</span>
+        </h1>
+
+        <h1 style="padding-left: 45%; font-weight: bold">since whenever.</h1>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="introduction">
+      <div class="introText">
+        <h2 style="font-weight: 500; font-size: 24px;">
+          We craft killer digital vibes for any screen, using top-notch tools
+          and smart coding to keep it smooth and scalable. See how our squad
+          sets you up to win.
+        </h2>
       </div>
       <div>
-      <img style="width: 100px;" src="./public/landing1.png" alt="img">
+        <a href="./service.html"><button>Get Started</button></a>
       </div>
-    </div>
-    <div>
-      <h1 style="padding-left: 15%;"> int<span style="font-size: 2rem;">&#128522;</span><span style="font-style: italic;">'heck yeah'</span>  </h1>
-      <h1 style="padding-left: 35%; font-weight: bold;">since whenever. </h1>
-    </div>
-    </header>
+    </section>
 
-  <!-- Introduction -->
-  <section class="introduction">
-    <div>
-      <h1>We craft killer digital vibes for any screen, using top-notch tools and smart coding to keep it smooth and scalable. See how our squad sets you up to win.</h1>
+    <!-- Services -->
+    <section class="services">
+      <h1>WE CAN BUILD <i>ALMOST</i> ANYTHING.</h1>
+      <h2>From pitch decks to fully functioning applications.</h2>
+      <h2>Have questions? Find our FAQs here, or ask away.</h2>
 
-    </div>
-    <div>
-      <a  href="./service.html"><button>Get Started</button></a>
-    </div>
-  </section>
+      <div style="width: 50%;">
+        <a href="/"><button class="btn">FAQs</button></a>
+      </div>
+    </section>
 
-  <!-- Services -->
-  <section class="services">
-    <h2>What we do?</h2>
-    <ul>
-      <li>Brand Strategy</li>
-      <li>Website Design</li>
-      <li>Logo Redesign</li>
-      <li>Web Development</li>
-      <li>App Development</li>
-    </ul>
-  </section>
+    <!-- How We Cook -->
+     <section class="howWeCook">
+      <h1>How we Cook?</h1>
 
-  <!-- Team -->
-  <section class="team">
-  <h2>Our Team</h2>
+      <div class="cookList">
+        <div class="cookListItem">
+          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: center; gap: 0.5em;">
+            <div class="cookListNumber"><span class="cookListDigit">1.</span></div>
+            <h2>Vision alignment</h2>
+          </div>
 
-  <div class="team-member">
-    <img src="./public/team/antara.png" alt="Antara Paul" />
-    <p>Antara Paul<br/>Designer</p>
-    <a href="https://x.com/antara_x" target="_blank" class="xlogo">
-      <img src="./public/x.png" alt="X not found" />
-    </a>
-  </div>
+          <p>You start by filling out our intake form, tell us what&apos;s your idea, your goals, your dreams, your timeline. We read it all and hop on a meet for follow-ups.</p>
+        </div>
 
-  <div class="team-member">
-    
-    <img src="./public/team/subroto.png" alt="Subroto Banerjee" />
-    
-    <p>Subroto Banerjee<br/>Developer</p>
-    <a href="https://x.com/Subroto0108" target="_blank" class="xlogo">
-      <img src="./public/x.png" alt="X not found" />
-    </a>
-  </div>
+        <div class="cookListItem">
+          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: center; gap: 0.5em;">
+            <div class="cookListNumber"><span class="cookListDigit">2.</span></div>
+            <h2>Brainstorming</h2>
+          </div>
 
-  <div class="team-member">
-    <img src="./public/team/mrutyunjay.png" alt="Mrutyunjay Lodhi" />
-    <p>Mrutyunjay Lodhi<br/>Developer</p>
-    <a href="https://x.com/Mrutyunjay1010" target="_blank" class="xlogo">
-      <img src="./public/x.png" alt="X not found" />
-    </a>
-  </div>
-</section>
+          <p>We brainstorm, moodboard, sketch, Figma, and iterate until the concept starts feeling exactly like you envisioned it.</p>
+        </div>
 
+        <div class="cookListItem">
+          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: center; gap: 0.5em;">
+            <div class="cookListNumber"><span class="cookListDigit">3.</span></div>
+            <h2>Execution & Launch</h2>
+          </div>
 
-  <!-- Footer -->
-  <footer class="custom-footer">
-  <div class="footer-left">
-    <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo" />
-    <div class="footer-socials">
-      <a href="https://www.linkedin.com/company/cooketh-company"><img src="./public/linkedin.png" alt="LinkedIn" /></a>
-      <a href="https://discord.com/invite/fN3X4SMK3T"><img src="./public/disc.png" alt="Game Icon" /></a>
-    </div>
-  </div>
-  <div class="footer-right">
-    <ul class="footer-nav">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About Us</a></li>
-      <li><a href="./service.html">Services</a></li>
-    </ul>
-    <p class="copyright">Copyright © 2025 All rights reserved. @cookethcompany</p>
-  </div>
-</footer>
+          <p>We build, test, and refine your website, ensuring every detail aligns with your vision. Once perfected, we launch it live and support you post-launch.</p>
+        </div>
+      </div>
+     </section>
 
-  <script src="./src/main.js"></script>
-</body>
+     <!-- Banner -->
+      <section class="banner">
+        <div class="imgContainer">
+          <img src="public/bannerCooketh.png" alt="">
+        </div>
+
+        <div>
+          <h2>WE BRING THE HEAT, SO YOUR IDEAS NEVER FALL FLAT</h2>
+        </div>
+      </section>
+
+    <!-- Our Products -->
+     <section class="products">
+      <h1>Our Products</h1>
+
+      <div class="carousel">
+        <div>
+          <a href="/"><button class="btn2"><i class="fa-solid fa-caret-left"></i></button></a>
+        </div>
+
+        <div class="productContainer"></div>
+
+        <div>
+          <a href="/"><button class="btn2"><i class="fa-solid fa-caret-right"></i></button></a>
+        </div>
+      </div>
+     </section>
+
+    <!-- Team -->
+    <section class="team">
+      <h2>Our Team</h2>
+
+      <div class="team-member">
+        <img src="./public/team/antara.png" alt="Antara Paul" />
+        <p class="teamName">Antara Paul</p>
+        <p class="teamRole">Designer</p>
+        <a href="https://x.com/antara_x" target="_blank" class="xlogo">
+          <img src="./public/x.png" alt="X not found" />
+        </a>
+      </div>
+
+      <div class="team-member">
+        <img src="./public/team/subroto.png" alt="Subroto Banerjee" />
+
+        <p class="teamName">Subroto Banerjee</p>
+        <p class="teamRole">Developer</p>
+        <a href="https://x.com/Subroto0108" target="_blank" class="xlogo">
+          <img src="./public/x.png" alt="X not found" />
+        </a>
+      </div>
+
+      <div class="team-member">
+        <img src="./public/team/mrutyunjay.png" alt="Mrutyunjay Lodhi" />
+        <p class="teamName">Mrutyunjay Lodhi</p>
+        <p class="teamRole">Developer</p>
+        <a href="https://x.com/Mrutyunjay1010" target="_blank" class="xlogo">
+          <img src="./public/x.png" alt="X not found" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+     <div id="footer"></div>
+
+    <script src="./src/main.js"></script>
+    <script src="./components/script.js"></script>
+    <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
+  </body>
 </html>
