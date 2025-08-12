@@ -65,7 +65,7 @@
 
 /* Detailed Services */
 .detailServices {
-  padding: 16vh 2rem 6vh 2rem;
+  padding: 16vh 5rem 6vh 5rem;
   margin-bottom: 0px;
   background-color: #fde2cf;
   text-align: center;
@@ -119,8 +119,8 @@
 
 /* CTA */
 .cta {
-  margin: 6vh 2rem 3vh 2rem;
-  padding: 7em 11em;
+  margin: 6vh 4rem 3vh 4rem;
+  padding: 7em 11.5em;
   background-color: #f8a720;
   text-align: left;
   display: flex;
@@ -130,7 +130,7 @@
   align-items: start;
   min-height: 90vh;
   height: fit-content;
-  width: 92vw;
+  width: 91vw;
   border-radius: 10px;
 }
 
