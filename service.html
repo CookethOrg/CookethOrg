@@ -1,37 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cooketh Company</title>
-  <link rel="icon" type="image/png" href="./public/icon.png" />
-  <link rel="stylesheet" href="./src/style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="./index.html"><img class="nav_logo" src="./public/navlogo.png" alt="logo" /></a>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li class="thispagebutton"><a href="./service.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-<a style="background-color: rgb(123, 23, 23);">
-    contentsd,bnsndfs kndfskm dfkjldfk idfsjk idg
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooketh Company</title>
+    <link rel="icon" type="image/png" href="./public/icon.png" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/service.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
 
-</a>
-  
+    <!-- Services -->
+    <section class="services">
+      <h1>WE CAN BUILD <i>ALMOST</i> ANYTHING.</h1>
+      <h2>From pitch decks to fully functioning applications.</h2>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 All rights reserved.</p>
-  </footer>
+    <!-- Tech Stack -->
+     <section class="tech">
+      <h1>Tech Stack</h1>
 
-  <script src="./src/main.js"></script>
-</body>
+      <div class="techSection">
+        <div class="techContainer">
+          <h2>Design</h2>
+
+          <ul>
+            <li>Figma,</li>
+            <li>Blender,</li>
+            <li>Spline,</li>
+            <li>Framer,</li>
+            <li>Lovable,</li>
+            <li>Subframe</li>
+          </ul>
+        </div>
+
+        <div class="techContainer">
+          <h2>Frontend</h2>
+
+          <ul>
+            <li>Flutter,</li>
+            <li>Dart,</li>
+            <li>Flutterflow,</li>
+            <li>React JS,</li>
+            <li>Next JS</li>
+          </ul>
+        </div>
+
+        <div class="techContainer">
+          <h2>Backend</h2>
+
+          <ul>
+            <li>Django,</li>
+            <li>Flask,</li>
+            <li>Firebase,</li>
+            <li>Supabase</li>
+          </ul>
+        </div>
+
+        <div class="techContainer">
+          <h2>Databases</h2>
+
+          <ul>
+            <li>MySQL,</li>
+            <li>PostgresSQL</li>
+          </ul>
+        </div>
+      </div>
+     </section>
+
+    <!-- Detail Services -->
+    <section class="detailServices">
+      <h1>Services</h1>
+
+      <!-- Service Item 1 -->
+      <div class="serviceItem">
+        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
+          <div class="cookListNumber"><span class="cookListDigit">1.</span></div>
+          <h2>Branding and Visual Identity</h2>
+        </div>
+
+        <ul class="serviceItemList">
+          <li>
+            <div>
+              <h3>Branding</h3>
+              <p>Logo design, visual identity, style guides, illustrations, and icons.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>UI/UX</h3>
+              <p>Website and mobile app UI/UX, design systems, microinteractions, onboarding, prototyping, and UX audits (e.g., WCAG compliance).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Marketing Design</h3>
+              <p>Landing pages, pitch decks, email templates, social media kits, and ad creatives.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Packaging and Merch.</h3>
+              <p>Product packaging, branded swag (e.g., T-shirts, stickers).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Event Design</h3>
+              <p>Conference booths, banners, and digital displays.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Item 2 -->
+      <div class="serviceItem">
+        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
+          <div class="cookListNumber"><span class="cookListDigit">2.</span></div>
+          <h2>Software Development</h2>
+        </div>
+
+        <ul class="serviceItemList">
+          <li>
+            <div>
+              <h3>Mobile Apps</h3>
+              <p>Native (iOS/Android) or cross-platform apps, push notifications, in-app purchases, and device-specific features.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Web Apps</h3>
+              <p>Responsive web design, PWAs, SPAs, CMS integration, SEO, and web security.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Desktop Apps</h3>
+              <p>Apps for Windows, macOS, or Linux.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Backend</h3>
+              <p>APIs, databases (PostgreSQL, MongoDB), and third-party integrations (e.g., Stripe, social logins).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>CLI Tools & SDKs</h3>
+              <p>Command-line tools and libraries.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Item 3 -->
+      <div class="serviceItem">
+        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
+          <div class="cookListNumber"><span class="cookListDigit">3.</span></div>
+          <h2>Additional Services</h2>
+        </div>
+
+        <ul class="serviceItemList">
+          <li>
+            <div>
+              <h3>Strategy and Research</h3>
+              <p>Moodboards, user personas, journey maps, and content strategy.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Data Visualization</h3>
+              <p>Custom charts, KPIs, and dashboards.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Gamification</h3>
+              <p>Badges, progress bars, and user engagement features.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Testing and Compliance</h3>
+              <p>Unit/integration testing, accessibility (WCAG), and regulatory compliance (GDPR, HIPAA).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Maintenance</h3>
+              <p>Post-launch support, updates, and documentation.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Scalability</h3>
+              <p>Integration with existing systems and scalable hosting (AWS, Google Cloud).</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Item 4 -->
+      <div class="serviceItem">
+        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
+          <div class="cookListNumber"><span class="cookListDigit">4.</span></div>
+          <h2>Delivery & Support</h2>
+        </div>
+
+        <ul class="serviceItemList">
+          <li>
+            <div>
+              <p>Flexible delivery (MVP or full), pricing (flat fee, hourly, retainer), and timelines.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Source code ownership and legal support (NDAs).</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+     <section class="cta">
+      <h1>HAVE A PROJECT IDEA?</h1>
+
+      <p>Before we hop on a call and throw ideas around, we like to get a solid grip on what you&apos;re looking for. Here&apos;s <b>how it works:</b></p>
+
+      <ul class="">
+          <li>
+            <div>
+              <h3>Strategy and Research</h3>
+              <p>Moodboards, user personas, journey maps, and content strategy.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Data Visualization</h3>
+              <p>Custom charts, KPIs, and dashboards.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Gamification</h3>
+              <p>Badges, progress bars, and user engagement features.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Testing and Compliance</h3>
+              <p>Unit/integration testing, accessibility (WCAG), and regulatory compliance (GDPR, HIPAA).</p>
+            </div>
+          </li>
+        </ul>
+
+      <div style="width: 45%;">
+        <a href="/"><button class="ctaBtn">Go to the form</button></a>
+      </div>
+     </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="./src/main.js"></script>
+    <script src="./components/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8b897771ea.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
