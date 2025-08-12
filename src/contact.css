@@ -19,6 +19,7 @@
     color: rgb(143, 33, 33);
     font-size: 72px;
     line-height: 1.1em;
+    width: 50%;
 }
 
 .contact-left p {
@@ -96,7 +97,7 @@
     border-radius: 24px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 18px;
     width: 60%;
     height: fit-content;
 }
@@ -106,9 +107,8 @@
     justify-content: space-between;
     padding: 20px 24px;
     font-size: 20px;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     line-height: 1.4em;
-    font-weight: 400;
     border-bottom: 1px solid black;
     cursor: pointer;
 }

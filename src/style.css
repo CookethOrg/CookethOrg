@@ -63,7 +63,37 @@ a {
 /* Font CLasses */
 .title {
   font-family: 'VVDS', sans-serif;
+  font-weight: 400 !important;
+}
+
+.content {
+  font-family: 'Frederik';
+  font-weight: 600 !important;
+}
+
+.btnText {
+  font-family: 'VVDS', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.aboutContent {
+  font-family: 'Frederik', sans-serif;
   font-weight: 400;
+}
+
+.subContent {
+  font-family: 'Frederik', sans-serif;
+  font-weight: 500 !important;
+}
+
+.inputFont {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.faqFont {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
 /* Navigation */
@@ -109,12 +139,14 @@ nav {
 
 .nav-links li a {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
   display: inline-block;
   color: #652614;
+  font-family: 'Frederik', sans-serif;
+  font-weight: 600;
 }
 
 .nav-links li a:hover {
@@ -168,7 +200,7 @@ nav {
 }
 
 .introText {
-  width: 55%;
+  width: 60%;
   text-align: left;
   font-weight: 600 !important;
 }
@@ -180,14 +212,14 @@ nav {
   height: fit-content;
   background-color: rgba(237, 99, 37, 1);
   color: #fde2cf;
-  font-weight: 600;
   border-radius: 86px;
-  font-size: 24px;
-  letter-spacing: 0.06em;
+  font-size: 25px;
+  letter-spacing: 0.05em;
   box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
   transition: box-shadow 0.35s;
-  padding: 1.2em 2.2em;
+  padding: 1em 2.3em;
 }
+
 .introduction button:hover {
   box-shadow: 0 0 0 0;
 }
@@ -195,6 +227,7 @@ nav {
 /* Services */
 .services {
   padding: 22vh 2rem 0 2rem;
+  margin-top: 15vh;
   background-color: #fde2cf;
   text-align: center;
   display: flex;
@@ -206,9 +239,9 @@ nav {
 .services h1 {
   font-size: 72px;
   line-height: 1.1em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #8f2121;
-  width: 80%;
+  width: 60%;
 }
 
 .services h2 {
@@ -243,10 +276,10 @@ nav {
   font-weight: 600;
   border-radius: 86px;
   font-size: 24px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
   transition: box-shadow 0.35s;
-  padding: 1.2em 2.2em;
+  padding: 1em 2.3em;
   margin-top: 2em;
 }
 .btn:hover {
@@ -280,9 +313,10 @@ nav {
 
 .cookList h2 {
   text-align: left;
-  color: #942714;
+  color: #642714;
   font-size: 35px;
   letter-spacing: -1.25px;
+  line-height: 1.2em;
   font-weight: 630;
 }
 
@@ -294,7 +328,8 @@ nav {
   line-height: 1.3em;
   font-weight: 600;
   width: 75%;
-  justify-self: end;
+  justify-self: center;
+  margin-left: 1em;
 }
 
 .cookListItem {
@@ -323,7 +358,7 @@ nav {
 
 /* Banner */
 .banner {
-  padding: 15vh 14rem 0 18rem;
+  padding: 15vh 13rem 0 17rem;
   background-color: #fde2cf;
   text-align: center;
   display: flex;
@@ -345,9 +380,8 @@ nav {
 
 .banner h2 {
   color: #8f2121;
-  font-size: 60px;
+  font-size: 72px;
   line-height: 1.1em;
-  letter-spacing: -3px;
 }
 
 /* Our Products */
@@ -365,7 +399,7 @@ nav {
   color: #1e1a16;
   font-size: 72px;
   line-height: 1.1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
 }
 
 .carousel {
@@ -523,7 +557,7 @@ nav {
 
 .footer-nav li {
   border-right: 1px solid #28292a;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .footer-nav li:last-child {
@@ -532,10 +566,11 @@ nav {
 
 .footer-nav a {
   color: #8c8e92;
-  font-weight: 500;
   transition: color 0.3s ease;
   font-size: 16px;
   letter-spacing: -0.18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .footer-nav a:hover {
@@ -544,9 +579,10 @@ nav {
 
 .copyright {
   color: #8c8e92;
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 /* Responsive */
