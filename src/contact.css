@@ -19,6 +19,7 @@
     color: rgb(143, 33, 33);
     font-size: 72px;
     line-height: 1.1em;
+    width: 50%;
 }
 
 .contact-left p {
@@ -90,25 +91,42 @@
     color: #fde2cf;
 }
 
-.faqAns {
+.faqContent {
     background: #fde2cf;
-    padding: 16px 36px;
+    padding: 24px 38px;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 18px;
     width: 60%;
     height: fit-content;
 }
 
 .faqItem {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px 24px;
-    font-size: 20px;
-    font-weight: 600 !important;
     line-height: 1.4em;
-    font-weight: 400;
     border-bottom: 1px solid black;
+}
+
+.faqQues {
+    font-size: 20px;
+    font-weight: 500 !important;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
+}
+
+.faqAns {
+    display: none;
+    margin-top: 1.1em;
+    font-size: 17px;
+    line-height: 2em !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.faqItem.active .faqAns {
+  display: block;
 }

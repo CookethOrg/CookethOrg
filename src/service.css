@@ -1,6 +1,6 @@
 /* Tech Stack */
 .tech {
-  padding: 16vh 2rem 6vh 2rem;
+  padding: 20vh 2rem 6vh 2rem;
   margin-bottom: 0px;
   background-color: #fde2cf;
   text-align: center;
@@ -14,7 +14,6 @@
     color: #1e1a16;
     font-size: 72px;
     line-height: 1.1em;
-    letter-spacing: -3px;
     margin-bottom: 0.8em;
 }
 
@@ -29,24 +28,24 @@
 }
 
 .techContainer {
-    background: #ed6325;
-    min-height: 260px;
-    width: 38%;
+    background: #f8a720;
+    height: fit-content;
+    width: 39%;
     border-radius: 1em;
-    padding: 2em 3em;
+    padding: 2em 1.5em;
 }
 
 .techContainer h2 {
     width: 100%;
-    text-align: left;
-    color: #fde2cf;
+    text-align: center;
+    color: #642714;
     font-size: 35px;
     letter-spacing: -1.25px;
     margin-bottom: 0.7em;
 }
 
 .techContainer li {
-    color: #ffd2b2;
+    color: #8f2121;
     font-size: 26px;
     letter-spacing: -1.25px;
     line-height: 1.4em;
@@ -79,7 +78,6 @@
     color: #1e1a16;
     font-size: 80px;
     line-height: 1.1em;
-    letter-spacing: -3px;
 }
 
 .serviceItem {
@@ -100,7 +98,7 @@
 
 .serviceItemList {
     color: #8e2121;
-    margin: 0 6.5em;
+    margin: 0 7em;
 }
 
 .serviceItemList li {
@@ -108,13 +106,14 @@
     margin: 0.5em 0;
 }
 
-.serviceItemList h3 {
-    font-size: 25px;
+.serviceItemList h3, .serviceItemList p {
+    font-size: 26px;
+    letter-spacing: -1.25px;
+    line-height: 1.4em;
 }
 
-.serviceItemList p {
-    font-size: 20px;
-    font-weight: 600;
+.boldService {
+    font-weight: 800 !important;
 }
 
 /* CTA */
@@ -138,14 +137,14 @@
     color: #8f2121;
     font-size: 72px;
     line-height: 1.1em;
-    letter-spacing: -5px;
     margin-bottom: 0.3em;
 }
 
-.cta p, .cta ul {
+.cta p, .cta ul, .cta h3 {
     color: #642714;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: -0.18px;
+    line-height: 2.1em;
 }
 
 .cta ul {

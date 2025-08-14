@@ -9,62 +9,120 @@
   <link rel="stylesheet" href="./src/contact.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <div id="navbar"></div>
+  <!-- Navigation -->
+    <!-- <div id="navbar"></div> -->
+     <nav>
+        <div class="nav-container">
+          <a href="index.html"><img class="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
+      
+          <div class="hamburger" id="hamburger">&#9776;</div>
+          
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html" class="thispagebutton">Contact</a></li>
+          </ul>
+        </div>
+     </nav>
 
   <!-- Contact -->
    <section class="contact">
     <div class="contact-left">
-      <h1>CONNECT WITH US</h1>
+      <h1 class="title">CONNECT WITH US</h1>
 
-      <p>Whether you&apos;ve got a fully-baked product roadmap or just a wild idea scribbled on a napkin, we&apos;re down to build it with you. Got questions that slipped past the FAQs? Or maybe you just really love us and want to drop a few kind words (we won&apos;t stop you). Either way, our inbox is open and we&apos;re all ears.</p>
+      <p class="aboutContent">Whether you&apos;ve got a fully-baked product roadmap or just a wild idea scribbled on a napkin, we&apos;re down to build it with you. Got questions that slipped past the FAQs? Or maybe you just really love us and want to drop a few kind words (we won&apos;t stop you). Either way, our inbox is open and we&apos;re all ears.</p>
 
-      <p>Or, you can also reach out to us at <b>cookethcompany@gmail.com</b></p>
+      <p class="aboutContent">Or, you can also reach out to us at <b>cookethcompany@gmail.com</b></p>
     </div>
 
     <div class="contact-right">
-      <input type="text" name="name" id="name" placeholder="Name">
-      <input type="text" name="email" id="email" placeholder="Email">
-      <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-      <button class="submitBtn">Submit</button>
+      <input type="text" name="name" id="name" placeholder="Name" class="inputFont">
+      <input type="text" name="email" id="email" placeholder="Email" class="inputFont">
+      <textarea name="message" id="message" placeholder="Message" rows="4" class="inputFont"></textarea>
+      <button class="submitBtn inoutFont">Submit</button>
     </div>
    </section>
 
    <!-- FAQs -->
     <section class="faq">
       <div style="display: flex; justify-content: space-between; width: 100%;">
-        <h2>FAQs</h2>
+        <h2 class="title">FAQS</h2>
 
-        <div class="faqAns">
+        <div class="faqContent faqFont">
           <div class="faqItem">
-            <p>What services does Cooketh Company offer?</p>
+            <div class="faqQues">
+              <p>What services does Cooketh Company offer?</p>
+              <span>+</span>
+            </div>
 
-            <span>+</span>
+            <div class="faqAns">
+              <p class="inputFont">We design and build mobile apps, web apps, landing pages, and branding solutions using tools like Flutter, React, Figma, and more. From UI/UX to full-stack development, we create custom, scalable products tailored to your needs.</p>
+            </div>
           </div>
-          <div class="faqItem">
-            <p>How does your process work?</p>
 
-            <span>+</span>
+          <div class="faqItem">
+            <div class="faqQues">
+              <p>How does your process work?</p>
+              <span>+</span>
+            </div>
+
+            <div class="faqAns">
+              <p class="inputFont">It starts with you sharing your vision via our intake form. We follow up with a meeting, brainstorm concepts using sketches and Figma, and then build, test, and launch your project with ongoing support.</p>
+            </div>
           </div>
-          <div class="faqItem">
-            <p>What makes Cooketh Company different?</p>
 
-            <span>+</span>
+          <div class="faqItem">
+            <div class="faqQues">
+              <p>What makes Cooketh Company different?</p>
+              <span>+</span>
+            </div>
+
+            <div class="faqAns">
+              <p class="inputFont">We&apos;re a small, agile team of college students with a passion for bold, user-focused design and development. Our hackathon roots keep us fast, creative, and dedicated to delivering unique, high-quality solutions.</p>
+            </div>
           </div>
-          <div class="faqItem">
-            <p>How can I start a project with you?</p>
 
-            <span>+</span>
+          <div class="faqItem">
+            <div class="faqQues">
+              <p>How can I start a project with you?</p>
+              <span>+</span>
+            </div>
+
+            <div class="faqAns">
+              <p class="inputFont">Fill out our intake form on our website with your idea and goals and schedule a meet with us. We’ll reach out to discuss your project, timeline, and budget, ensuring a smooth collaboration from concept to launch.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   
   <!-- Footer -->
-   <div id="footer"></div>
+     <!-- <div id="footer"></div> -->
+      <footer class="custom-footer">
+        <div class="footer-left">
+          <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo"/>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/cooketh-company"><img src="./public//linkedin.png" alt="LinkedIn"/></a>
+            <a href="https://discord.com/invite/fN3X4SMK3T"><img src="./public//disc.png" alt="Game Icon"/></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+          </ul>
+          
+          <p class="copyright">
+            Copyright © 2025 All rights reserved. @cookethcompany
+          </p>
+        </div>
+      </footer>
 
    <script src="./src/main.js"></script>
-   <script src="./components/script.js"></script>
+   <!-- <script src="/components/script.js"></script> -->
    <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
 </body>
 </html>

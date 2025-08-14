@@ -9,14 +9,28 @@
   <link rel="stylesheet" href="./src/about.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <div id="navbar"></div>
+  <!-- Navigation -->
+    <!-- <div id="navbar"></div> -->
+     <nav>
+        <div class="nav-container">
+          <a href="index.html"><img class="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
+      
+          <div class="hamburger" id="hamburger">&#9776;</div>
+          
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="thispagebutton">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+     </nav>
 
    <!-- About Content -->
    <section class="about">
-    <h1 style="margin-bottom: 0.4em;">THE STORY OF<br>COOKETH COMPANY</h1>
+    <h1 style="margin-bottom: 0.4em;" class="title">THE STORY OF<br>COOKETH COMPANY</h1>
 
-    <p>(aka how a failed hackathon turned into a full-blown studio) We&apos;re just a couple of college students who accidentally started this. It all began with a hackathon project called Cooketh Flow (put link to cooketh flow website), a chaotic mix of design sprints, energy drinks, way too many Figma tabs and thousands of lines of code. We didn&apos;t win (shocker), but what we did realize was this: We work surprisingly well together. Instead of going back to our solo journeys, we said, “Hey… what if we actually built something together?” So we did. Now we&apos;re Cooketh Company, a no-fluff design & dev studio crafting everything from brands and landing pages to full-blown apps. We&apos;re small, fast, and allergic to boring.We may not have trophies (yet), but we&apos;ve got taste, teamwork, and just enough delusion to build some seriously epic solutions. And we are pretty fun to be around.</p>
+    <p class="aboutContent">(aka how a failed hackathon turned into a full-blown studio) We&apos;re just a couple of college students who accidentally started this. It all began with a hackathon project called Cooketh Flow (put link to cooketh flow website), a chaotic mix of design sprints, energy drinks, way too many Figma tabs and thousands of lines of code. We didn&apos;t win (shocker), but what we did realize was this: We work surprisingly well together. Instead of going back to our solo journeys, we said, “Hey… what if we actually built something together?” So we did. Now we&apos;re Cooketh Company, a no-fluff design & dev studio crafting everything from brands and landing pages to full-blown apps. We&apos;re small, fast, and allergic to boring.We may not have trophies (yet), but we&apos;ve got taste, teamwork, and just enough delusion to build some seriously epic solutions. And we are pretty fun to be around.</p>
    </section>
 
    <!-- Team -->
@@ -53,10 +67,31 @@
     </section>
 
    <!-- Footer -->
-   <div id="footer"></div>
+     <!-- <div id="footer"></div> -->
+      <footer class="custom-footer">
+        <div class="footer-left">
+          <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo"/>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/cooketh-company"><img src="./public//linkedin.png" alt="LinkedIn"/></a>
+            <a href="https://discord.com/invite/fN3X4SMK3T"><img src="./public//disc.png" alt="Game Icon"/></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+          </ul>
+          
+          <p class="copyright">
+            Copyright © 2025 All rights reserved. @cookethcompany
+          </p>
+        </div>
+      </footer>
 
    <script src="./src/main.js"></script>
-   <script src="./components/script.js"></script>
+   <!-- <script src="/components/script.js"></script> -->
    <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
 </body>
 </html>
