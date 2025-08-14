@@ -10,12 +10,14 @@ function loadComponent(id, file, callback) {
 
 function highlightActiveNav() {
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  console.log(currentPath)
 
   document.querySelectorAll(".nav-links a").forEach(link => {
     const linkPath = link.getAttribute("href");
     if (linkPath === currentPath) {
       link.classList.add("thispagebutton");
     }
+    console.log(linkPath)
   });
 }
 
