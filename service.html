@@ -9,8 +9,22 @@
     <link rel="stylesheet" href="./src/service.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <div id="navbar"></div>
+    <!-- Navigation -->
+    <!-- <div id="navbar"></div> -->
+     <nav>
+        <div class="nav-container">
+          <a href="index.html"><img class="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
+      
+          <div class="hamburger" id="hamburger">&#9776;</div>
+          
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html" class="thispagebutton">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+     </nav>
 
     <!-- Services -->
     <section class="services">
@@ -264,13 +278,31 @@
      </section>
 
     <!-- Footer -->
-    <div id="footer"></div>
+     <!-- <div id="footer"></div> -->
+      <footer class="custom-footer">
+        <div class="footer-left">
+          <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo"/>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/cooketh-company"><img src="./public//linkedin.png" alt="LinkedIn"/></a>
+            <a href="https://discord.com/invite/fN3X4SMK3T"><img src="./public//disc.png" alt="Game Icon"/></a>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+          </ul>
+          
+          <p class="copyright">
+            Copyright © 2025 All rights reserved. @cookethcompany
+          </p>
+        </div>
+      </footer>
 
     <script src="./src/main.js"></script>
-    <script src="/components/script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/8b897771ea.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- <script src="/components/script.js"></script> -->
+    <script src="https://kit.fontawesome.com/8b897771ea.js"crossorigin="anonymous"></script>
   </body>
 </html>
