@@ -23,6 +23,6 @@ function highlightActiveNav() {
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Starting Load...")
-  loadComponent("navbar", "./navbar.html", highlightActiveNav);
-  loadComponent("footer", "./footer.html");
+  loadComponent("navbar", "navbar.html", highlightActiveNav);
+  loadComponent("footer", "footer.html");
 });
