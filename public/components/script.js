@@ -13,7 +13,7 @@ function highlightActiveNav() {
   console.log(currentPath)
 
   document.querySelectorAll(".nav-links a").forEach(link => {
-    const linkPath = link.getAttribute("href");
+    const linkPath = link.getAttribute("href").replace(/^\//, "");;
     if (linkPath === currentPath) {
       link.classList.add("thispagebutton");
     }
