@@ -358,7 +358,7 @@ nav {
 
 /* Banner */
 .banner {
-  padding: 15vh 13rem 0 17rem;
+  padding: 8vh 13rem 0 17rem;
   background-color: #fde2cf;
   text-align: center;
   display: flex;
@@ -484,7 +484,7 @@ nav {
 
 /* Team */
 .team {
-  padding: 22vh 2rem 0 2rem;
+  padding: 14vh 2rem 0 2rem;
   margin-bottom: 0px;
   background-color: #fde2cf;
   text-align: center;
@@ -559,7 +559,7 @@ nav {
 }
 
 .footer-logo {
-  height: 55%;
+  height: 45%;
   width: auto;
 }
 
@@ -614,7 +614,7 @@ nav {
 .footer-nav a {
   color: #8c8e92;
   transition: color 0.3s ease;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.18px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -626,7 +626,7 @@ nav {
 
 .copyright {
   color: #8c8e92;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: -0.18px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
