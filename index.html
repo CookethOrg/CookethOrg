@@ -6,6 +6,7 @@
     <title>Cooketh Company</title>
     <link rel="icon" type="image/png" href="./public/icon.png" />
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <!-- Navigation -->
@@ -122,11 +123,13 @@
 
       <div class="carousel">
         <div>
-          <a href="/CookethOrg/index.html"><button class="btn2"><i class="fa-solid fa-caret-left"></i></button></a>
+          <button class="btn2 btn-prev"><i class="fa-solid fa-caret-left"></i></button>
         </div>
 
-        <div class="productContainer">
-          <div class="productContent">
+        <div class="productContainer swiper">
+        <div class="swiper-wrapper">
+          <!-- Item 1 -->
+          <div class="productContent swiper-slide">
             <div class="productImage">
               <img src="./public/productImg.avif" alt="">
             </div>
@@ -137,10 +140,48 @@
               <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
             </div>
           </div>
+
+          <!-- Item 2 -->
+          <div class="productContent swiper-slide">
+            <div class="productImage">
+              <img src="./public/productImg.avif" alt="">
+            </div>
+
+            <div class="productText">
+              <h2 class="title">Cooketh Flow 2</h2>
+              <p class="faqFont productLink"><u><a href="https://cookethflow.framer.website/">https://cookethflow.framer.website/</a></u></p>
+              <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="productContent swiper-slide">
+            <div class="productImage">
+              <img src="./public/productImg.avif" alt="">
+            </div>
+
+            <div class="productText">
+              <h2 class="title">Cooketh Flow 3</h2>
+              <p class="faqFont productLink"><u><a href="https://cookethflow.framer.website/">https://cookethflow.framer.website/</a></u></p>
+              <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
+            </div>
+          </div>
+
+          <!-- More Brewing Slide -->
+          <div class="productContentMoreBrewing swiper-slide">
+            <div class="productImage">
+              <img src="./public/MoreBrewing.png" alt="" style="width: 100%;">
+            </div>
+
+            <div class="productTextMoreBrewing">
+              <h2 class="title" style="color: #8f2121;">MORE BREWING...</h2>
+            </div>
+          </div>
+        </div>
         </div>
 
         <div>
-          <a href="/CookethOrg/index.html"><button class="btn2"><i class="fa-solid fa-caret-right"></i></button></a>
+          <button class="btn2 btn-next"><i class="fa-solid fa-caret-right"></i></button>
         </div>
       </div>
      </section>
@@ -168,14 +209,14 @@
         </a>
       </div>
 
-      <div class="team-member">
+      <!-- <div class="team-member">
         <img src="./public/team/mrutyunjay.png" alt="Mrutyunjay Lodhi" />
         <p class="teamName">Mrutyunjay Lodhi</p>
         <p class="teamRole content">Developer</p>
         <a href="https://x.com/Mrutyunjay1010" target="_blank" class="xlogo">
           <img src="./public/x.png" alt="X not found" />
         </a>
-      </div>
+      </div> -->
     </section>
 
     <!-- Footer -->
@@ -203,7 +244,31 @@
       </footer>
 
     <script src="./src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="./components/script.js"></script> -->
     <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.btn-next',
+          prevEl: '.btn-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    </script>
   </body>
 </html>
