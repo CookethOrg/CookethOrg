@@ -103,6 +103,7 @@ button:disabled {
 .successPanel {
     position: absolute;
     display: none;
+    z-index: 100;
     justify-content: center;
     align-items: center;
     background: #fde2cf;
