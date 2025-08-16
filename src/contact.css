@@ -11,120 +11,148 @@
 }
 
 .contact-left {
-    width: 35vw;
-    text-align: left;
+  width: 35vw;
+  text-align: left;
 }
 
 .contact-left h1 {
-    color: rgb(143, 33, 33);
-    font-size: 72px;
-    line-height: 1.1em;
-    width: 50%;
+  color: rgb(143, 33, 33);
+  font-size: 72px;
+  line-height: 1.1em;
+  width: 50%;
 }
 
 .contact-left p {
-    font-size: 18px;
-    line-height: 1.6em;
-    margin: 1em 0;
+  font-size: 18px;
+  line-height: 1.6em;
+  margin: 1em 0;
 }
 
 .contact-right {
-    width: 38vw;
-    height: 100%;
-    border: 1px solid#ed6325;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2em;
-    padding: 36px;
+  width: 38vw;
+  height: 100%;
+  border: 1px solid#ed6325;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  padding: 36px;
 }
 
-.contact-right input, .contact-right textarea {
-    width: 100%;
-    padding: 16px 24px;
-    border-radius: 24px;
-    font-weight: 400;
-    font-size: 16px;
-    background: rgb(247, 247, 247);
-    color: rgb(5, 5, 5);
-    border: none;
-    outline: none;
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  background: rgb(247, 247, 247);
+  color: rgb(5, 5, 5);
+  border: none;
+  outline: none;
 }
 
 .submitBtn {
-    background: #ed6325;
-    width: 100%;
-    border: none;
-    line-height: 1.4em;
-    border-radius: 24px;
-    padding: 16px 24px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    color: rgb(255,255,255);
-    transition: all 0.2s ease-in-out;
+  background: #ed6325;
+  width: 100%;
+  border: none;
+  line-height: 1.4em;
+  border-radius: 24px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submitBtn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
+}
+
+.loader {
+  display: none;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button:disabled {
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 /* FAQs */
 .faq {
-    background: #ed6325;
-    width: 92.7vw;
-    height: fit-content;
-    justify-self: center;
-    margin: 1.5em 0;
-    border-radius: 32px;
-    padding: 5em 7em;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+  background: #ed6325;
+  width: 92.7vw;
+  height: fit-content;
+  justify-self: center;
+  margin: 1.5em 0;
+  border-radius: 32px;
+  padding: 5em 7em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .faq h2 {
-    font-size: 72px;
-    line-height: 1.1em;
-    color: #fde2cf;
+  font-size: 72px;
+  line-height: 1.1em;
+  color: #fde2cf;
 }
 
 .faqContent {
-    background: #fde2cf;
-    padding: 24px 38px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 60%;
-    height: fit-content;
+  background: #fde2cf;
+  padding: 24px 38px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 60%;
+  height: fit-content;
 }
 
 .faqItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 24px;
-    line-height: 1.4em;
-    border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 24px;
+  line-height: 1.4em;
+  border-bottom: 1px solid black;
 }
 
 .faqQues {
-    font-size: 20px;
-    font-weight: 500 !important;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+  font-size: 20px;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .faqAns {
-    display: none;
-    margin-top: 1.1em;
-    font-size: 17px;
-    line-height: 2em !important;
-    transition: all 0.3s ease-in-out;
+  display: none;
+  margin-top: 1.1em;
+  font-size: 17px;
+  line-height: 2em !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .faqItem.active .faqAns {
