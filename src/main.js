@@ -24,6 +24,7 @@ const form = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");
 const btnText = document.getElementById("btnText");
 const btnLoader = document.getElementById("btnLoader");
+const successMessage = document.getElementById("successPanel");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -39,12 +40,13 @@ form.addEventListener("submit", async (e) => {
 
     const response = await fetch("https://submit-form.com/0L6QO6wvG", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: json,
     });
 
     if (response.ok) {
       console.log("Thank you! Your message has been sent.");
+      successMessage.style.display = "flex";
       form.reset();
     } else {
       alert("Something went wrong, please try again.");

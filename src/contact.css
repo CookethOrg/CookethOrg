@@ -29,6 +29,7 @@
 }
 
 .contact-right {
+  position: relative;
   width: 38vw;
   height: 100%;
   border: 1px solid#ed6325;
@@ -97,6 +98,32 @@
 button:disabled {
   opacity: 1;
   cursor: not-allowed;
+}
+
+.successPanel {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #fde2cf;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+}
+
+.successIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ed6325;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.check {
+    font-size: 28px;
+    color: white;
 }
 
 /* FAQs */
