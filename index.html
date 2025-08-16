@@ -118,73 +118,35 @@
       </section>
 
     <!-- Our Products -->
-     <section class="products">
+    <section class="products">
       <h1>Our Products</h1>
-
+    
       <div class="carousel">
         <div>
           <button class="btn2 btn-prev"><i class="fa-solid fa-caret-left"></i></button>
         </div>
-
+    
         <div class="productContainer swiper">
-        <div class="swiper-wrapper">
-          <!-- Item 1 -->
-          <div class="productContent swiper-slide">
-            <div class="productImage">
-              <img src="./public/productImg.avif" alt="">
-            </div>
-
-            <div class="productText">
-              <h2 class="title">Cooketh Flow</h2>
-              <p class="faqFont productLink"><u><a href="https://cookethflow.framer.website/">https://cookethflow.framer.website/</a></u></p>
-              <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="productContent swiper-slide">
-            <div class="productImage">
-              <img src="./public/productImg.avif" alt="">
-            </div>
-
-            <div class="productText">
-              <h2 class="title">Cooketh Flow 2</h2>
-              <p class="faqFont productLink"><u><a href="https://cookethflow.framer.website/">https://cookethflow.framer.website/</a></u></p>
-              <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="productContent swiper-slide">
-            <div class="productImage">
-              <img src="./public/productImg.avif" alt="">
-            </div>
-
-            <div class="productText">
-              <h2 class="title">Cooketh Flow 3</h2>
-              <p class="faqFont productLink"><u><a href="https://cookethflow.framer.website/">https://cookethflow.framer.website/</a></u></p>
-              <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
-            </div>
-          </div>
-
-          <!-- More Brewing Slide -->
-          <div class="productContentMoreBrewing swiper-slide">
-            <div class="productImage">
-              <img src="./public/MoreBrewing.png" alt="" style="width: 100%;">
-            </div>
-
-            <div class="productTextMoreBrewing">
-              <h2 class="title" style="color: #8f2121;">MORE BREWING...</h2>
+          <div class="swiper-wrapper" id="product-wrapper">
+            <!-- JS will inject product slides here -->
+    
+            <!-- More Brewing slide -->
+            <div class="productContentMoreBrewing swiper-slide">
+              <div class="productImage">
+                <img src="./public/MoreBrewing.png" alt="" style="width: 100%;">
+              </div>
+              <div class="productTextMoreBrewing">
+                <h2 class="title" style="color: #8f2121;">MORE BREWING...</h2>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-
+    
         <div>
           <button class="btn2 btn-next"><i class="fa-solid fa-caret-right"></i></button>
         </div>
       </div>
-     </section>
+    </section>
 
     <!-- Team -->
     <section class="team">
@@ -248,27 +210,52 @@
     <!-- <script src="./components/script.js"></script> -->
     <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
     <script>
-      const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-      
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.btn-next',
-          prevEl: '.btn-prev',
-        },
-      
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
+      const wrapper = document.getElementById("product-wrapper");
+      const moreBrewingSlide = document.querySelector(".productContentMoreBrewing");
+    
+      fetch("./products.json")
+        .then(response => response.json())
+        .then(products => {
+          products.forEach(item => {
+            let slide = document.createElement("div");
+            slide.classList.add("productContent", "swiper-slide");
+            slide.innerHTML = `
+              <div class="productImage">
+                <img src="${item.image}" alt="${item.title}">
+              </div>
+              <div class="productText">
+                <h2 class="title">${item.title}</h2>
+                <p class="faqFont productLink">
+                  <u><a href="${item.link}" target="_blank">${item.link}</a></u>
+                </p>
+                <p class="subContent productDesc">${item.description}</p>
+              </div>
+            `;
+            wrapper.insertBefore(slide, moreBrewingSlide);
+          });
+    
+          const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+          
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.btn-next',
+              prevEl: '.btn-prev',
+            },
+          
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          });
+        });
     </script>
   </body>
 </html>
