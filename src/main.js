@@ -38,7 +38,8 @@ form.addEventListener("submit", async (e) => {
     const object = Object.fromEntries(data);
     const json = JSON.stringify(object);
 
-    const response = await fetch("https://submit-form.com/0L6QO6wvG", {
+    // const response = await fetch("https://submit-form.com/0L6QO6wvG", {
+    const response = await fetch("https://submit-form.com/iZS9Y5PdC", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: json,
