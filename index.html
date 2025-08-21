@@ -13,9 +13,7 @@
     <!-- <div id="navbar"></div> -->
      <nav>
         <div class="nav-container">
-          <a href="index.html"><img class="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
-      
-          <div class="hamburger" id="hamburger">&#9776;</div>
+          <a href="index.html"><img class="nav_logo" id="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
           
           <ul class="nav-links" id="nav-links">
             <li><a href="index.html" class="thispagebutton">Home</a></li>
@@ -23,14 +21,19 @@
             <li><a href="service.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
+
+          <div class="hamburgerContainer" id="hamburger">
+            <i class="fa-solid fa-bars hamburgerMenu"></i>
+          </div>
         </div>
      </nav>
 
     <!-- Hero -->
     <section class="hero">
       <div class="heroLine1">
-        <div>
-          <h1 class="heroLine1TitleA title">Turning<span class="heroLine1TitleB">'what if'</span></h1>
+        <div style="display: flex;" class="heroFirst">
+          <h1 class="heroLine1TitleA title" style="width: fit-content;">Turning</h1>
+          <h1 class="heroLine1TitleB title" style="width: fit-content;">'what if'</h1>
         </div>
 
         <div class="heroLine1ImgContainer">
@@ -40,7 +43,7 @@
 
       <div>
         <h1 class="title heroLine2">
-          int<img src="./public/heroSmiley.png" alt="" class="heroLine2Img"><span style="font-style: italic">'heck yeah'</span>
+          int<img src="./public/heroSmiley.png" alt="" class="heroLine2Img"><span style="font-style: italic" class="heroLine2TitleB">'heck yeah'</span>
         </h1>
 
         <h1 class="title heroLine3">since whenever.</h1>

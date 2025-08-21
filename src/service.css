@@ -11,10 +11,10 @@
 }
 
 .tech h1 {
-    color: #1e1a16;
-    font-size: 72px;
-    line-height: 1.1em;
-    margin-bottom: 0.8em;
+  color: #1e1a16;
+  font-size: 72px;
+  line-height: 1.1em;
+  margin-bottom: 0.8em;
 }
 
 .techSection {
@@ -28,38 +28,38 @@
 }
 
 .techContainer {
-    background: #f8a720;
-    height: fit-content;
-    width: 39%;
-    border-radius: 1em;
-    padding: 2em 1.5em;
+  background: #f8a720;
+  height: fit-content;
+  width: 39%;
+  border-radius: 1em;
+  padding: 2em 1.5em;
 }
 
 .techContainer h2 {
-    width: 100%;
-    text-align: center;
-    color: #642714;
-    font-size: 35px;
-    letter-spacing: -1.25px;
-    margin-bottom: 0.7em;
+  width: 100%;
+  text-align: center;
+  color: #642714;
+  font-size: 35px;
+  letter-spacing: -1.25px;
+  margin-bottom: 0.7em;
 }
 
 .techContainer li {
-    color: #8f2121;
-    font-size: 26px;
-    letter-spacing: -1.25px;
-    line-height: 1.4em;
+  color: #8f2121;
+  font-size: 26px;
+  letter-spacing: -1.25px;
+  line-height: 1.4em;
 }
 
 .techContainer ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
-    gap: 1em;
-    width: 80%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
 }
 
 /* Detailed Services */
@@ -75,45 +75,54 @@
 }
 
 .detailServices h1 {
-    color: #1e1a16;
-    font-size: 80px;
-    line-height: 1.1em;
+  color: #1e1a16;
+  font-size: 80px;
+  line-height: 1.1em;
+}
+
+.detailedServiceTitle {
+  margin-bottom: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25em;
 }
 
 .serviceItem {
-    width: 72vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin: 2em 0;
+  width: 72vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 2em 0;
 }
 
 .serviceItem h2 {
-    color: #642714;
-    font-size: 35px;
-    font-weight: 600;
-    letter-spacing: -1.25px;
+  color: #642714;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -1.25px;
 }
 
 .serviceItemList {
-    color: #8e2121;
-    margin: 0 7em;
+  color: #8e2121;
+  margin: 0 7em;
 }
 
 .serviceItemList li {
-    text-align: left;
-    margin: 0.5em 0;
+  text-align: left;
+  margin: 0.5em 0;
 }
 
-.serviceItemList h3, .serviceItemList p {
-    font-size: 26px;
-    letter-spacing: -1.25px;
-    line-height: 1.4em;
+.serviceItemList h3,
+.serviceItemList p {
+  font-size: 26px;
+  letter-spacing: -1.25px;
+  line-height: 1.4em;
 }
 
 .boldService {
-    font-weight: 900 !important;
+  font-weight: 900 !important;
 }
 
 /* CTA */
@@ -133,35 +142,42 @@
   border-radius: 10px;
 }
 
-.cta h1{
-    color: #8f2121;
-    font-size: 72px;
-    line-height: 1.1em;
-    margin-bottom: 0.3em;
+.cta h1 {
+  color: #8f2121;
+  font-size: 72px;
+  line-height: 1.1em;
+  margin-bottom: 0.3em;
 }
 
-.cta p, .cta ul, .cta h3 {
-    color: #642714;
-    font-size: 16px;
-    letter-spacing: -0.18px;
+.cta p,
+.cta ul,
+.cta h3 {
+  color: #642714;
+  font-size: 16px;
+  letter-spacing: -0.18px;
 }
 
 .cta ul {
-    list-style: decimal;
-    margin: 0.5em 1.2em;
-    font-size: 18px;
+  list-style: decimal;
+  margin: 0.5em 1.2em;
+  font-size: 18px;
 }
 
 .cta ul h3 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
-.aboutContent h3, .aboutContent p {
-    line-height: 1.9em !important;
+.aboutContent h3,
+.aboutContent p {
+  line-height: 1.9em !important;
 }
 
 .bold {
-    font-weight: 900 !important;
+  font-weight: 900 !important;
+}
+
+.btnContainer {
+  width: 45%;
 }
 
 .ctaBtn {
@@ -181,4 +197,122 @@
 }
 .ctaBtn:hover {
   box-shadow: 0 0 0 0;
+}
+
+@media (max-width: 1055px) {
+  .cta {
+    width: 94vw;
+    padding: 5em 6em;
+  }
+}
+
+@media (max-width: 867px) {
+  .techContainer h2 {
+    font-size: 24px;
+  }
+
+  .techContainer li {
+    font-size: 20px;
+  }
+
+  .techContainer {
+    width: 47%;
+  }
+
+  .detailServices {
+    padding: 16vh 1rem 6vh 1rem;
+  }
+
+  .serviceItem {
+    width: 90%;
+  }
+
+  .serviceItemList {
+    margin: 0 2em;
+  }
+}
+
+@media (max-width: 707px) {
+  .serviceItem {
+    width: 92vw;
+  }
+
+  .serviceItemList {
+    margin: 0 1.5em;
+  }
+
+  .detailServices {
+    padding: 16vh 0.1rem 6vh 0.1rem;
+  }
+
+  .serviceItem h2 {
+    font-size: 24px;
+  }
+
+  .serviceItemList h3 {
+    font-size: 18px;
+  }
+
+  .serviceItemList p {
+    font-size: 16px;
+  }
+
+  .cta {
+    width: 95vw;
+    padding: 5em 1em;
+  }
+
+  .cta h1 {
+    font-size: 60px;
+  }
+
+  .btnContainer {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 525px) {
+  .techSection {
+    gap: 0.5em;
+  }
+
+  .tech h1 {
+    font-size: 60px;
+  }
+
+  .techContainer {
+    width: 95%;
+  }
+
+  .detailServices h1 {
+    font-size: 60px;
+  }
+
+  .cta {
+    width: 95vw;
+    padding: 5em 1em;
+  }
+
+  .cta h1 {
+    font-size: 45px;
+  }
+
+  .ctaBtn {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 465px) {
+  .services h1 {
+    font-size: 48px !important;
+  }
+
+  .services h2 {
+    font-size: 25px;
+    line-height: 1.1em;
+  }
+
+  .detailedServiceTitle {
+    gap: 0.1em;
+  }
 }

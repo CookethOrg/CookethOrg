@@ -1,11 +1,24 @@
 console.log("JavaScript loaded");
 
-// const hamburger = document.getElementById('hamburger');
-// const navLinks = document.getElementById('nav-links');
+// Navbar Logic
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const navLogo = document.getElementById("nav_logo")
 
-// hamburger.addEventListener('click', () => {
-//   navLinks.classList.toggle('active');
-// });
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("navActive");
+  navLinks.classList.toggle("navActive");
+  navLogo.classList.toggle("navLogoActive")
+});
+
+document.querySelectorAll(".nav-links li a").forEach(link =>
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    navLogo.classList.remove("navLogoActive")
+  })
+);
+
 
 
 // FAQ JS
