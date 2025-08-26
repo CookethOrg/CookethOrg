@@ -1363,3 +1363,49 @@ nav {
     font-weight: 600;
   }
 }
+
+@media (max-width: 327px) {
+  .hero {
+    padding-left: 0;
+  }
+
+  .heroLine1TitleA {
+    font-size: 50px !important;
+  }
+
+  .heroLine1TitleB {
+    font-size: 66px !important;
+  }
+
+  .heroLine1ImgContainer {
+    position: absolute;
+    right: 0%;
+    margin-bottom: 70px;
+  }
+
+  .heroLine2 {
+    justify-content: center;
+  }
+
+  .heroLine2TitleB {
+    font-size: 1.3em;
+  }
+
+  .heroLine2Img {
+    width: 6%;
+    height: 6%;
+    margin-bottom: -2%;
+  }
+
+  .heroLine3 {
+    padding-left: 3.5%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .introduction {
+    padding: 2rem 0.5rem !important;
+  }
+}
