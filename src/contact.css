@@ -176,15 +176,16 @@ button:disabled {
 }
 
 .faqAns {
-  display: none;
+  height: 0;
+  overflow: hidden;
   margin-top: 1.1em;
   font-size: 17px;
   line-height: 2em !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .faqItem.active .faqAns {
-  display: block;
+  height: 150px;
 }
 
 @media (max-width: 1055px) {

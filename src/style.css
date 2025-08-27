@@ -1303,6 +1303,10 @@ nav {
     font-size: 58px;
   }
 
+  .carousel {
+    width: 100vw;
+  }
+
   .team {
     padding: 14vh 0rem 0 0rem;
     text-align: center;
@@ -1362,6 +1366,10 @@ nav {
     font-size: 1.1em;
     font-weight: 600;
   }
+
+  .productTextMoreBrewing h2 {
+    font-size: 32px !important;
+  }
 }
 
 @media (max-width: 327px) {
@@ -1407,5 +1415,9 @@ nav {
 
   .introduction {
     padding: 2rem 0.5rem !important;
+  }
+
+  .productTextMoreBrewing h2 {
+    font-size: 26px !important;
   }
 }

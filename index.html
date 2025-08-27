@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="./public/icon.png" />
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation -->
@@ -31,17 +32,17 @@
     <!-- Hero -->
     <section class="hero">
       <div class="heroLine1">
-        <div style="display: flex;" class="heroFirst">
+        <div style="display: flex;" class="heroFirst" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
           <h1 class="heroLine1TitleA title" style="width: fit-content;">Turning</h1>
           <h1 class="heroLine1TitleB title" style="width: fit-content;">'what if'</h1>
         </div>
 
-        <div class="heroLine1ImgContainer">
+        <div class="heroLine1ImgContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="600">
           <img src="./public/landing1.png" alt="img" class="heroLine1Img" />
         </div>
       </div>
 
-      <div>
+      <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
         <h1 class="title heroLine2">
           int<img src="./public/heroSmiley.png" alt="" class="heroLine2Img"><span style="font-style: italic" class="heroLine2TitleB">'heck yeah'</span>
         </h1>
@@ -52,7 +53,7 @@
 
     <!-- Introduction -->
     <section class="introduction">
-      <div class="introText">
+      <div class="introText" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
         <h2 class="content introContent">
           We craft killer digital vibes for any screen, using top-notch tools
           and smart coding to keep it smooth and scalable. See how our squad
@@ -66,11 +67,11 @@
 
     <!-- Services -->
     <section class="services">
-      <h1 class="title">WE CAN BUILD <i>ALMOST</i> <br>ANYTHING.</h1>
-      <h2 class="content h2A">From pitch decks to fully functioning applications.</h2>
-      <h2 class="content">Have questions? Find our FAQs here, or ask away.</h2>
+      <h1 class="title" data-aos="fade-up" data-aos-duration="800">WE CAN BUILD <i>ALMOST</i> <br>ANYTHING.</h1>
+      <h2 class="content h2A" data-aos="fade-up" data-aos-duration="800">From pitch decks to fully functioning applications.</h2>
+      <h2 class="content" data-aos="fade-up" data-aos-duration="800">Have questions? Find our FAQs here, or ask away.</h2>
 
-      <div style="width: 50%;">
+      <div style="width: 50%;" data-aos="fade-up" data-aos-duration="800">
         <a href="contact.html"><button class="btn btnText">FAQs</button></a>
       </div>
     </section>
@@ -79,7 +80,7 @@
      <section class="howWeCook">
       <h1 class="title">How we cook?</h1>
 
-      <div class="cookList">
+      <div class="cookList" data-aos="fade-up" data-aos-duration="600">
         <div class="cookListItem">
           <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: start; gap: 0.5em; width: 100%;">
             <div class="cookListNumber title"><span class="cookListDigit">1.</span></div>
@@ -115,14 +116,14 @@
           <img src="public/bannerCooketh.png" alt="">
         </div>
 
-        <div class="bannerText">
+        <div class="bannerText" class="content" data-aos="fade-left" data-aos-duration="500">
           <h2 class="title">WE BRING THE HEAT, SO YOUR IDEAS NEVER FALL FLAT</h2>
         </div>
       </section>
 
     <!-- Our Products -->
     <section class="products">
-      <h1>Our Products</h1>
+      <h1 data-aos="fade-zoom-in" data-aos-duration="1200" data-aos-delay="300">Our Products</h1>
     
       <div class="carousel">
         <div>
@@ -130,7 +131,7 @@
         </div>
     
         <div class="productContainer swiper">
-          <div class="swiper-wrapper" id="product-wrapper">
+          <div class="swiper-wrapper" id="product-wrapper" class="content" data-aos="fade-down" data-aos-duration="500">
             <!-- JS will inject product slides here -->
     
             <!-- More Brewing slide -->
@@ -153,9 +154,9 @@
 
     <!-- Team -->
     <section class="team">
-      <h2 class="title">Our Team</h2>
+      <h2 class="title" data-aos="fade-up" data-aos-duration="800">Our Team</h2>
 
-      <div class="team-member">
+      <div class="team-member" data-aos="fade-up" data-aos-duration="800">
         <img src="./public/team/antara.png" alt="Antara Paul" />
         <p class="teamName">Antara Paul</p>
         <p class="teamRole content">Designer</p>
@@ -164,7 +165,7 @@
         </a>
       </div>
 
-      <div class="team-member">
+      <div class="team-member" data-aos="fade-up" data-aos-duration="800">
         <img src="./public/team/subroto.png" alt="Subroto Banerjee" />
 
         <p class="teamName">Subroto Banerjee</p>
@@ -186,7 +187,7 @@
 
     <!-- Footer -->
      <!-- <div id="footer"></div> -->
-      <footer class="custom-footer">
+      <footer class="custom-footer" data-aos="fade-up" data-aos-duration="800">
         <div class="footer-left">
           <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo"/>
           <div class="footer-socials">
@@ -212,6 +213,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="./components/script.js"></script> -->
     <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       const wrapper = document.getElementById("product-wrapper");
       const moreBrewingSlide = document.querySelector(".productContentMoreBrewing");
@@ -259,6 +261,9 @@
             },
           });
         });
+    </script>
+    <script>
+      AOS.init({ once: true });
     </script>
   </body>
 </html>

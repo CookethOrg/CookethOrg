@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="./public/icon.png" />
   <link rel="stylesheet" href="./src/style.css" />
   <link rel="stylesheet" href="./src/contact.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
@@ -31,14 +32,14 @@
   <!-- Contact -->
    <section class="contact">
     <div class="contact-left">
-      <h1 class="title" style="margin-bottom: 0.4em;">CONNECT WITH US</h1>
+      <h1 class="title" style="margin-bottom: 0.4em;" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1200">CONNECT WITH US</h1>
 
-      <p class="aboutContent" style="margin-bottom: 1.8em !important;">Whether you&apos;ve got a fully-baked product roadmap or just a wild idea scribbled on a napkin, we&apos;re down to build it with you. Got questions that slipped past the FAQs? Or maybe you just really love us and want to drop a few kind words (we won&apos;t stop you). Either way, our inbox is open and we&apos;re all ears.</p>
+      <p class="aboutContent" style="margin-bottom: 1.8em !important;" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">Whether you&apos;ve got a fully-baked product roadmap or just a wild idea scribbled on a napkin, we&apos;re down to build it with you. Got questions that slipped past the FAQs? Or maybe you just really love us and want to drop a few kind words (we won&apos;t stop you). Either way, our inbox is open and we&apos;re all ears.</p>
 
-      <p class="aboutContent">Or, you can also reach out to us at <b>cookethcompany@gmail.com</b></p>
+      <p class="aboutContent" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">Or, you can also reach out to us at <b>cookethcompany@gmail.com</b></p>
     </div>
 
-    <form id="contactForm" class="contact-right contact-form">
+    <form id="contactForm" class="contact-right contact-form" data-aos="fade-left" data-aos-easing="ease-in-back" data-aos-duration="1200">
       <input type="text" name="name" id="name" placeholder="Name" class="inputFont" required>
       <input type="email" name="email" id="email" placeholder="Email" class="inputFont" required>
       <textarea name="message" id="message" placeholder="Message" rows="4" class="inputFont" required></textarea>
@@ -58,9 +59,9 @@
    <!-- FAQs -->
     <section class="faq">
       <div style="display: flex; justify-content: space-between; width: 100%;" class="faqContentContainer">
-        <h2 class="title">FAQS</h2>
+        <h2 class="title" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="800">FAQS</h2>
 
-        <div class="faqContent faqFont">
+        <div class="faqContent faqFont" data-aos="fade-left" data-aos-easing="ease-in-back" data-aos-duration="800">
           <div class="faqItem">
             <div class="faqQues">
               <p>What services does Cooketh Company offer?</p>
@@ -135,5 +136,9 @@
    <script src="./src/main.js"></script>
    <!-- <script src="/components/script.js"></script> -->
    <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init({ once: true });
+   </script>
 </body>
 </html>
