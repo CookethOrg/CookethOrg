@@ -1,42 +1,45 @@
 /* Fonts */
 @font-face {
-  font-family: 'Frederik';
-  src: url('../fonts/frederik-font-family/Frederik-Regular-BF645d9bffaa893.woff') format('woff');
+  font-family: "Frederik";
+  src: url("../fonts/frederik-font-family/Frederik-Regular-BF645d9bffaa893.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Frederik';
-  src: url('../fonts/frederik-font-family/Frederik-Medium-BF645d9bffbc329.woff') format('woff');
+  font-family: "Frederik";
+  src: url("../fonts/frederik-font-family/Frederik-Medium-BF645d9bffbc329.woff")
+    format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Frederik';
-  src: url('../fonts/frederik-font-family/Frederik-DemiBold-BF645d9bff7b6ff.woff') format('woff');
+  font-family: "Frederik";
+  src: url("../fonts/frederik-font-family/Frederik-DemiBold-BF645d9bff7b6ff.woff")
+    format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'VVDS';
-  src: url('../fonts/VVDS Fifties/VVDS-Fifties-SExp-Med.woff') format('woff');
+  font-family: "VVDS";
+  src: url("../fonts/VVDS Fifties/VVDS-Fifties-SExp-Med.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter_28pt-Regular.woff') format('woff');
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter_28pt-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter_18pt-Medium.woff') format('woff');
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter_18pt-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -62,38 +65,42 @@ a {
 
 /* Font CLasses */
 .title {
-  font-family: 'VVDS', sans-serif;
+  font-family: "VVDS", sans-serif;
   font-weight: 400 !important;
 }
 
 .content {
-  font-family: 'Frederik';
+  font-family: "Frederik";
   font-weight: 600 !important;
 }
 
 .btnText {
-  font-family: 'VVDS', sans-serif !important;
+  font-family: "VVDS", sans-serif !important;
   font-weight: 400 !important;
 }
 
 .aboutContent {
-  font-family: 'Frederik', sans-serif;
+  font-family: "Frederik", sans-serif;
   font-weight: 400;
 }
 
 .subContent {
-  font-family: 'Frederik', sans-serif;
+  font-family: "Frederik", sans-serif;
   font-weight: 500 !important;
 }
 
 .inputFont {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
 .faqFont {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
+}
+
+.lineFeed {
+  display: none;
 }
 
 /* Navigation */
@@ -145,7 +152,7 @@ nav {
   transition: background-color 0.3s ease, color 0.3s ease;
   display: inline-block;
   color: #652614;
-  font-family: 'Frederik', sans-serif;
+  font-family: "Frederik", sans-serif;
   font-weight: 600;
 }
 
@@ -164,6 +171,14 @@ nav {
   background-color: rgba(240, 162, 31, 1) !important;
 }
 
+.hamburgerContainer {
+  display: none;
+}
+
+.navActive {
+  display: flex !important;
+}
+
 /* Hero */
 .hero {
   margin-top: 27vh;
@@ -174,9 +189,48 @@ nav {
   width: 80vw;
 }
 
+.heroLine1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 2.5em;
+  width: 100%;
+}
+
+.heroLine1TitleA {
+  display: flex;
+  gap: 0.2em;
+}
+
+.heroLine1TitleB {
+  font-style: italic;
+  padding-left: 0%;
+}
+
+.heroLine1ImgContainer {
+  margin-top: -0.2em;
+  margin-left: 3.7em;
+}
+
+.heroLine1Img {
+  width: 72%;
+  margin-left: 0em;
+}
+
+.heroLine2 {
+  padding-left: 8%;
+}
+
+.heroLine2Img {
+  width: 4.2%;
+}
+
+.heroLine3 {
+  padding-left: 45%;
+}
+
 .hero h1 {
   font-size: 85px;
-  /* font-weight: 700; */
   max-width: 100vw;
   margin: 0 auto;
   color: rgba(30, 26, 32);
@@ -337,8 +391,8 @@ nav {
 }
 
 .cookListNumber {
-  width: 64px;
-  height: 64px;
+  width: 64px !important;
+  height: 64px !important;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   image-rendering: pixelated;
@@ -400,6 +454,7 @@ nav {
   font-size: 72px;
   line-height: 1.1em;
   margin-bottom: 0.8em;
+  letter-spacing: -1.5px;
 }
 
 .carousel {
@@ -410,20 +465,20 @@ nav {
 }
 
 .productContainer {
-  background: #ed6325;
   width: 58vw;
   height: 75vh;
   border-radius: 8px;
 }
 
 .productContent {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 2em 4em;
+  padding: 2em 3em;
   gap: 0.5em;
+  background: #ed6325;
 }
 
 .productImage {
@@ -461,6 +516,32 @@ nav {
   font-size: 24px;
   letter-spacing: -1.25px;
   line-height: 1.4em;
+}
+
+.productContentMoreBrewing {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2em 3em;
+  gap: 0.5em;
+}
+
+.productContentMoreBrewing h2 {
+  font-size: 56px;
+  line-height: 1.1em !important;
+  width: fit-content;
+}
+
+.productTextMoreBrewing {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: #fde2cf;
 }
 
 .btn2 {
@@ -616,7 +697,7 @@ nav {
   transition: color 0.3s ease;
   font-size: 18px;
   letter-spacing: -0.18px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
@@ -628,84 +709,715 @@ nav {
   color: #8c8e92;
   font-size: 16px;
   letter-spacing: -0.18px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
-/* Responsive */
-@media (max-width: 1080px) {
-  nav {
-    margin-left: 10%;
-    margin-right: 10%;
+/* Responsiveness */
+@media (max-width: 1381px) {
+  .heroLine3 {
+    padding-left: 35%;
   }
-  .hamburger {
-    display: block;
+
+  .bannerText h2 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1180px) {
+  .heroLine1 {
+    padding-left: 0em;
+  }
+
+  .heroLine1TitleA {
+    gap: 0em;
+  }
+
+  .heroLine1ImgContainer {
+    margin-left: 1em;
+  }
+
+  .heroLine3 {
+    padding-left: 28%;
+  }
+
+  .banner {
+    padding: 8vh 4rem 0 8rem;
+    gap: 3em;
+  }
+
+  .introduction {
+    padding: 3.5rem 0;
+  }
+
+  .services h1 {
+    width: 80%;
+  }
+
+  .cookList {
+    flex-direction: column;
+  }
+
+  .cookListItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .bannerText h2 {
+    font-size: 60px;
+  }
+
+  .productContainer {
+    height: fit-content;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+  }
+
+  .productImage img {
+    width: 85%;
+  }
+
+  .productText {
+    width: 85%;
+  }
+
+  .productText h2 {
+    font-size: 42px;
+  }
+
+  .productLink {
+    font-size: 15px;
+    margin-bottom: 0.9em;
+  }
+
+  .productDesc {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1055px) {
+  .heroLine1Img {
+    width: 55%;
+  }
+
+  .heroLine1ImgContainer {
+    margin-left: 0em;
+  }
+
+  .heroLine2 {
+    padding-left: 5%;
+  }
+
+  .heroLine2Img {
+    width: 5%;
+  }
+
+  .heroLine3 {
+    padding-left: 33%;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+    max-width: 100vw;
+  }
+
+  .services {
+    margin-top: 5vh;
+  }
+
+  .services h1 {
+    width: 90%;
+  }
+
+  .banner {
+    padding: 8vh 6rem 0 6rem;
+  }
+
+  .bannerText h2 {
+    font-size: 50px;
+  }
+
+  .imgContainer img {
+    width: 110%;
+  }
+
+  .custom-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 96vw;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 4em 2.5em;
+    gap: 3.5rem;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 3em;
+  }
+
+  .footer-logo {
+    width: 80%;
+    height: auto;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 1rem;
+    margin-left: 0em;
+  }
+
+  .footer-socials a {
+    display: flex;
+    align-items: start;
+  }
+
+  .footer-socials img {
+    height: 38px;
+    width: 38px;
+    padding: 0.4rem;
+  }
+
+  .footer-right {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: start;
+    gap: 3em;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-nav li {
+    padding: 0 1.5rem;
+  }
+
+  .footer-nav li:first-child {
+    padding-left: 0;
+  }
+
+  .footer-nav a {
+    font-size: 18px;
+  }
+
+  .copyright {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 867px) {
+  .nav-container {
+    width: 100%;
+    padding: 1em 0em 0 0em;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .heroLine1Img {
+    width: 45%;
+  }
+
+  .heroLine1ImgContainer {
+    margin-left: -1em;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .introduction {
+    padding: 3.5rem 1rem;
+    max-width: 92vw;
+    margin: auto;
+    font-size: 18px !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .introText {
+    width: 80%;
+    text-align: left;
+  }
+
+  .introduction button {
+    margin-left: 15%;
+    width: 100%;
+    font-size: 20px;
+    padding: 0.8em 2em;
+  }
+
+  .services h1 {
+    width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .bannerText h2 {
+    text-align: center;
+  }
+
+  .imgContainer img {
+    width: 70%;
+  }
+
+  .productContentMoreBrewing {
+    padding: 2em 1em;
+  }
+
+  .productTextMoreBrewing h2 {
+    font-size: 38px !important;
+  }
+}
+
+@media (max-width: 707px) {
+  nav {
+    padding: 0.5rem 1.2rem 0 1.2rem;
+  }
+
+  .nav_logo {
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navLogoActive {
+    width: 70%;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: #fde2cf;
-    border-top: 1px solid #ccc;
-    padding: 1rem 0;
-    gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 2em;
+    gap: 0.8em;
+    transition: all 0.3s ease-in-out;
   }
 
-  .nav-links.active {
+  .nav-container {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .hamburgerContainer {
+    background: #f0a21f;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.25em;
+    padding: 8px;
+    border-radius: 8px;
+    color: #642714;
+    border: 1px solid #642714;
+    box-shadow: 0 1px 0 0 #642714;
   }
 
-  .nav-links li {
-    text-align: center;
+  .hamburgerMenu {
+    font-size: 20px;
   }
-  .thispagebutton {
-    display: inline-block;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0.2rem 0.25rem;
-    border-radius: 25px;
+
+  .heroLine1Img {
+    width: 60%;
+  }
+
+  .heroLine1TitleB {
+    width: 100%;
+  }
+
+  .heroLine1ImgContainer {
+    margin-left: -1em;
+    width: 30%;
+  }
+
+  .heroLine2 {
+    padding: 0%;
+    width: 100%;
+  }
+
+  .heroLine2Img {
+    width: 6%;
+    height: 6%;
+  }
+
+  .heroLine3 {
+    padding-left: 20vw;
   }
 
   .hero h1 {
-    font-size: 2rem;
-  }
-  .hero img {
-    padding-left: 0;
-    width: 150px;
+    font-size: 44px;
   }
 
   .introduction {
-    display: flex;
     flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    font-size: 14px !important;
   }
+
+  .introText {
+    width: 90%;
+  }
+
   .introduction button {
-    margin-left: 0%;
+    padding: 1em 2.3em;
+    margin: 0;
   }
-  .services ul {
+
+  .productContent {
+    padding: 2em 1.5em;
+  }
+
+  .productImage img {
+    width: 95%;
+  }
+
+  .productText {
+    width: 95%;
+  }
+}
+
+@media (max-width: 525px) {
+  .hero {
+    width: 90vw;
+  }
+
+  .heroLine1TitleA {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .heroLine2 {
+    padding-left: 1em;
+    display: flex;
+    justify-content: start;
+  }
+
+  .heroLine2Img {
+    width: 6%;
+    height: 6%;
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 1.5%;
+  }
+
+  .heroLine3 {
+    padding-left: 2em;
+    display: flex;
+    justify-content: start;
     flex-direction: column;
+  }
+
+  .introduction {
+    padding: 2rem 1rem !important;
+  }
+
+  .introContent {
+    font-size: 16px !important;
+  }
+
+  .introduction button {
+    font-size: 18px;
+    padding: 0.8em 2em;
+  }
+
+  .howWeCook {
+    padding: 22vh 0rem 0 0rem;
+  }
+
+  .howWeCook h1 {
+    font-size: 54px;
+  }
+
+  .cookList {
+    padding: 0;
+  }
+
+  .cookList h2 {
+    font-size: 25px;
+  }
+
+  .cookList p {
+    font-size: 20px;
+    margin-left: 0em;
+  }
+
+  .cookListNumber {
+    width: 40px !important;
+    height: 40px !important;
+    background-size: 100% 100%;
+  }
+
+  .cookListDigit {
+    font-size: 20px;
+    margin-left: 0.1em;
+  }
+
+  .h2A {
+    font-size: 24px !important;
+    margin: 0.8em 0;
+  }
+
+  .products {
+    width: 100vw;
+    padding: 22vh 0.5rem 0 0.5rem;
+  }
+
+  .productContainer {
+    width: 98vw !important;
+  }
+
+  .products h1 {
+    font-size: 46px;
+  }
+
+  .btn2 {
+    display: none;
+  }
+
+  .carousel {
+    width: 90vw;
+  }
+
+  .productImage img {
+    width: 100%;
+  }
+
+  .productText {
+    width: 100%;
+  }
+
+  .productText h2 {
+    font-size: 28px;
+  }
+
+  .productLink {
+    font-size: 12px;
+    margin-bottom: 0.9em;
+  }
+
+  .productDesc {
+    font-size: 14px;
+  }
+
+  .team h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 465px) {
+  .hero {
+    padding-left: 0.5em;
+    margin-top: 15vh;
+  }
+
+  .heroLine1TitleA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+  }
+
+  .heroLine1 {
+    justify-content: start;
+    align-items: center;
+    padding-right: 20%;
+  }
+
+  .heroLine1TitleA {
+    font-size: 55px !important;
+  }
+
+  .heroLine1TitleB {
+    font-size: 70px !important;
+    padding-left: 0em;
+  }
+
+  .heroLine2TitleB {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .heroLine1ImgContainer {
+    position: absolute;
+    right: 10%;
+    margin-bottom: 70px;
+  }
+
+  .heroFirst {
+    flex-direction: column;
+  }
+
+  .heroLine2 {
+    padding-left: 0em;
+    display: flex;
+    justify-content: start;
+  }
+
+  .heroLine2Img {
+    width: 6%;
+    height: 6%;
+    display: flex;
+    align-self: center;
+    margin-bottom: -2%;
+  }
+
+  .heroLine3 {
+    padding-left: 0em;
+    display: flex;
+    justify-content: start;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .services {
+    padding: 22vh 0rem 0 0rem;
+  }
+
+  .services h1 {
+    font-size: 58px;
+  }
+
+  .carousel {
+    width: 100vw;
+  }
+
+  .team {
+    padding: 14vh 0rem 0 0rem;
+    text-align: center;
+  }
+
+  .team h2 {
+    font-size: 60px;
+    margin-bottom: 2rem;
   }
 
   .team-member {
-    display: block;
-    margin: 2rem auto;
-  }
-
-  .custom-footer {
-    margin-left: 10%;
-    margin-right: 10%;
-    flex-direction: column;
-    align-items: center;
+    margin: 1.5rem 2rem 5rem 2rem;
     text-align: center;
   }
 
-  .footer-right {
-    text-align: center;
-    align-items: center;
+  .banner {
+    padding: 8vh 1rem 0 1rem;
   }
 
   .footer-nav {
+    gap: 1.2em;
+  }
+
+  .footer-nav li {
+    padding: 0;
+    border: none;
+  }
+
+  .footer-nav li:first-child {
+    padding-left: 0;
+  }
+
+  .footer-nav a {
+    font-size: 16px;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroLine1 {
+    padding-right: 5%;
+  }
+
+  .heroLine1TitleA {
+    /* margin-left: 0.5em !important; */
+  }
+
+  .heroLine1ImgContainer {
+    right: 5%;
+    margin-bottom: 65px;
+  }
+
+  .heroLine2TitleB {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .productTextMoreBrewing h2 {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 327px) {
+  .hero {
+    padding-left: 0;
+  }
+
+  .heroLine1TitleA {
+    font-size: 50px !important;
+  }
+
+  .heroLine1TitleB {
+    font-size: 66px !important;
+  }
+
+  .heroLine1ImgContainer {
+    position: absolute;
+    right: 0%;
+    margin-bottom: 70px;
+  }
+
+  .heroLine2 {
     justify-content: center;
+  }
+
+  .heroLine2TitleB {
+    font-size: 1.3em;
+  }
+
+  .heroLine2Img {
+    width: 6%;
+    height: 6%;
+    margin-bottom: -2%;
+  }
+
+  .heroLine3 {
+    padding-left: 3.5%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .introduction {
+    padding: 2rem 0.5rem !important;
+  }
+
+  .productTextMoreBrewing h2 {
+    font-size: 26px !important;
   }
 }

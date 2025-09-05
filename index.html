@@ -6,15 +6,15 @@
     <title>Cooketh Company</title>
     <link rel="icon" type="image/png" href="./public/icon.png" />
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation -->
     <!-- <div id="navbar"></div> -->
      <nav>
         <div class="nav-container">
-          <a href="index.html"><img class="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
-      
-          <div class="hamburger" id="hamburger">&#9776;</div>
+          <a href="index.html"><img class="nav_logo" id="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
           
           <ul class="nav-links" id="nav-links">
             <li><a href="index.html" class="thispagebutton">Home</a></li>
@@ -22,52 +22,57 @@
             <li><a href="service.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
+
+          <div class="hamburgerContainer" id="hamburger">
+            <i class="fa-solid fa-bars hamburgerMenu"></i>
+          </div>
         </div>
      </nav>
 
     <!-- Hero -->
     <section class="hero">
-      <div style="display: flex; justify-content: start; align-items: center; padding-left: 2.5em; width: 100%;">
-        <div>
-          <h1 class="title" style="display: flex; gap: 0.2em;">Turning<span style="font-style: italic; padding-left: 0%;">'what if'</span></h1>
+      <div class="heroLine1">
+        <div style="display: flex;" class="heroFirst" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
+          <h1 class="heroLine1TitleA title" style="width: fit-content;">Turning</h1>
+          <h1 class="heroLine1TitleB title" style="width: fit-content;">'what if'</h1>
         </div>
 
-        <div style="margin-top: -0.2em; margin-left: 3.7em;">
-          <img style="width: 72%; margin-left: 0em;" src="./public/landing1.png" alt="img" />
+        <div class="heroLine1ImgContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="600">
+          <img src="./public/landing1.png" alt="img" class="heroLine1Img" />
         </div>
       </div>
 
-      <div>
-        <h1 style="padding-left: 8%" class="title">
-          int<img src="./public/heroSmiley.png" alt="" style="width: 4.2%;"><span style="font-style: italic">'heck yeah'</span>
+      <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
+        <h1 class="title heroLine2">
+          int<img src="./public/heroSmiley.png" alt="" class="heroLine2Img"><span style="font-style: italic" class="heroLine2TitleB">'heck yeah'</span>
         </h1>
 
-        <h1 style="padding-left: 45%;" class="title">since whenever.</h1>
+        <h1 class="title heroLine3">since whenever.</h1>
       </div>
     </section>
 
     <!-- Introduction -->
     <section class="introduction">
-      <div class="introText">
-        <h2 style="font-weight: 500; font-size: 24px;" class="content">
+      <div class="introText" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
+        <h2 class="content introContent">
           We craft killer digital vibes for any screen, using top-notch tools
           and smart coding to keep it smooth and scalable. See how our squad
           sets you up to win.
         </h2>
       </div>
-      <div style="margin-right: 2%;">
-        <a href="./service.html"><button class="btnText">Get Started</button></a>
+      <div>
+        <a href="service.html"><button class="btnText">Get Started</button></a>
       </div>
     </section>
 
     <!-- Services -->
     <section class="services">
-      <h1 class="title">WE CAN BUILD <i>ALMOST</i> ANYTHING.</h1>
-      <h2 class="content">From pitch decks to fully functioning applications.</h2>
-      <h2 class="content">Have questions? Find our FAQs here, or ask away.</h2>
+      <h1 class="title" data-aos="fade-up" data-aos-duration="800">WE CAN BUILD <i>ALMOST</i> <br>ANYTHING.</h1>
+      <h2 class="content h2A" data-aos="fade-up" data-aos-duration="800">From pitch decks to fully functioning applications.</h2>
+      <h2 class="content" data-aos="fade-up" data-aos-duration="800">Have questions? Find our FAQs here, or ask away.</h2>
 
-      <div style="width: 50%;">
-        <a href="/"><button class="btn btnText">FAQs</button></a>
+      <div style="width: 50%;" data-aos="fade-up" data-aos-duration="800">
+        <a href="contact.html"><button class="btn btnText">FAQs</button></a>
       </div>
     </section>
 
@@ -75,9 +80,9 @@
      <section class="howWeCook">
       <h1 class="title">How we cook?</h1>
 
-      <div class="cookList">
+      <div class="cookList" data-aos="fade-up" data-aos-duration="600">
         <div class="cookListItem">
-          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: center; gap: 0.5em;">
+          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: start; gap: 0.5em; width: 100%;">
             <div class="cookListNumber title"><span class="cookListDigit">1.</span></div>
             <h2 class="content">Vision alignment</h2>
           </div>
@@ -86,7 +91,7 @@
         </div>
 
         <div class="cookListItem">
-          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: center; gap: 0.5em;">
+          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: start; gap: 0.5em; width: 100%;">
             <div class="cookListNumber title"><span class="cookListDigit">2.</span></div>
             <h2 class="content">Brainstorming</h2>
           </div>
@@ -95,7 +100,7 @@
         </div>
 
         <div class="cookListItem">
-          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: center; gap: 0.5em;">
+          <div style="margin-bottom: 1em; display: flex; align-items: center; justify-content: start; gap: 0.5em; width: 100%;">
             <div class="cookListNumber title"><span class="cookListDigit">3.</span></div>
             <h2 class="content">Execution & Launch</h2>
           </div>
@@ -111,45 +116,47 @@
           <img src="public/bannerCooketh.png" alt="">
         </div>
 
-        <div>
+        <div class="bannerText" class="content" data-aos="fade-left" data-aos-duration="500">
           <h2 class="title">WE BRING THE HEAT, SO YOUR IDEAS NEVER FALL FLAT</h2>
         </div>
       </section>
 
     <!-- Our Products -->
-     <section class="products">
-      <h1>Our Products</h1>
-
+    <section class="products">
+      <h1 data-aos="fade-zoom-in" data-aos-duration="1200" data-aos-delay="300">Our Products</h1>
+    
       <div class="carousel">
         <div>
-          <a href="/CookethOrg/index.html"><button class="btn2"><i class="fa-solid fa-caret-left"></i></button></a>
+          <button class="btn2 btn-prev"><i class="fa-solid fa-caret-left"></i></button>
         </div>
-
-        <div class="productContainer">
-          <div class="productContent">
-            <div class="productImage">
-              <img src="./public/productImg.avif" alt="">
-            </div>
-
-            <div class="productText">
-              <h2 class="title">Cooketh Flow</h2>
-              <p class="faqFont productLink"><u><a href="https://cookethflow.framer.website/">https://cookethflow.framer.website/</a></u></p>
-              <p class="subContent productDesc">Cooketh Flow is an open-source, powerful visual thinking tool designed for teams and individuals to brainstorm, sketch, and organize ideas effortlessly.</p>
+    
+        <div class="productContainer swiper">
+          <div class="swiper-wrapper" id="product-wrapper" class="content" data-aos="fade-down" data-aos-duration="500">
+            <!-- JS will inject product slides here -->
+    
+            <!-- More Brewing slide -->
+            <div class="productContentMoreBrewing swiper-slide">
+              <div class="productImage">
+                <img src="./public/MoreBrewing.png" alt="" style="width: 100%;">
+              </div>
+              <div class="productTextMoreBrewing">
+                <h2 class="title" style="color: #8f2121;">MORE BREWING...</h2>
+              </div>
             </div>
           </div>
         </div>
-
+    
         <div>
-          <a href="/CookethOrg/index.html"><button class="btn2"><i class="fa-solid fa-caret-right"></i></button></a>
+          <button class="btn2 btn-next"><i class="fa-solid fa-caret-right"></i></button>
         </div>
       </div>
-     </section>
+    </section>
 
     <!-- Team -->
     <section class="team">
-      <h2 class="title">Our Team</h2>
+      <h2 class="title" data-aos="fade-up" data-aos-duration="800">Our Team</h2>
 
-      <div class="team-member">
+      <div class="team-member" data-aos="fade-up" data-aos-duration="800">
         <img src="./public/team/antara.png" alt="Antara Paul" />
         <p class="teamName">Antara Paul</p>
         <p class="teamRole content">Designer</p>
@@ -158,7 +165,7 @@
         </a>
       </div>
 
-      <div class="team-member">
+      <div class="team-member" data-aos="fade-up" data-aos-duration="800">
         <img src="./public/team/subroto.png" alt="Subroto Banerjee" />
 
         <p class="teamName">Subroto Banerjee</p>
@@ -168,19 +175,19 @@
         </a>
       </div>
 
-      <div class="team-member">
+      <!-- <div class="team-member">
         <img src="./public/team/mrutyunjay.png" alt="Mrutyunjay Lodhi" />
         <p class="teamName">Mrutyunjay Lodhi</p>
         <p class="teamRole content">Developer</p>
         <a href="https://x.com/Mrutyunjay1010" target="_blank" class="xlogo">
           <img src="./public/x.png" alt="X not found" />
         </a>
-      </div>
+      </div> -->
     </section>
 
     <!-- Footer -->
      <!-- <div id="footer"></div> -->
-      <footer class="custom-footer">
+      <footer class="custom-footer" data-aos="fade-up" data-aos-duration="800">
         <div class="footer-left">
           <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo"/>
           <div class="footer-socials">
@@ -203,7 +210,60 @@
       </footer>
 
     <script src="./src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="./components/script.js"></script> -->
     <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      const wrapper = document.getElementById("product-wrapper");
+      const moreBrewingSlide = document.querySelector(".productContentMoreBrewing");
+    
+      fetch("./products.json")
+        .then(response => response.json())
+        .then(products => {
+          products.forEach(item => {
+            let slide = document.createElement("div");
+            slide.classList.add("productContent", "swiper-slide");
+            slide.innerHTML = `
+              <div class="productImage">
+                <img src="${item.image}" alt="${item.title}">
+              </div>
+              <div class="productText">
+                <h2 class="title">${item.title}</h2>
+                <p class="faqFont productLink">
+                  <u><a href="${item.link}" target="_blank">${item.link}</a></u>
+                </p>
+                <p class="subContent productDesc">${item.description}</p>
+              </div>
+            `;
+            wrapper.insertBefore(slide, moreBrewingSlide);
+          });
+    
+          const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+          
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.btn-next',
+              prevEl: '.btn-prev',
+            },
+          
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          });
+        });
+    </script>
+    <script>
+      AOS.init({ once: true });
+    </script>
   </body>
 </html>
