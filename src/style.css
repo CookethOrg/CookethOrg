@@ -1387,13 +1387,13 @@ nav {
     padding-left: 0;
   }
 
-  /* .heroLine1TitleA {
-    font-size: 50px !important;
+  .heroLine1TitleA {
+    font-size: 38px !important;
   }
 
   .heroLine1TitleB {
-    font-size: 50px !important;
-  } */
+    font-size: 38px !important;
+  }
 
   .heroLine1ImgContainer {
     position: absolute;
@@ -1402,11 +1402,7 @@ nav {
   }
 
   .heroLine2 {
-    justify-content: center;
-  }
-
-  .heroLine2TitleB {
-    font-size: 1.3em;
+    padding-left: 3.5%;
   }
 
   .heroLine2Img {
