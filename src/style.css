@@ -1247,19 +1247,19 @@ nav {
   }
 
   .heroLine1TitleA {
-    font-size: 50px !important;
+    font-size: 45px !important;
     padding-left: 5%;
   }
 
   .heroLine1TitleB {
-    font-size: 50px !important;
+    font-size: 45px !important;
     font-weight: 500 !important;
     padding-left: 0em;
   }
 
   .heroLine2TitleB {
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .heroLine1ImgContainer {
@@ -1277,7 +1277,7 @@ nav {
   }
 
   .heroLine2 {
-    padding-left: 0em;
+    padding-left: 4%;
     display: flex;
     justify-content: start;
   }
@@ -1291,7 +1291,7 @@ nav {
   }
 
   .heroLine3 {
-    padding-left: 0em;
+    padding-left: 4%;
     display: flex;
     justify-content: start;
     text-align: left;
@@ -1359,18 +1359,22 @@ nav {
     padding-right: 5%;
   }
 
-  .heroLine1TitleA {
-    /* margin-left: 0.5em !important; */
-  }
-
   .heroLine1ImgContainer {
     right: 6%;
     margin-bottom: 10px;
   }
 
+  .heroLine2 {
+    padding-left: 0;
+  }
+
   .heroLine2TitleB {
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 500;
+  }
+
+  .heroLine3 {
+    padding-left: 0;
   }
 
   .productTextMoreBrewing h2 {
@@ -1383,13 +1387,13 @@ nav {
     padding-left: 0;
   }
 
-  .heroLine1TitleA {
+  /* .heroLine1TitleA {
     font-size: 50px !important;
   }
 
   .heroLine1TitleB {
     font-size: 50px !important;
-  }
+  } */
 
   .heroLine1ImgContainer {
     position: absolute;
