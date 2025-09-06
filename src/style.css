@@ -1141,6 +1141,7 @@ nav {
   .introduction button {
     font-size: 18px;
     padding: 0.8em 2em;
+    margin-top: 1em;
   }
 
   .howWeCook {
@@ -1264,8 +1265,8 @@ nav {
 
   .heroLine1ImgContainer {
     position: absolute;
-    right: 10%;
-    margin-bottom: 10px;
+    right: 15%;
+    margin-bottom: 50px;
   }
 
   .heroLine1Img {
@@ -1355,17 +1356,21 @@ nav {
 }
 
 @media (max-width: 380px) {
+  .hero {
+    width: 95vw;
+  }
+
   .heroLine1 {
-    padding-right: 5%;
+    padding-right: 0%;
   }
 
   .heroLine1ImgContainer {
-    right: 6%;
-    margin-bottom: 10px;
+    right: 10%;
+    margin-bottom: 55px;
   }
 
   .heroLine2 {
-    padding-left: 0;
+    padding-left: 3.5%;
   }
 
   .heroLine2TitleB {
@@ -1374,7 +1379,7 @@ nav {
   }
 
   .heroLine3 {
-    padding-left: 0;
+    padding-left: 3.5%;
   }
 
   .productTextMoreBrewing h2 {
@@ -1397,8 +1402,8 @@ nav {
 
   .heroLine1ImgContainer {
     position: absolute;
-    right: 0%;
-    margin-bottom: 10px;
+    right: 10%;
+    margin-bottom: 45px;
   }
 
   .heroLine2 {
