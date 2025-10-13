@@ -28,6 +28,16 @@
   line-height: 1.9em;
 }
 
+.cookethLink {
+  text-shadow: 1px 1px 3px rgb(228, 147, 7);
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.cookethLink:hover {
+  text-shadow: 2px 2px 4px rgba(228, 147, 7, 1);
+}
+
 @media (max-width: 525px) {
   .about {
     padding: 0 4vw;
