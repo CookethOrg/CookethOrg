@@ -580,7 +580,7 @@ nav {
 
 .team-member {
   display: inline-block;
-  margin: 1.5rem 5rem 5rem 5rem;
+  margin: 1.5rem 2.5rem 2.5rem 2.5rem;
   text-align: center;
 }
 
@@ -595,6 +595,7 @@ nav {
   color: #642714;
   font-size: 17px;
   font-weight: 500;
+  width: 200px;
 }
 
 .team-member img {
@@ -604,6 +605,7 @@ nav {
   border-radius: 50%;
   background-color: rgba(237, 99, 37, 1);
 }
+
 .xlogo img {
   height: 50px;
   width: 50px;
