@@ -569,6 +569,14 @@ nav {
   margin-bottom: 0px;
   background-color: #fde2cf;
   text-align: center;
+  justify-content: flex-start;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .team h2 {
@@ -580,7 +588,7 @@ nav {
 
 .team-member {
   display: inline-block;
-  margin: 1.5rem 5rem 5rem 5rem;
+  margin: 1.5rem 6rem 3rem 6rem;
   text-align: center;
 }
 
@@ -595,6 +603,7 @@ nav {
   color: #642714;
   font-size: 17px;
   font-weight: 500;
+  width: 250px;
 }
 
 .team-member img {
@@ -604,6 +613,7 @@ nav {
   border-radius: 50%;
   background-color: rgba(237, 99, 37, 1);
 }
+
 .xlogo img {
   height: 50px;
   width: 50px;
