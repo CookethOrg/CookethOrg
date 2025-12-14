@@ -1,0 +1,56 @@
+[
+    {
+        "tier": "1",
+        "build": "Starter",
+        "price": "₹25,000 - ₹50,000",
+        "perfectFor": "early-stage founders, student startups, small businesses",
+        "included": ["5-8 screens/pages", "Simple UI or clean custom UI", "Basic authentication", "BaaS backend (Firebase / Supabase)", "CRUD features (Optional)", "Basic testing", "Deployment to Play Store / Web hosting", "1 week free support"],
+        "idealFor": "MVPs, simple apps, landing-page backed tools",
+        "region": "Domestic"
+    },
+    {
+        "tier": "2",
+        "build": "Growth",
+        "price": "₹60,000 - ₹80,000",
+        "perfectFor": "founders ready to scale, startups in MVP → v1 stage",
+        "included": ["9-15 screens/pages","Full authentication system","Custom API integration (or BaaS)","Strong UI/UX","Basic animations","Simple admin panel","Database design","Testing + launch support","1-2 weeks post-launch support"],
+        "idealFor": "more complex apps, SaaS dashboards, multi-role apps",
+        "region": "Domestic"
+    },
+    {
+        "tier": "3",
+        "build": "Pro",
+        "price": "₹1,50,000 onwards",
+        "perfectFor": "funded startups, enterprise clients, founders with long-term vision",
+        "included": ["Unlimited screens","Custom backend (FastAPI, Node, Supabase, etc.)","Payment gateway + advanced integrations","Push notifications","Dashboard / CMS","Role management","Premium UI/UX","Production-level security","Technical documentation","1-2 months free support"],
+        "idealFor": "full-scale products, SaaS, marketplace apps, consumer platforms",
+        "region": "Domestic"
+    },
+    {
+        "tier": "",
+        "build": "",
+        "price": "",
+        "perfectFor": "",
+        "included": "",
+        "idealFor": "",
+        "region": ""
+    },
+    {
+        "tier": "",
+        "build": "",
+        "price": "",
+        "perfectFor": "",
+        "included": "",
+        "idealFor": "",
+        "region": ""
+    },
+    {
+        "tier": "",
+        "build": "",
+        "price": "",
+        "perfectFor": "",
+        "included": "",
+        "idealFor": "",
+        "region": ""
+    }
+]

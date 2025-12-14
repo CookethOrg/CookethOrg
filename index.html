@@ -20,6 +20,8 @@
             <li><a href="index.html" class="thispagebutton">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="service.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
 
@@ -152,6 +154,63 @@
       </div>
     </section>
 
+    <!-- Our Results -->
+    <section class="results tech">
+      <h1 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">Our Results</h1>
+
+      <div class="techSection">
+        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
+          <h2 class="content">Result 1</h2>
+
+          <ul class="subContent">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+
+        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">
+          <h2 class="content">Result 2</h2>
+
+          <ul class="subContent">
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+
+        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
+          <h2 class="content">Result 3</h2>
+
+          <ul class="subContent">
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+
+        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-duration="800">
+          <h2 class="content">Result 4</h2>
+
+          <ul class="subContent">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Pricing -->
+    <section class="pricing">
+      <h2 class="title" data-aos="fade-up" data-aos-duration="800">Our Pricing</h2>
+
+      <div class="pricingContainer" id="pricingContainer"></div>
+
+      <div>
+        <a href="pricing.html"><button class="btn btnText">See full Pricing</button></a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials pricing">
+      <h2 class="title" data-aos="fade-up" data-aos-duration="800">Testimonials</h2>
+
+      <div class="testimonialContainer" id="testimonialContainer"></div>
+    </section>
+
     <!-- Team -->
     <section class="team">
       <h2 class="title" data-aos="fade-up" data-aos-duration="800">Our Team</h2>
@@ -281,6 +340,124 @@
             },
           });
         });
+    </script>
+    <script>
+      const pricingContainer = document.getElementById("pricingContainer");
+
+// change this dynamically if needed
+const selectedRegion = "Domestic"; 
+
+fetch("./pricing.json")
+  .then(res => res.json())
+  .then(data => {
+    const filteredData = data.filter(
+      item => item.region === selectedRegion
+    );
+
+    pricingContainer.innerHTML = filteredData
+      .map(tier => createTierHTML(tier))
+      .join("");
+  })
+  .catch(err => console.error("Error loading pricing data:", err));
+
+  function createTierHTML(tier) {
+    return `
+      <div class="pricingTiers">
+        <div class="tierContent title">
+          <h3>Tier ${tier.tier}</h3>
+          <h4>${tier.build} Build</h4>
+        </div>
+  
+        <p class="price title">
+          <strong>${tier.price}</strong>
+        </p>
+  
+        <p class="perfect content">
+          Perfect for: ${tier.perfectFor}
+        </p>
+  
+        <button class="btn3 btnText">
+          Choose ${tier.build} Plan
+        </button>
+  
+        <div class="included content">
+          <p>What's Included:</p>
+          <ul class="includeItems">
+            ${tier.included
+              .map(
+                item =>
+                  `<li><i class="fa-solid fa-check"></i> ${item}</li>`
+              )
+              .join("")}
+          </ul>
+        </div>
+  
+        <p class="perfect info">
+          <strong>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            For add ons price increases proportionally
+          </strong>
+        </p>
+  
+        <p class="perfect content">
+          <strong>Ideal For:</strong> ${tier.idealFor}
+        </p>
+      </div>
+    `;
+  }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("testimonialContainer");
+
+  if (!container) {
+    console.error("testimonials-container not found");
+    return;
+  }
+
+  fetch("./testimonial.json")
+    .then(res => res.json())
+    .then(data => {
+      container.innerHTML = data
+        .map(item => createTestimonialHTML(item))
+        .join("");
+    })
+    .catch(err =>
+      console.error("Error loading testimonials data:", err)
+    );
+});
+
+function createTestimonialHTML(item) {
+  return `
+    <div class="testimonialItem">
+      <h1 class="quotes title">
+        <i class="fa-solid fa-quote-right"></i>
+      </h1>
+
+      <p class="content">
+        "${item.testimonial}"
+      </p>
+
+      <div class="reviewer">
+        <div class="content">
+          <img 
+            src="${item.image}" 
+            alt="${item.client}" 
+            class="testImg"
+          />
+          <div class="user">
+            <h3>${item.client}</h3>
+            <p>${item.profession}</p>
+          </div>
+        </div>
+
+        <a href="${item.social}" target="_blank" rel="noopener">
+          <i class="fa-regular fa-share-from-square"></i>
+        </a>
+      </div>
+    </div>
+  `;
+}
     </script>
     <script>
       AOS.init({ once: true });
