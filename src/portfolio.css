@@ -1,0 +1,19 @@
+.contentBox {
+    height: 47vh;
+    padding: 20vh 0 8vh 0;
+    color: #1e1a16 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contentBox i {
+    color: #1e1a16 !important;
+    font-size: 80px;
+}
+
+.contentBox h2 {
+    color: #1e1a16 !important;
+    font-size: 50px;
+}

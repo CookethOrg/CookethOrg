@@ -4,53 +4,59 @@
         "build": "Starter",
         "price": "₹25,000 - ₹50,000",
         "perfectFor": "early-stage founders, student startups, small businesses",
-        "included": ["5-8 screens/pages", "Simple UI or clean custom UI", "Basic authentication", "BaaS backend (Firebase / Supabase)", "CRUD features (Optional)", "Basic testing", "Deployment to Play Store / Web hosting", "1 week free support"],
+        "included": ["5-8 screens/pages", "Simple UI or clean custom UI", "Basic authentication", "BaaS backend (Firebase / Supabase)", "CRUD features (Optional)", "Basic testing", "Website and App Deployment", "1 week free support"],
         "idealFor": "MVPs, simple apps, landing-page backed tools",
-        "region": "Domestic"
+        "region": "Domestic",
+        "delay": 100
     },
     {
         "tier": "2",
         "build": "Growth",
         "price": "₹60,000 - ₹80,000",
         "perfectFor": "founders ready to scale, startups in MVP → v1 stage",
-        "included": ["9-15 screens/pages","Full authentication system","Custom API integration (or BaaS)","Strong UI/UX","Basic animations","Simple admin panel","Database design","Testing + launch support","1-2 weeks post-launch support"],
+        "included": ["9-15 screens/pages","Strong UI/UX","Full authentication system","Custom API integration (or BaaS)","Simple admin panel","Testing + launch support","Database design","1-2 weeks post-launch support"],
         "idealFor": "more complex apps, SaaS dashboards, multi-role apps",
-        "region": "Domestic"
+        "region": "Domestic",
+        "delay": 200
     },
     {
         "tier": "3",
         "build": "Pro",
         "price": "₹1,50,000 onwards",
         "perfectFor": "funded startups, enterprise clients, founders with long-term vision",
-        "included": ["Unlimited screens","Custom backend (FastAPI, Node, Supabase, etc.)","Payment gateway + advanced integrations","Push notifications","Dashboard / CMS","Role management","Premium UI/UX","Production-level security","Technical documentation","1-2 months free support"],
+        "included": ["Unlimited screens","Premium UI/UX","Role management","Custom backend","Dashboard / CMS","Production-level security","Payment + advanced integrations","1-2 months free support"],
         "idealFor": "full-scale products, SaaS, marketplace apps, consumer platforms",
-        "region": "Domestic"
+        "region": "Domestic",
+        "delay": 300
     },
     {
-        "tier": "",
-        "build": "",
-        "price": "",
-        "perfectFor": "",
-        "included": "",
-        "idealFor": "",
-        "region": ""
+        "tier": "1",
+        "build": "Starter",
+        "price": "$1200 - $2000",
+        "perfectFor": "early-stage founders, student startups, small businesses",
+        "included": ["5-8 screens/pages", "Simple UI or clean custom UI", "Basic authentication", "BaaS backend (Firebase / Supabase)", "CRUD features (Optional)", "Basic testing", "Website and App Deployment", "1 week free support"],
+        "idealFor": "MVPs, simple apps, landing-page backed tools",
+        "region": "International",
+        "delay": 100
     },
     {
-        "tier": "",
-        "build": "",
-        "price": "",
-        "perfectFor": "",
-        "included": "",
-        "idealFor": "",
-        "region": ""
+        "tier": "2",
+        "build": "Growth",
+        "price": "$2500 - $5000",
+        "perfectFor": "founders ready to scale, startups in MVP → v1 stage",
+        "included": ["9-15 screens/pages","Strong UI/UX","Full authentication system","Custom API integration (or BaaS)","Simple admin panel","Testing + launch support","Database design","1-2 weeks post-launch support"],
+        "idealFor": "more complex apps, SaaS dashboards, multi-role apps",
+        "region": "International",
+        "delay": 200
     },
     {
-        "tier": "",
-        "build": "",
-        "price": "",
-        "perfectFor": "",
-        "included": "",
-        "idealFor": "",
-        "region": ""
+        "tier": "3",
+        "build": "Pro",
+        "price": "$8000 onwards",
+        "perfectFor": "funded startups, enterprise clients, founders with long-term vision",
+        "included": ["Unlimited screens","Premium UI/UX","Role management","Custom backend","Dashboard / CMS","Production-level security","Payment + advanced integrations","1-2 months free support"],
+        "idealFor": "full-scale products, SaaS, marketplace apps, consumer platforms",
+        "region": "International",
+        "delay": 300
     }
 ]

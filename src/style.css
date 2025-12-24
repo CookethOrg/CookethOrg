@@ -730,6 +730,46 @@ nav {
   color: #1e1a16;
 }
 
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 1em 3em;
+}
+
+.btn-overlay {
+  background: red;
+  display: flex;
+  width: 7.25%;
+  justify-content: start;
+  padding: 0.25em;
+  border-radius: 2em;
+  box-shadow: rgb(142, 33, 33) 0px 5px 0px 0px;
+  background-color: #f8a720;
+  transition: all 0.5s ease-in-out;
+}
+
+.region-changed {
+  justify-content: end !important;
+}
+
+.btn-container button {
+  padding: 0.5em 0.775em;
+  /* margin-bottom: 0.2em; */
+  border-radius: 50%;
+  border-width: 0px;
+  font-size: 1.5em;
+  color: #fde2cf;
+  box-shadow: rgb(142, 33, 33) 1px 2px 1px 1px;
+  background-color: rgba(237, 99, 37, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-container button:hover{
+  box-shadow: 0px 0px 0px 0px black;
+  margin-bottom: 0em;
+}
+
 .pricingContainer {
   width: 100%;
   display: flex;
@@ -790,6 +830,8 @@ nav {
   flex-direction: column;
   text-align: left;
   margin: 1.2em 0em;
+  /* background-color: red; */
+  width: 100%;
 }
 
 .included p {

@@ -1,0 +1,134 @@
+[
+  {
+    "Feature": "Screens / Pages",
+    "Starter": "5-8",
+    "Growth": "9-15",
+    "Pro": "Unlimited"
+  },
+  {
+    "Feature": "UI Design",
+    "Starter": "Simple / Clean UI",
+    "Growth": "Strong UI/UX",
+    "Pro": "Premium, Brand-Focused UI/UX"
+  },
+  {
+    "Feature": "Custom UI Components",
+    "Starter": "Limited",
+    "Growth": "Yes",
+    "Pro": "Yes (Advanced)"
+  },
+  {
+    "Feature": "Animations",
+    "Starter": "-",
+    "Growth": "Basic",
+    "Pro": "Advanced / Micro-interactions"
+  },
+  {
+    "Feature": "Authentication (Email/Password)",
+    "Starter": "Yes",
+    "Growth": "Yes",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "OTP Verification",
+    "Starter": "-",
+    "Growth": "Yes",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "Password Reset",
+    "Starter": "-",
+    "Growth": "Yes",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "Social Login",
+    "Starter": "-",
+    "Growth": "Yes",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "User Roles & Permissions",
+    "Starter": "-",
+    "Growth": "Limited",
+    "Pro": "Advanced / Multi-Role"
+  },
+  {
+    "Feature": "Admin Panel / Dashboard",
+    "Starter": "-",
+    "Growth": "Basic",
+    "Pro": "Advanced CMS / Dashboard"
+  },
+  {
+    "Feature": "Backend Type",
+    "Starter": "BaaS (Firebase / Supabase)",
+    "Growth": "BaaS or Custom APIs",
+    "Pro": "Fully Custom Backend"
+  },
+  {
+    "Feature": "Database Design",
+    "Starter": "Basic",
+    "Growth": "Structured",
+    "Pro": "Scalable & Optimized"
+  },
+  {
+    "Feature": "CRUD Operations",
+    "Starter": "Optional Add-on",
+    "Growth": "Yes",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "API Integrations",
+    "Starter": "-",
+    "Growth": "Basic",
+    "Pro": "Advanced / Multiple"
+  },
+  {
+    "Feature": "Payment Gateway Integration",
+    "Starter": "-",
+    "Growth": "-",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "Push Notifications",
+    "Starter": "-",
+    "Growth": "-",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "Third-Party Integrations",
+    "Starter": "-",
+    "Growth": "Limited",
+    "Pro": "Advanced"
+  },
+  {
+    "Feature": "Security Practices",
+    "Starter": "Basic",
+    "Growth": "Standard",
+    "Pro": "Production-Grade"
+  },
+  {
+    "Feature": "Testing",
+    "Starter": "Basic",
+    "Growth": "Full Testing",
+    "Pro": "Advanced Testing + QA"
+  },
+  {
+    "Feature": "Deployment & Launch Support",
+    "Starter": "Yes",
+    "Growth": "Yes",
+    "Pro": "Yes"
+  },
+  {
+    "Feature": "Documentation",
+    "Starter": "-",
+    "Growth": "-",
+    "Pro": "Technical Documentation"
+  },
+  {
+    "Feature": "Post-Launch Free Support",
+    "Starter": "1 Week",
+    "Growth": "1-2 Weeks",
+    "Pro": "1-2 Months"
+  }
+]

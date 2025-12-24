@@ -4,20 +4,23 @@
         "image": "./public/team/SK.png",
         "client": "Client Mr. Abcd Xyz",
         "profession": "Professor, IIIT Kalyani",
-        "social": "/"
+        "social": "https://www.linkedin.com/in/swarnabha-khamrui-396353321/",
+        "delay": 100
     },
     {
         "testimonial": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore, provident non doloremque expedita delectus totam officiis facere voluptates consectetur.",
         "image": "./public/team/SK.png",
         "client": "Client Mr. Abcd Xyz",
         "profession": "Professor, IIIT Kalyani",
-        "social": "/"
+        "social": "https://www.linkedin.com/in/swarnabha-khamrui-396353321/",
+        "delay": 200
     },
     {
         "testimonial": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore, provident non doloremque expedita delectus totam officiis facere voluptates consectetur.",
         "image": "./public/team/SK.png",
         "client": "Client Mr. Abcd Xyz",
         "profession": "Professor, IIIT Kalyani",
-        "social": "/"
+        "social": "https://www.linkedin.com/in/swarnabha-khamrui-396353321/",
+        "delay": 300
     }
 ]
