@@ -733,16 +733,16 @@ nav {
 .btn-container {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   padding: 1em 3em;
 }
 
 .btn-overlay {
   background: red;
   display: flex;
-  width: 7.25%;
+  width: 16%;
   justify-content: start;
-  padding: 0.25em;
+  padding: 0.4em;
   border-radius: 2em;
   box-shadow: rgb(142, 33, 33) 0px 5px 0px 0px;
   background-color: #f8a720;
@@ -755,8 +755,7 @@ nav {
 
 .btn-container button {
   padding: 0.5em 0.775em;
-  /* margin-bottom: 0.2em; */
-  border-radius: 50%;
+  border-radius: 1em;
   border-width: 0px;
   font-size: 1.5em;
   color: #fde2cf;

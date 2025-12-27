@@ -350,11 +350,9 @@
       const pricingContainer = document.getElementById("pricingContainer");
       const priceBtn = document.getElementById("pricingBtn");
 
-// Initial selected region
 let selectedRegion = "Domestic"; 
-priceBtn.textContent = "₹"
+priceBtn.textContent = "Indian"
 
-// Function to render pricing based on selectedRegion
 function renderPricing() {
   fetch("./pricing.json")
     .then(res => res.json())
@@ -368,7 +366,6 @@ function renderPricing() {
     .catch(err => console.error("Error loading pricing data:", err));
 }
 
-// Initial render
 renderPricing();
 
 function createTierHTML(tier) {
@@ -407,18 +404,15 @@ function createTierHTML(tier) {
   `;
 }
 
-// Example button logic to change region dynamically
-const changeRegionBtn = document.getElementById("changeRegionBtn"); // Assume you have a button in HTML
+const changeRegionBtn = document.getElementById("changeRegionBtn");
 
 changeRegionBtn.addEventListener("click", () => {
-  // Update variable
+  
   selectedRegion = selectedRegion === "International" ? "Domestic" : "International";
-  priceBtn.textContent = selectedRegion === "International" ? "$" : "₹";
+  priceBtn.textContent = selectedRegion === "International" ? "Overseas" : "Indian";
 
-  // Add a class to container for styling
   changeRegionBtn.classList.toggle("region-changed");
 
-  // Re-render pricing
   renderPricing();
 });
 
