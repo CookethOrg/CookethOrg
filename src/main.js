@@ -19,6 +19,49 @@ document.querySelectorAll(".nav-links li a").forEach(link =>
   })
 );
 
+// Dynamic Results Rendering
+document.addEventListener("DOMContentLoaded", () => {
+  const resultsContainer = document.getElementById("results-container");
+
+  if (resultsContainer) {
+    fetch("./results.json")
+      .then(res => res.json())
+      .then(data => {
+        resultsContainer.innerHTML = data.map((item, index) => `
+          <div class="resultCard" data-aos="zoom-in" data-aos-delay="${index * 100}">
+            <div class="resultShape">
+               <i class="${item.icon}"></i>
+            </div>
+            <h2 class="title resultStat">${item.stat}</h2>
+            <p class="subContent resultDesc">${item.description}</p>
+          </div>
+        `).join("");
+      })
+      .catch(err => console.error("Error loading results:", err));
+  }
+});
+// Dynamic Team Rendering
+document.addEventListener("DOMContentLoaded", () => {
+  const teamContainer = document.getElementById("team-container");
+
+  if (teamContainer) {
+    fetch("./team.json")
+      .then(res => res.json())
+      .then(data => {
+        teamContainer.innerHTML = data.map(member => `
+          <div class="team-member" data-aos="fade-up" data-aos-duration="800">
+            <img src="${member.image}" alt="${member.name}" />
+            <p class="teamName">${member.name}</p>
+            <p class="teamRole content">${member.role}</p>
+            <a href="${member.xLink}" target="_blank" class="xlogo">
+              <img src="./public/x.png" alt="X" />
+            </a>
+          </div>
+        `).join("");
+      })
+      .catch(err => console.error("Error loading team data:", err));
+  }
+});
 
 
 // FAQ JS

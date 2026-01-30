@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Antara Paul",
+    "role": "Lead Product Designer",
+    "image": "./public/team/antara.png",
+    "xLink": "https://x.com/Paul_Antara04"
+  },
+  {
+    "name": "Mrutyunjay Lodhi",
+    "role": "Fullstack Developer",
+    "image": "./public/team/MJ2.png",
+    "xLink": "https://x.com/Mrutyunjay1010"
+  },
+  {
+    "name": "Swarnabha Khamrui",
+    "role": "App Developer",
+    "image": "./public/team/SK.png",
+    "xLink": "https://x.com/SwarnabhaK74163?t=MdY4dmPjZB1Ip30gM8T3_Q&s=09"
+  },
+  {
+    "name": "Saksham Jaiswal",
+    "role": "Fullstack Developer",
+    "image": "./public/team/SJ.png",
+    "xLink": "https://x.com/SakshamJais2004"
+  }
+]

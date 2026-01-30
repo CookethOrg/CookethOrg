@@ -39,55 +39,86 @@
 
     <!-- Tech Stack -->
      <section class="tech">
-      <h1 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">Tech Stack</h1>
+  <h1 class="title" data-aos="fade-up">Tech Stack</h1>
 
-      <div class="techSection">
-        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
-          <h2 class="content">Design</h2>
-
-          <ul class="subContent">
-            <li>Figma,</li>
-            <li>Blender,</li>
-            <li>Spline,</li>
-            <li>Framer,</li>
-            <li>Lovable,</li>
-            <li>Subframe</li>
-          </ul>
-        </div>
-
-        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">
-          <h2 class="content">Frontend</h2>
-
-          <ul class="subContent">
-            <li>Flutter,</li>
-            <li>Dart,</li>
-            <li>Flutterflow,</li>
-            <li>React JS,</li>
-            <li>Next JS</li>
-          </ul>
-        </div>
-
-        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
-          <h2 class="content">Backend</h2>
-
-          <ul class="subContent">
-            <li>Django,</li>
-            <li>Flask,</li>
-            <li>Firebase,</li>
-            <li>Supabase</li>
-          </ul>
-        </div>
-
-        <div class="techContainer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-duration="800">
-          <h2 class="content">Databases</h2>
-
-          <ul class="subContent">
-            <li>MySQL,</li>
-            <li>PostgresSQL</li>
-          </ul>
-        </div>
+  <div class="tech-dashboard" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="tech-nav">
+      <div class="tech-nav-item active" onclick="showTech('design', this)">
+        <i class="fa-solid fa-pen-nib"></i> <span>Design</span>
       </div>
-     </section>
+      <div class="tech-nav-item" onclick="showTech('frontend', this)">
+        <i class="fa-solid fa-code"></i> <span>Frontend</span>
+      </div>
+      <div class="tech-nav-item" onclick="showTech('backend', this)">
+        <i class="fa-solid fa-server"></i> <span>Backend</span>
+      </div>
+      <div class="tech-nav-item" onclick="showTech('databases', this)">
+        <i class="fa-solid fa-database"></i> <span>Databases</span>
+      </div>
+    </div>
+
+    <div class="tech-content-viewport">
+      <div id="tech-details" class="tech-details-container">
+        <h2 class="content">Design Tools</h2>
+        <ul class="subContent">
+          <li>Figma</li>
+          <li>Blender</li>
+          <li>Spline</li>
+          <li>Framer</li>
+          <li>Lovable</li>
+          <li>Subframe</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const techData = {
+    design: {
+      title: "Design Tools",
+      items: ["Figma", "Blender", "Spline", "Framer", "Lovable", "Subframe"]
+    },
+    frontend: {
+      title: "Frontend Development",
+      items: ["Flutter", "Dart", "Flutterflow", "React JS", "Next JS", "Tailwind CSS"]
+    },
+    backend: {
+      title: "Backend Services",
+      items: ["Django", "Flask", "Firebase", "Supabase", "Node.js"]
+    },
+    databases: {
+      title: "Databases",
+      items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
+    }
+  };
+
+  function showTech(category, element) {
+    // Update active state in Nav
+    document.querySelectorAll('.tech-nav-item').forEach(item => item.classList.remove('active'));
+    element.classList.add('active');
+
+    const container = document.getElementById('tech-details');
+    
+    // Smooth transition: Fade out
+    container.style.opacity = '0';
+    container.style.transform = 'translateX(20px)';
+
+    setTimeout(() => {
+      const data = techData[category];
+      let itemsHtml = data.items.map(item => `<li>${item}</li>`).join('');
+      
+      container.innerHTML = `
+        <h2 class="content">${data.title}</h2>
+        <ul class="subContent">${itemsHtml}</ul>
+      `;
+
+      // Fade in and slide back
+      container.style.opacity = '1';
+      container.style.transform = 'translateX(0)';
+    }, 250);
+  }
+</script>
 
     <!-- Detail Services -->
     <section class="detailServices">
