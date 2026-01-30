@@ -37,6 +37,50 @@
       <h2 class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500">From pitch decks to fully functioning applications.</h2>
     </section>
 
+        <!-- Detail Services -->
+  <section class="detailServices">
+      <div class="services-header" data-aos="fade-up">
+        <h1 class="title">Our Menu</h1>
+        <p class="content">Pick your flavor. We handle the ingredients.</p>
+      </div>
+
+      <div id="dynamic-services-list" class="services-dashboard-grid">
+        </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const serviceContainer = document.getElementById("dynamic-services-list");
+
+        if (serviceContainer) {
+          // REPLACE the fetch block in service.html with this specific structure
+fetch("./services.json")
+  .then(res => res.json())
+  .then(data => {
+    serviceContainer.innerHTML = data.map((service, index) => `
+      <div class="service-main-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+        <div class="service-card-header">
+          <div class="cookListNumber"><span class="cookListDigit title">${service.id}</span></div>
+          <h2 class="content">${service.title}</h2>
+        </div>
+        <div class="service-card-body">
+          <ul class="service-sub-list">
+            ${service.details.map(item => `
+              <li>
+                <h3 class="title">${item.subTitle}</h3>
+                <p class="subContent">${item.desc}</p>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    `).join("");
+  })
+  .catch(err => console.error("Error loading services:", err));
+        }
+      });
+    </script>
+
     <!-- Tech Stack -->
      <section class="tech">
   <h1 class="title" data-aos="fade-up">Tech Stack</h1>
@@ -119,161 +163,6 @@
     }, 250);
   }
 </script>
-
-    <!-- Detail Services -->
-    <section class="detailServices">
-      <h1 class="title" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="1500">Services</h1>
-
-      <!-- Service Item 1 -->
-      <div class="serviceItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">
-        <div class="detailedServiceTitle">
-          <div class="cookListNumber"><span class="cookListDigit title">1.</span></div>
-          <h2 class="content">Branding and Visual Identity</h2>
-        </div>
-
-        <ul class="serviceItemList subContent">
-          <li>
-            <div>
-              <h3>Branding</h3>
-              <p>Logo design, visual identity, style guides, illustrations, and icons.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>UI/UX</h3>
-              <p>Website and mobile app UI/UX, design systems, microinteractions, onboarding, prototyping, and UX audits (e.g., WCAG compliance).</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Marketing Design</h3>
-              <p>Landing pages, pitch decks, email templates, social media kits, and ad creatives.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Packaging and Merch.</h3>
-              <p>Product packaging, branded swag (e.g., T-shirts, stickers).</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Event Design</h3>
-              <p>Conference booths, banners, and digital displays.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Service Item 2 -->
-      <div class="serviceItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">
-        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
-          <div class="cookListNumber"><span class="cookListDigit title">2.</span></div>
-          <h2 class="content">Software Development</h2>
-        </div>
-
-        <ul class="serviceItemList subContent">
-          <li>
-            <div>
-              <h3>Mobile Apps</h3>
-              <p>Native (iOS/Android) or cross-platform apps, push notifications, in-app purchases, and device-specific features.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Web Apps</h3>
-              <p>Responsive web design, PWAs, SPAs, CMS integration, SEO, and web security.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Desktop Apps</h3>
-              <p>Apps for Windows, macOS, or Linux.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Backend</h3>
-              <p>APIs, databases (PostgreSQL, MongoDB), and third-party integrations (e.g., Stripe, social logins).</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>CLI Tools & SDKs</h3>
-              <p>Command-line tools and libraries.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Service Item 3 -->
-      <div class="serviceItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">
-        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
-          <div class="cookListNumber"><span class="cookListDigit title">3.</span></div>
-          <h2 class="content">Additional Services</h2>
-        </div>
-
-        <ul class="serviceItemList subContent">
-          <li>
-            <div>
-              <h3>Strategy and Research</h3>
-              <p>Moodboards, user personas, journey maps, and content strategy.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Data Visualization</h3>
-              <p>Custom charts, KPIs, and dashboards.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Gamification</h3>
-              <p>Badges, progress bars, and user engagement features.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Testing and Compliance</h3>
-              <p>Unit/integration testing, accessibility (WCAG), and regulatory compliance (GDPR, HIPAA).</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Maintenance</h3>
-              <p>Post-launch support, updates, and documentation.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Scalability</h3>
-              <p>Integration with existing systems and scalable hosting (AWS, Google Cloud).</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Service Item 4 -->
-      <div class="serviceItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">
-        <div style="margin-bottom: 0.8em; display: flex; align-items: center; justify-content: center; gap: 1.25em;">
-          <div class="cookListNumber"><span class="cookListDigit title">4.</span></div>
-          <h2 class="content">Delivery & Support</h2>
-        </div>
-
-        <ul class="serviceItemList subContent">
-          <li>
-            <div>
-              <p>Flexible delivery (MVP or full), pricing (flat fee, hourly, retainer), and timelines.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Source code ownership and legal support (NDAs).</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
 
     <!-- CTA -->
      <section class="cta" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Branding & Creative Design",
+    "details": [
+      { "subTitle": "Visual Identity", "desc": "Logo design, style guides, and custom illustrations that give your brand a soul." },
+      { "subTitle": "UI/UX Design", "desc": "Crafting high-fidelity prototypes and design systems that make users say 'heck yeah'." },
+      { "subTitle": "Pitch Decks", "desc": "Investor-ready decks that tell your story and help you secure that bag." }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Web & App Engineering",
+    "details": [
+      { "subTitle": "Website Dev", "desc": "From high-converting landing pages to complex corporate sites using Next.js and React." },
+      { "subTitle": "App Development", "desc": "Native-feel cross-platform mobile apps for iOS and Android that stay smooth on any screen." },
+      { "subTitle": "E-Commerce", "desc": "Custom shopping experiences with secure checkouts and seamless inventory management." }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "AI & Future Tech",
+    "details": [
+      { "subTitle": "AI / ML Integration", "desc": "Bringing smart features to your product, from recommendation engines to data analysis." },
+      { "subTitle": "Autonomous Agents", "desc": "Custom AI agents that automate your workflows while you sleep." },
+      { "subTitle": "Data Dashboards", "desc": "Turning messy data into beautiful, interactive KPIs and visual stories." }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Startup Launchpad",
+    "details": [
+      { "subTitle": "MVP for Startups", "desc": "We build the core version of your idea in weeks, not months, to get you to market fast." },
+      { "subTitle": "Product Strategy", "desc": "Market research and user journey mapping to ensure your idea actually solves a problem." },
+      { "subTitle": "Scalability Audit", "desc": "Preparing your small-scale app for the big leagues with smart cloud infrastructure." }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Interactive Experiences",
+    "details": [
+      { "subTitle": "Game Development", "desc": "Web-based indie games and interactive gamified experiences for brand engagement." },
+      { "subTitle": "3D & Immersive", "desc": "Integrating 3D elements using Spline or Three.js to make your site feel 4D." },
+      { "subTitle": "Gamification", "desc": "Adding badges, levels, and reward loops to boring apps to keep users hooked." }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Support & Maintenance",
+    "details": [
+      { "subTitle": "Post-Launch Support", "desc": "We don't ghost you. We provide monthly updates and bug fixes to keep things spicy." },
+      { "subTitle": "Cloud Hosting", "desc": "Managed hosting on AWS or Google Cloud so you never worry about downtime." },
+      { "subTitle": "SEO & Performance", "desc": "Speed optimization and SEO audits to make sure you're actually found on Google." }
+    ]
+  }
+]

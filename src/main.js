@@ -40,6 +40,38 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error("Error loading results:", err));
   }
 });
+
+// Dynamic Services Rendering
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceContainer = document.getElementById("dynamic-services-list");
+
+  if (serviceContainer) {
+    fetch("./services.json")
+      .then(res => res.json())
+      .then(data => {
+        serviceContainer.innerHTML = data.map(service => `
+          <div class="serviceItem" data-aos="fade-up">
+            <div class="detailedServiceTitle">
+              <div class="cookListNumber"><span class="cookListDigit title">${service.id}.</span></div>
+              <h2 class="content">${service.title}</h2>
+            </div>
+            <ul class="serviceItemList subContent">
+              ${service.details.map(item => `
+                <li>
+                  <div class="serviceDetailCard">
+                    <h3>${item.subTitle}</h3>
+                    <p>${item.desc}</p>
+                  </div>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        `).join("");
+      })
+      .catch(err => console.error("Error loading services:", err));
+  }
+});
+
 // Dynamic Team Rendering
 document.addEventListener("DOMContentLoaded", () => {
   const teamContainer = document.getElementById("team-container");

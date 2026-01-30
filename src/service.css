@@ -1,395 +1,294 @@
-/* Tech Stack */
-/* Tech Stack Dashboard Styling */
+/* --- Global Service Page Layout --- */
+.services {
+    padding: 22vh 2rem 5vh 2rem;
+    text-align: center;
+    background-color: #fde2cf;
+}
+
+.services h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    color: #8f2121;
+    margin-bottom: 1rem;
+}
+
+/* --- Detail Services Grid (STRICT NO-OVERLAP GRID) --- */
+.detailServices {
+    padding: 5vh 5vw;
+    background-color: #fde2cf;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-header h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: #1e1a16;
+}
+
+/* The Layout Engine - Prevents Overlap */
+.services-dashboard-grid {
+    display: grid;
+    /* Fixed: Added auto-rows to control height */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    grid-auto-rows: 1fr; /* Makes all rows equal height */
+    gap: 3rem; 
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.service-main-card {
+    background: #f8a720;
+    border: 3px solid #642714;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 10px 10px 0px #8f2121;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Makes cards in the same row equal height */
+    position: relative; /* Only for the child number, doesn't affect flow */
+    /* Added to prevent content overflow */
+    min-height: 400px; /* Minimum height for consistency */
+    overflow: hidden; /* Prevents content from spilling out */
+}
+
+.service-main-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 15px 15px 0px #ed6325;
+}
+
+.service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed #642714;
+    /* Added to prevent header from growing too much */
+    flex-shrink: 0;
+}
+
+.service-card-header h2 {
+    font-size: 1.6rem;
+    color: #8f2121;
+    line-height: 1.2;
+    margin: 0;
+    /* Added to prevent text overflow */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.service-card-body {
+    flex-grow: 1;
+    /* Added to enable scrolling if content is too long */
+    overflow-y: auto;
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.service-card-body::-webkit-scrollbar {
+    display: none;
+}
+
+.service-sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.service-sub-list li {
+    padding: 0;
+    margin: 0;
+}
+
+.service-sub-list h3 {
+    font-family: "VVDS", sans-serif;
+    font-size: 1.2rem;
+    color: #642714;
+    margin-bottom: 0.3rem;
+    /* Added to prevent text overflow */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.service-sub-list p {
+    font-size: 0.95rem;
+    color: #642714;
+    line-height: 1.4;
+    font-weight: 500;
+    /* Added to prevent text overflow */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* --- Tech Stack Dashboard --- */
 .tech {
-  padding: 15vh 2rem;
-  background-color: #fde2cf;
+    padding: 10vh 2rem;
+    background-color: #fde2cf;
+    text-align: center;
 }
 
 .tech-dashboard {
-  display: flex;
-  width: 85vw;
-  max-width: 1000px;
-  min-height: 450px;
-  background: #f8a720;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 12px 12px 0px #8f2121;
-  border: 3px solid #642714;
-  margin-top: 2em;
+    display: flex;
+    width: 90vw;
+    max-width: 1100px;
+    min-height: 500px;
+    background: #f8a720;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 12px 12px 0px #8f2121;
+    border: 3px solid #642714;
+    margin: 3rem auto;
 }
 
-/* Left Navigation */
 .tech-nav {
-  width: 35%;
-  background: #642714;
-  display: flex;
-  flex-direction: column;
-  padding: 2em 0;
+    width: 30%;
+    background: #642714;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
 }
 
 .tech-nav-item {
-  padding: 1.5em 2em;
-  color: #fde2cf;
-  font-family: "VVDS", sans-serif;
-  font-size: 1.4em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-left: 6px solid transparent;
-}
-
-.tech-nav-item i {
-  width: 30px;
-  text-align: center;
-}
-
-.tech-nav-item:hover {
-  background: rgba(253, 226, 207, 0.1);
-  padding-left: 2.5em;
+    padding: 1.5rem 2rem;
+    color: #fde2cf;
+    font-family: "VVDS", sans-serif;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 6px solid transparent;
 }
 
 .tech-nav-item.active {
-  background: #ed6325;
-  color: #fff;
-  border-left: 6px solid #fde2cf;
-  padding-left: 2.5em;
+    background: #ed6325;
+    color: #fff;
+    border-left: 6px solid #fde2cf;
 }
 
-/* Right Content */
 .tech-content-viewport {
-  width: 65%;
-  padding: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: radial-gradient(#64271422 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.tech-details-container {
-  width: 100%;
-  transition: all 0.35s ease;
-  opacity: 1;
-  transform: translateX(0);
+    width: 70%;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient(#64271415 1.5px, transparent 0);
+    background-size: 20px 20px;
 }
 
 .tech-details-container h2 {
-  color: #642714;
-  font-size: 2.5em;
-  margin-bottom: 0.8em;
-  text-align: left;
+    color: #642714;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .tech-details-container ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0;
 }
 
 .tech-details-container li {
-  background: #ed6325;
-  color: #fde2cf;
-  padding: 0.8em 1.2em;
-  border-radius: 12px;
-  font-size: 1.2em;
-  font-weight: 600;
-  text-align: center;
-  box-shadow: 4px 4px 0px #8f2121;
-  border: 2px solid #642714;
+    background: #ed6325;
+    color: #fde2cf;
+    padding: 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 2px solid #642714;
+    box-shadow: 4px 4px 0px #8f2121;
 }
 
-/* Responsive Tech Stack */
-@media (max-width: 768px) {
-  .tech-dashboard {
-    flex-direction: column;
-    width: 92vw;
-    height: auto;
-  }
-  .tech-nav {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 0;
-  }
-  .tech-nav-item {
-    padding: 1em 1.5em;
-    font-size: 1em;
-    white-space: nowrap;
-    border-left: none;
-    border-bottom: 4px solid transparent;
-  }
-  .tech-nav-item.active {
-    border-left: none;
-    border-bottom: 4px solid #fde2cf;
-    padding-left: 1.5em;
-  }
-  .tech-content-viewport {
-    width: 100%;
-    padding: 2em;
-  }
-  .tech-details-container h2 {
-    font-size: 1.8em;
-  }
-  .tech-details-container ul {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Detailed Services */
-.detailServices {
-  padding: 16vh 5rem 6vh 5rem;
-  margin-bottom: 0px;
-  background-color: #fde2cf;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.detailServices h1 {
-  color: #1e1a16;
-  font-size: 80px;
-  line-height: 1.1em;
-}
-
-.detailedServiceTitle {
-  margin-bottom: 0.8em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25em;
-}
-
-.serviceItem {
-  width: 72vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin: 2em 0;
-}
-
-.serviceItem h2 {
-  color: #642714;
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: -1.25px;
-}
-
-.serviceItemList {
-  color: #8e2121;
-  margin: 0 7em;
-}
-
-.serviceItemList li {
-  text-align: left;
-  margin: 0.5em 0;
-}
-
-.serviceItemList h3,
-.serviceItemList p {
-  font-size: 26px;
-  letter-spacing: -1.25px;
-  line-height: 1.4em;
-}
-
-.boldService {
-  font-weight: 900 !important;
-}
-
-/* CTA */
+/* --- CTA Section --- */
 .cta {
-  margin: 6vh 4rem 3vh 4rem;
-  padding: 5em 11.5em;
-  background-color: #f8a720;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  justify-self: center;
-  align-items: start;
-  min-height: 90vh;
-  height: fit-content;
-  width: 91vw;
-  border-radius: 10px;
+    margin: 5vh auto;
+    padding: 4rem 2rem;
+    background-color: #f8a720;
+    width: 90vw;
+    max-width: 1200px;
+    border-radius: 24px;
+    border: 3px solid #642714;
+    box-shadow: 12px 12px 0px #8f2121;
+    text-align: center;
 }
 
 .cta h1 {
-  color: #8f2121;
-  font-size: 72px;
-  line-height: 1.1em;
-  margin-bottom: 0.3em;
-}
-
-.cta p,
-.cta ul,
-.cta h3 {
-  color: #642714;
-  font-size: 16px;
-  letter-spacing: -0.18px;
-}
-
-.cta ul {
-  list-style: decimal;
-  margin: 0.5em 1.2em;
-  font-size: 18px;
-}
-
-.cta ul h3 {
-  font-weight: 600;
-}
-
-.aboutContent h3,
-.aboutContent p {
-  line-height: 1.9em !important;
-}
-
-.bold {
-  font-weight: 900 !important;
-}
-
-.btnContainer {
-  width: 45%;
+    color: #8f2121;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
 }
 
 .ctaBtn {
-  width: fit-content;
-  border-width: 0px;
-  height: fit-content;
-  background-color: rgba(237, 99, 37, 1);
-  color: #fde2cf;
-  font-weight: 600;
-  border-radius: 86px;
-  font-size: 24px;
-  letter-spacing: -1px;
-  box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
-  transition: box-shadow 0.35s;
-  padding: 1em 1.5em;
-  margin-top: 1em;
+    background-color: #ed6325;
+    color: #fde2cf;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 0px 6px 0px #8f2121;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: "VVDS", sans-serif;
 }
+
 .ctaBtn:hover {
-  box-shadow: 0 0 0 0;
+    transform: translateY(3px);
+    box-shadow: 0px 3px 0px #8f2121;
 }
 
-@media (max-width: 1055px) {
-  .cta {
-    width: 94vw;
-    padding: 5em 6em;
-  }
+/* --- Responsive Fixes --- */
+@media (max-width: 992px) {
+    .tech-dashboard { flex-direction: column; height: auto; }
+    .tech-nav { width: 100%; flex-direction: row; overflow-x: auto; padding: 0; }
+    .tech-nav-item { white-space: nowrap; border-left: none; border-bottom: 4px solid transparent; }
+    .tech-nav-item.active { border-bottom: 4px solid #fde2cf; }
+    .tech-content-viewport { width: 100%; }
+    .services-dashboard-grid { grid-template-columns: 1fr; }
+    .service-main-card { min-height: 350px; } /* Adjusted for mobile */
 }
 
-@media (max-width: 867px) {
-  .techContainer h2 {
-    font-size: 24px;
-  }
-
-  .techContainer li {
-    font-size: 20px;
-  }
-
-  .techContainer {
-    width: 47%;
-  }
-
-  .detailServices {
-    padding: 16vh 1rem 6vh 1rem;
-  }
-
-  .serviceItem {
-    width: 90%;
-  }
-
-  .serviceItemList {
-    margin: 0 2em;
-  }
+@media (max-width: 768px) {
+    .services-dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 10px;
+    }
+    
+    .service-main-card {
+        min-height: 380px; /* Slightly taller for better readability on mobile */
+        padding: 1.5rem;
+    }
 }
 
-@media (max-width: 707px) {
-  .serviceItem {
-    width: 92vw;
-  }
-
-  .serviceItemList {
-    margin: 0 1.5em;
-  }
-
-  .detailServices {
-    padding: 16vh 0.1rem 6vh 0.1rem;
-  }
-
-  .serviceItem h2 {
-    font-size: 24px;
-  }
-
-  .serviceItemList h3 {
-    font-size: 18px;
-  }
-
-  .serviceItemList p {
-    font-size: 16px;
-  }
-
-  .cta {
-    width: 95vw;
-    padding: 5em 1em;
-  }
-
-  .cta h1 {
-    font-size: 60px;
-  }
-
-  .btnContainer {
-    width: fit-content;
-  }
-}
-
-@media (max-width: 525px) {
-  .techSection {
-    gap: 0.5em;
-  }
-
-  .tech h1 {
-    font-size: 60px;
-  }
-
-  .techContainer {
-    width: 95%;
-  }
-
-  .detailServices h1 {
-    font-size: 60px;
-  }
-
-  .cta {
-    width: 95vw;
-    padding: 5em 1em;
-  }
-
-  .cta h1 {
-    font-size: 45px;
-  }
-
-  .ctaBtn {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 465px) {
-  .services h1 {
-    font-size: 48px !important;
-  }
-
-  .services h2 {
-    font-size: 25px;
-    line-height: 1.1em;
-  }
-
-  .detailedServiceTitle {
-    gap: 0.1em;
-  }
+@media (max-width: 480px) {
+    .services-dashboard-grid { 
+        padding: 10px;
+        gap: 1.5rem;
+    }
+    .service-main-card { 
+        padding: 1.2rem;
+        min-height: 400px; /* Ensure enough space for content */
+    }
+    .service-card-header h2 {
+        font-size: 1.4rem;
+    }
+    .service-sub-list h3 {
+        font-size: 1.1rem;
+    }
+    .service-sub-list p {
+        font-size: 0.9rem;
+    }
 }
