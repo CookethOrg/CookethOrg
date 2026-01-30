@@ -563,9 +563,389 @@ nav {
   box-shadow: 0 0 0 0;
 }
 
+.btn3 {
+  width: fit-content;
+  border-width: 0px;
+  height: fit-content;
+  background-color: #f8a720;
+  color: #642714;
+  font-weight: 600;
+  border-radius: 86px;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
+  transition: box-shadow 0.35s;
+  padding: 0.75em 1.75em;
+  margin: 1em 0 0.5em 0;
+}
+
+.btn3:hover {
+  box-shadow: 0 0 0 0;
+}
+
+/* Tech Stack */
+.tech {
+  padding: 20vh 2rem 6vh 2rem;
+  margin-bottom: 0px;
+  background-color: #fde2cf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech h1 {
+  color: #1e1a16;
+  font-size: 72px;
+  line-height: 1.1em;
+  margin-bottom: 0.8em;
+}
+
+.techSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 92vw;
+  height: fit-content;
+  gap: 2em;
+}
+
+.techContainer {
+  background: #f8a720;
+  height: fit-content;
+  width: 23%;
+  border-radius: 1em;
+  padding: 2em 1.5em;
+}
+
+.techContainer h2 {
+  width: 100%;
+  text-align: center;
+  color: #642714;
+  font-size: 35px;
+  letter-spacing: -1.25px;
+  margin-bottom: 0.25em;
+}
+
+.techContainer li {
+  color: #8f2121;
+  font-size: 26px;
+  letter-spacing: -1.25px;
+  line-height: 1.4em;
+}
+
+.techContainer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
+}
+
+/* Detailed Services */
+.detailServices {
+  padding: 16vh 5rem 6vh 5rem;
+  margin-bottom: 0px;
+  background-color: #fde2cf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailServices h1 {
+  color: #1e1a16;
+  font-size: 80px;
+  line-height: 1.1em;
+}
+
+.detailedServiceTitle {
+  margin-bottom: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25em;
+}
+
+.serviceItem {
+  width: 72vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 2em 0;
+}
+
+.serviceItem h2 {
+  color: #642714;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -1.25px;
+}
+
+.serviceItemList {
+  color: #8e2121;
+  margin: 0 7em;
+}
+
+.serviceItemList li {
+  text-align: left;
+  margin: 0.5em 0;
+}
+
+.serviceItemList h3,
+.serviceItemList p {
+  font-size: 26px;
+  letter-spacing: -1.25px;
+  line-height: 1.4em;
+}
+
+.boldService {
+  font-weight: 900 !important;
+}
+
+/* Pricing */
+.pricing {
+  padding: 20vh 2rem 6vh 2rem;
+  margin-bottom: 0px;
+  width: 100%;
+  background-color: #fde2cf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing h2 {
+  font-size: 80px;
+  margin-bottom: 2rem;
+  line-height: -1.25px;
+  color: #1e1a16;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em 3em;
+}
+
+.btn-overlay {
+  background: red;
+  display: flex;
+  width: 16%;
+  justify-content: start;
+  padding: 0.4em;
+  border-radius: 2em;
+  box-shadow: rgb(142, 33, 33) 0px 5px 0px 0px;
+  background-color: #f8a720;
+  transition: all 0.5s ease-in-out;
+}
+
+.region-changed {
+  justify-content: end !important;
+}
+
+.btn-container button {
+  padding: 0.5em 0.775em;
+  border-radius: 1em;
+  border-width: 0px;
+  font-size: 1.5em;
+  color: #fde2cf;
+  box-shadow: rgb(142, 33, 33) 1px 2px 1px 1px;
+  background-color: rgba(237, 99, 37, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-container button:hover{
+  box-shadow: 0px 0px 0px 0px black;
+  margin-bottom: 0em;
+}
+
+.pricingContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: start;
+}
+
+.pricingTiers {
+  background: #ed6325;
+  color: #fde2cf;
+  width: 30vw;
+  height: fit-content;
+  justify-self: center;
+  margin: 1.5em 0;
+  border-radius: 32px;
+  padding: 3em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tierContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  letter-spacing: 0.1em;
+}
+
+.tierContent h3 {
+  font-size: 2.25em;
+}
+
+.tierContent h4 {
+  font-size: 1.75em;
+  text-shadow: 2px 2px 2px #642714;
+}
+
+.price {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  margin: 1.2em 0 0.8em 0;
+}
+
+.perfect {
+  width: 100%;
+  text-align: left;
+  font-size: 1.05em;
+}
+
+.included {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 1.2em 0em;
+  /* background-color: red; */
+  width: 100%;
+}
+
+.included p {
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
+}
+
+.includeItems {
+  align-self: flex-end;
+  font-size: 1.1em;
+  width: 95%;
+  justify-self: center;
+  list-style: none;
+}
+
+.info {
+  font-size: 1.07em;
+  margin-bottom: 1em;
+}
+
+/* Testimonial Section */
+.testimonials {
+  padding: 20vh 2rem 6vh 2rem;
+  margin-bottom: 0px;
+  width: 100%;
+  height: fit-content;
+  background-color: #fde2cf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonialContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.testimonialItem {
+  background-color: #1e1a16;
+  color: #fde2cf;
+  width: 32%;
+  border-radius: 0.8em;
+  padding: 1em 2em 1.25em 2em;
+}
+
+.quotes {
+  font-size: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.quotes i{
+  text-shadow: 3px 3px #ed6325;
+  transition: all 0.3s ease-in-out;
+}
+
+.quotes i:hover {
+  text-shadow: none;
+}
+
+.testimonialItem p {
+  text-align: left;
+  font-size: 1.1em;
+  margin: 0.5em 0;
+}
+
+.reviewer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.testImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 1em;
+  justify-content: center;
+  align-self: end;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  margin-left: 0.5em;
+}
+
+.user h3 {
+  font-size: 20px !important;
+}
+
+.user p {
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 0 !important;
+  color: #fde2cfbb !important;
+}
+
 /* Team */
 .team {
-  padding: 14vh 2rem 0 2rem;
+  padding: 20vh 2rem 0 2rem;
   margin-bottom: 0px;
   background-color: #fde2cf;
   text-align: center;
