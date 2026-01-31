@@ -3,235 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cooketh Company</title>
+    <title>Cooketh Company | Services</title>
     <link rel="icon" type="image/png" href="./public/icon.png" />
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/service.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Navigation -->
-    <!-- <div id="navbar"></div> -->
-     <nav>
-        <div class="nav-container">
-          <a href="index.html"><img class="nav_logo" src="./public//navlogo.png" alt="logo"/></a>
-          
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="service.html" class="thispagebutton">Services</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+   <div id="navbar-component"></div>
 
-          <div class="hamburgerContainer" id="hamburger">
-            <i class="fa-solid fa-bars hamburgerMenu"></i>
-          </div>
-        </div>
-     </nav>
-
-    <!-- Services -->
     <section class="services">
-      <h1 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1200">WE CAN BUILD <i>ALMOST</i> ANYTHING.</h1>
-      <h2 class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500">From pitch decks to fully functioning applications.</h2>
+      <h1 class="title" data-aos="fade-zoom-in" data-aos-duration="1200">WE CAN BUILD <i>ALMOST</i> ANYTHING.</h1>
+      <h2 class="content" data-aos="fade-zoom-in" data-aos-delay="300">From pitch decks to fully functioning applications.</h2>
     </section>
 
-        <!-- Detail Services -->
-  <section class="detailServices">
+    <section class="detailServices">
       <div class="services-header" data-aos="fade-up">
         <h1 class="title">Our Menu</h1>
         <p class="content">Pick your flavor. We handle the ingredients.</p>
       </div>
-
       <div id="dynamic-services-list" class="services-dashboard-grid">
+         </div>
+    </section>
+
+    <section class="tech">
+      <h1 class="title" data-aos="fade-up">Tech Stack</h1>
+      <div class="tech-dashboard" data-aos="zoom-in">
+        <div class="tech-nav">
+          <div class="tech-nav-item active" onclick="showTech('design', this)">
+            <i class="fa-solid fa-pen-nib"></i> <span>Design</span>
+          </div>
+          <div class="tech-nav-item" onclick="showTech('frontend', this)">
+            <i class="fa-solid fa-code"></i> <span>Frontend</span>
+          </div>
+          <div class="tech-nav-item" onclick="showTech('backend', this)">
+            <i class="fa-solid fa-server"></i> <span>Backend</span>
+          </div>
+          <div class="tech-nav-item" onclick="showTech('databases', this)">
+            <i class="fa-solid fa-database"></i> <span>Databases</span>
+          </div>
+          <div class="tech-nav-item" onclick="showTech('cloud', this)">
+            <i class="fa-solid fa-cloud"></i> <span>Cloud Services</span>
+          </div>
+        </div>
+        <div class="tech-content-viewport">
+          <div id="tech-details" class="tech-details-container">
+            <h2 class="content">Design Tools</h2>
+            <ul class="subContent">
+              <li>Figma</li><li>Blender</li><li>Spline</li><li>Framer</li><li>Lovable</li><li>Subframe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-wrapper">
+        <div class="cta" data-aos="fade-up">
+            <h1 class="title">HAVE A PROJECT IDEA?</h1>
+            <p class="aboutContent">Before we hop on a call, here's how we start cooking:</p>
+            <ul class="cta-list aboutContent">
+                <li>
+                    <h3 class="bold">Fill Out the Form</h3>
+                    <p>Tell us about your project vibe and goals. Go wild with details.</p>
+                </li>
+                <li>
+                    <h3 class="bold">Schedule a Call</h3>
+                    <p>Lock in a time. The form sends automatically to both of us.</p>
+                </li>
+                <li>
+                    <h3 class="bold">We Review & Strategize</h3>
+                    <p>We prep fresh ideas so our meeting skips the boring stuff and gets to the heat.</p>
+                </li>
+            </ul>
+            <div class="btnContainer">
+              <a href="https://tally.so/r/woQJje" target="_blank"><button class="ctaBtn title">Go to the form</button></a>
+            </div>
         </div>
     </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const serviceContainer = document.getElementById("dynamic-services-list");
-
-        if (serviceContainer) {
-          // REPLACE the fetch block in service.html with this specific structure
-fetch("./services.json")
-  .then(res => res.json())
-  .then(data => {
-    serviceContainer.innerHTML = data.map((service, index) => `
-      <div class="service-main-card" data-aos="fade-up" data-aos-delay="${index * 100}">
-        <div class="service-card-header">
-          <div class="cookListNumber"><span class="cookListDigit title">${service.id}</span></div>
-          <h2 class="content">${service.title}</h2>
-        </div>
-        <div class="service-card-body">
-          <ul class="service-sub-list">
-            ${service.details.map(item => `
-              <li>
-                <h3 class="title">${item.subTitle}</h3>
-                <p class="subContent">${item.desc}</p>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      </div>
-    `).join("");
-  })
-  .catch(err => console.error("Error loading services:", err));
-        }
-      });
-    </script>
-
-    <!-- Tech Stack -->
-     <section class="tech">
-  <h1 class="title" data-aos="fade-up">Tech Stack</h1>
-
-  <div class="tech-dashboard" data-aos="zoom-in" data-aos-duration="1000">
-    <div class="tech-nav">
-      <div class="tech-nav-item active" onclick="showTech('design', this)">
-        <i class="fa-solid fa-pen-nib"></i> <span>Design</span>
-      </div>
-      <div class="tech-nav-item" onclick="showTech('frontend', this)">
-        <i class="fa-solid fa-code"></i> <span>Frontend</span>
-      </div>
-      <div class="tech-nav-item" onclick="showTech('backend', this)">
-        <i class="fa-solid fa-server"></i> <span>Backend</span>
-      </div>
-      <div class="tech-nav-item" onclick="showTech('databases', this)">
-        <i class="fa-solid fa-database"></i> <span>Databases</span>
-      </div>
-    </div>
-
-    <div class="tech-content-viewport">
-      <div id="tech-details" class="tech-details-container">
-        <h2 class="content">Design Tools</h2>
-        <ul class="subContent">
-          <li>Figma</li>
-          <li>Blender</li>
-          <li>Spline</li>
-          <li>Framer</li>
-          <li>Lovable</li>
-          <li>Subframe</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  const techData = {
-    design: {
-      title: "Design Tools",
-      items: ["Figma", "Blender", "Spline", "Framer", "Lovable", "Subframe"]
-    },
-    frontend: {
-      title: "Frontend Development",
-      items: ["Flutter", "Dart", "Flutterflow", "React JS", "Next JS", "Tailwind CSS"]
-    },
-    backend: {
-      title: "Backend Services",
-      items: ["Django", "Flask", "Firebase", "Supabase", "Node.js"]
-    },
-    databases: {
-      title: "Databases",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
-    }
-  };
-
-  function showTech(category, element) {
-    // Update active state in Nav
-    document.querySelectorAll('.tech-nav-item').forEach(item => item.classList.remove('active'));
-    element.classList.add('active');
-
-    const container = document.getElementById('tech-details');
-    
-    // Smooth transition: Fade out
-    container.style.opacity = '0';
-    container.style.transform = 'translateX(20px)';
-
-    setTimeout(() => {
-      const data = techData[category];
-      let itemsHtml = data.items.map(item => `<li>${item}</li>`).join('');
-      
-      container.innerHTML = `
-        <h2 class="content">${data.title}</h2>
-        <ul class="subContent">${itemsHtml}</ul>
-      `;
-
-      // Fade in and slide back
-      container.style.opacity = '1';
-      container.style.transform = 'translateX(0)';
-    }, 250);
-  }
-</script>
-
-    <!-- CTA -->
-     <section class="cta" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="800">
-      <h1 class="title">HAVE A PROJECT IDEA?</h1>
-
-      <p class="aboutContent">Before we hop on a call and throw ideas around, we like to get a solid grip on what you&apos;re looking for. Here&apos;s <b>how it works:</b></p>
-
-      <ul class="aboutContent">
-          <li>
-            <div>
-              <h3>Fill Out the Form</h3>
-              <p>Take a few minutes to tell us about your project, your vibe, and what you&apos;re hoping to build. The more details, the better. Go wild.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Schedule a Call & Send It In</h3>
-              <p>Once you're done, lock in a time that works for you. The form will be automatically emailed to us (and you too, no surprises).</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>We Review Everything</h3>
-              <p>We&apos;ll go through your answers with fresh eyes, which will take us a couple of days, and prep for our chat so we don&apos;t waste your time.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3 class="bold">We Talk, Strategize, and Start Cooking</h3>
-              <p>When we meet, we&apos;ll already be on the same page. That way, we can skip the “so what do you do?” phase and get into the good stuff.</p>
-            </div>
-          </li>
-        </ul>
-
-      <div class="btnContainer" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="300">
-        <a href="https://tally.so/r/woQJje" rel="noopener" target="_blank"><button class="ctaBtn">Go to the form</button></a>
-      </div>
-     </section>
-
-    <!-- Footer -->
-     <!-- <div id="footer"></div> -->
-      <footer class="custom-footer" data-aos="fade-up" data-aos-duration="800">
-        <div class="footer-left">
-          <img src="./public/cooklight.png" alt="Cooketh Company Logo" class="footer-logo"/>
-          <div class="footer-socials">
-            <a href="https://www.linkedin.com/company/cooketh-company"><img src="./public//linkedin.png" alt="LinkedIn"/></a>
-            <a href="https://discord.com/invite/fN3X4SMK3T"><img src="./public//disc.png" alt="Game Icon"/></a>
-          </div>
-        </div>
-
-        <div class="footer-right">
-          <ul class="footer-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="service.html">Services</a></li>
-          </ul>
-          
-          <p class="copyright">
-            Copyright © 2025 All rights reserved. @cookethcompany
-          </p>
-        </div>
-      </footer>
+    <div id="footer-component"></div>
 
     <script src="./src/main.js"></script>
-    <!-- <script src="/components/script.js"></script> -->
-    <script src="https://kit.fontawesome.com/8b897771ea.js"crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ once: true });
+
+      // Services Injection Logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const serviceContainer = document.getElementById("dynamic-services-list");
+        fetch("./services.json")
+          .then(res => res.json())
+          .then(data => {
+            serviceContainer.innerHTML = data.map((service, index) => `
+              <div class="service-main-card" data-aos="fade-up" data-aos-delay="${index * 50}">
+                <div class="service-card-header">
+                  <div class="cookListNumber"><span class="cookListDigit title">${service.id}</span></div>
+                  <h2 class="content">${service.title}</h2>
+                </div>
+                <div class="service-card-body">
+                  <ul class="service-sub-list">
+                    ${service.details.map(item => `
+                      <li>
+                        <h3 class="title">${item.subTitle}</h3>
+                        <p class="subContent">${item.desc}</p>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+              </div>
+            `).join("");
+          });
+      });
+
+      // Tech Stack Logic
+      const techData = {
+        design: { title: "Design Tools", items: ["Figma", "Blender", "Spline", "Framer", "Lovable", "Subframe"] },
+        frontend: { title: "Frontend", items: ["Flutter", "Dart", "Flutterflow", "React JS", "Next JS", "Tailwind","ViteJs","Angular Js","Flame"] },
+        backend: { title: "Backend", items: ["Django", "Flask", "Firebase", "Supabase", "Node.js","Express Js"] },
+        databases: { title: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "Redis",] },
+        cloud: {title: "Cloud Services", items: ["AWS","Google Cloud","Heroku","Digital Ocean"]}
+      };
+
+      function showTech(category, element) {
+        document.querySelectorAll('.tech-nav-item').forEach(item => item.classList.remove('active'));
+        element.classList.add('active');
+        const container = document.getElementById('tech-details');
+        container.style.opacity = '0';
+        setTimeout(() => {
+          const data = techData[category];
+          container.innerHTML = `<h2 class="content">${data.title}</h2><ul class="subContent">${data.items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+          container.style.opacity = '1';
+        }, 200);
+      }
     </script>
   </body>
 </html>
