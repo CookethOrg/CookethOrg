@@ -4,3 +4,6 @@
 //     "image": "./public/team/subroto.png",
 //     "xLink": "https://x.com/Subroto0108"
 //   },
+
+
+//   { "name": "Portfolio", "link": "portfolio.html" },
