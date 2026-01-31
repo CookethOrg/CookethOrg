@@ -1902,3 +1902,48 @@ nav {
     font-size: 48px;
   }
 }
+
+/* Navbar Fixes */
+#navbar-component nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links.navActive {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fde2cf;
+    padding: 2rem;
+    border-bottom: 2px solid #642714;
+}
+
+/* Global Responsive Base */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburgerContainer { display: flex !important; }
+    
+    .hero h1 { font-size: 50px !important; }
+    .introduction { flex-direction: column; padding: 2rem; }
+    .introText { width: 100%; text-align: center; }
+    
+    .custom-footer {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+        gap: 2rem;
+        text-align: center;
+    }
+    .footer-right { text-align: center; align-items: center; }
+    .footer-nav { justify-content: center; }
+}
