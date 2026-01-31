@@ -1005,104 +1005,163 @@ nav {
   transform: scale(1.1);
   transition: transform 0.2s;
 }
-
-/* Footer */
+/* --- Updated Footer Styling --- */
 .custom-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 91vw;
-  height: 50vh;
-  background-color: #1e1a16;
-  color: #fff;
-  margin: auto;
-  margin-bottom: 1rem;
-  padding: 4em 6.2em;
-  flex-wrap: wrap;
-  border-radius: 10px;
+    background-color: #1e1a16;
+    color: #fde2cf;
+    padding: 5rem 5vw;
+    margin-top: 5vh;
 }
 
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    min-width: 250px;
 }
 
 .footer-logo {
-  height: 45%;
-  width: auto;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.footer-tagline {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #fde2cfbb;
 }
 
 .footer-socials {
-  display: flex;
-  gap: 1rem;
-}
-
-.footer-socials a {
-  display: flex;
-  align-items: end;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .footer-socials img {
-  height: 38px;
-  width: 38px;
-  background-color: #fde2cf;
-  border-radius: 50%;
-  padding: 0.4rem;
-  transition: transform 0.3s ease;
+    width: 35px;
+    filter: invert(1); /* Makes icons light */
+    transition: 0.3s;
 }
 
-.footer-socials img:hover {
-  transform: scale(1.1);
+.insta-icon {
+    font-size: 2rem;
+    color: #fde2cf;
+    transition: 0.3s;
 }
 
-.footer-right {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
+.footer-socials a:hover img, 
+.footer-socials a:hover .insta-icon {
+    transform: translateY(-5px);
+    color: #ed6325;
 }
 
-.footer-nav {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-end;
+.footer-middle h3, .footer-right h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ed6325;
 }
 
-.footer-nav li {
-  border-right: 1px solid #28292a;
-  padding: 0 1.5rem;
+.footer-nav-links {
+    list-style: none;
+    padding: 0;
 }
 
-.footer-nav li:last-child {
-  border-right: none;
+.footer-nav-links li {
+    margin-bottom: 0.8rem;
 }
 
-.footer-nav a {
-  color: #8c8e92;
-  transition: color 0.3s ease;
-  font-size: 18px;
-  letter-spacing: -0.18px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+.footer-nav-links a {
+    font-family: "Frederik", sans-serif;
+    transition: 0.3s;
+    color: #fde2cfbb;
 }
 
-.footer-nav a:hover {
-  color: #fff;
+.footer-nav-links a:hover {
+    color: #fde2cf;
+    padding-left: 5px;
+}
+
+.email-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.email-link a {
+    color: #fde2cfbb;
+    transition: 0.3s;
+}
+
+.email-link a:hover {
+    color: #ed6325;
 }
 
 .copyright {
-  color: #8c8e92;
-  font-size: 16px;
-  letter-spacing: -0.18px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #fde2cf66;
 }
 
+/* --- Global Responsiveness Fixes --- */
+@media (max-width: 992px) {
+    .footer-container {
+        text-align: center;
+        justify-content: center;
+    }
+    .footer-socials, .email-link {
+        justify-content: center;
+    }
+    .footer-left, .footer-middle, .footer-right {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav { padding: 0.5rem 1rem; }
+    .nav-container { width: 100%; }
+    .nav_logo { width: 150px; }
+    
+    .hero h1 { font-size: 45px !important; }
+    .heroLine3 { padding-left: 0 !important; }
+    
+    .pricingTiers, .testimonialItem {
+        width: 100% !important;
+        margin: 1rem 0;
+    }
+
+    /* Mobile Hamburger Nav styling */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #642714;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        z-index: 1000;
+    }
+
+    .nav-links.navActive {
+        display: flex;
+    }
+
+    .nav-links li a {
+        color: #fde2cf;
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+    }
+}
 /* Responsiveness */
 @media (max-width: 1381px) {
   .heroLine3 {

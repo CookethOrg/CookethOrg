@@ -48,20 +48,35 @@ function renderFooter() {
 
     footerElement.innerHTML = `
         <footer class="custom-footer" data-aos="fade-up">
-            <div class="footer-left">
-                <img src="./public/cooklight.png" alt="Logo" class="footer-logo"/>
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/company/cooketh-company"><img src="./public/linkedin.png" alt="LinkedIn"/></a>
-                    <a href="https://discord.com/invite/fN3X4SMK3T"><img src="./public/disc.png" alt="Discord"/></a>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="./public/cooklight.png" alt="Logo" class="footer-logo"/>
+                    <p class="footer-tagline content">Turning 'what if' into 'heck yeah'.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/cooketh-company" target="_blank"><img src="./public/linkedin.png" alt="LinkedIn"/></a>
+                        <a href="https://discord.com/invite/fN3X4SMK3T" target="_blank"><img src="./public/disc.png" alt="Discord"/></a>
+                        <a href="https://www.instagram.com/cookethcompany" target="_blank"><i class="fa-brands fa-instagram insta-icon"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-right">
-                <ul class="footer-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                </ul>
-                <p class="copyright">Copyright © 2025 All rights reserved. @cookethcompany</p>
+
+                <div class="footer-middle">
+                    <h3 class="title">Explore</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-right">
+                    <h3 class="title">Get in Touch</h3>
+                    <p class="content email-link"><i class="fa-solid fa-envelope"></i> <a href="mailto:cookethcompany@gmail.com">cookethcompany@gmail.com</a></p>
+                    <p class="content email-link"><i class="fa-solid fa-envelope"></i> <a href="mailto:subroto.2003@gmail.com">subroto.2003@gmail.com</a></p>
+                    <p class="copyright">Copyright © 2025 All rights reserved. <br>@cookethcompany</p>
+                </div>
             </div>
         </footer>`;
 }
