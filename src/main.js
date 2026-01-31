@@ -1,78 +1,120 @@
-console.log("JavaScript loaded");
-
-// Navbar Logic
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
-const navLogo = document.getElementById("nav_logo")
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("navActive");
-  navLinks.classList.toggle("navActive");
-  navLogo.classList.toggle("navLogoActive")
+document.addEventListener("DOMContentLoaded", () => {
+    renderNavbar();
+    renderFooter();
+    // Re-run other dynamic injectors
+    initDynamicComponents();
 });
 
-document.querySelectorAll(".nav-links li a").forEach(link =>
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
-    navLogo.classList.remove("navLogoActive")
-  })
-);
+function renderNavbar() {
+    const navElement = document.getElementById("navbar-component");
+    if (!navElement) return;
 
+    fetch("./navbar.json")
+        .then(res => res.json())
+        .then(links => {
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const navHTML = `
+                <nav>
+                    <div class="nav-container">
+                        <a href="index.html"><img class="nav_logo" id="nav_logo" src="./public/navlogo.png" alt="logo"/></a>
+                        <ul class="nav-links" id="nav-links">
+                            ${links.map(item => `
+                                <li><a href="${item.link}" class="${currentPage === item.link ? 'thispagebutton' : ''}">${item.name}</a></li>
+                            `).join('')}
+                        </ul>
+                        <div class="hamburgerContainer" id="hamburger">
+                            <i class="fa-solid fa-bars hamburgerMenu"></i>
+                        </div>
+                    </div>
+                </nav>`;
+            navElement.innerHTML = navHTML;
+            setupHamburger();
+        });
+}
 
-
-// FAQ JS
-document.querySelectorAll('.faqQues').forEach(question => {
-  question.addEventListener('click', () => {
-    const faqItem = question.parentElement;
-
-    faqItem.classList.toggle('active');
-
-    const icon = question.querySelector('span');
-  });
-});
-
-// Contact Form Submissions
-const form = document.getElementById("contactForm");
-const submitBtn = document.getElementById("submitBtn");
-const btnText = document.getElementById("btnText");
-const btnLoader = document.getElementById("btnLoader");
-const successMessage = document.getElementById("successPanel");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  btnText.textContent = "";
-  btnLoader.style.display = "flex";
-  submitBtn.disabled = true;
-
-  try {
-    const data = new FormData(form);
-    const object = Object.fromEntries(data);
-    const json = JSON.stringify(object);
-
-    // const response = await fetch("https://submit-form.com/0L6QO6wvG", {
-    const response = await fetch("https://submit-form.com/iZS9Y5PdC", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: json,
-    });
-
-    if (response.ok) {
-      console.log("Thank you! Your message has been sent.");
-      successMessage.style.display = "flex";
-      form.reset();
-    } else {
-      alert("Something went wrong, please try again.");
-      console.log("Something went wrong, please try again.");
+function setupHamburger() {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    if (hamburger) {
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("navActive");
+        });
     }
-  } catch (error) {
-    console.log("Network error. Try again later.");
-    console.log(error)
-  } finally {
-    btnText.textContent = "Submit";
-    btnLoader.style.display = "none";
-    submitBtn.disabled = false;
-    form.reset();
-  }
-});
+}
+
+function renderFooter() {
+    const footerElement = document.getElementById("footer-component");
+    if (!footerElement) return;
+
+    footerElement.innerHTML = `
+        <footer class="custom-footer" data-aos="fade-up">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="./public/cooklight.png" alt="Logo" class="footer-logo"/>
+                    <p class="footer-tagline content">Turning 'what if' into 'heck yeah'.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/cooketh-company" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://discord.com/invite/fN3X4SMK3T" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.instagram.com/cookethcompany" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/cookethcompany" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-middle">
+                    <h3 class="title">Explore</h3>
+                    <ul class="footer-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-right">
+                    <h3 class="title">Get in Touch</h3>
+                    <div class="email-links">
+                        <div class="email-link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:cookethcompany@gmail.com">cookethcompany@gmail.com</a>
+                        </div>
+                        <div class="email-link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:subroto.2003@gmail.com">subroto.2003@gmail.com</a>
+                        </div>
+                    </div>
+                    <p class="copyright">Copyright © 2025 All rights reserved. <br>@cookethcompany</p>
+                </div>
+            </div>
+        </footer>`;
+}
+
+function initDynamicComponents() {
+    // Dynamic Results
+    const resultsContainer = document.getElementById("results-container");
+    if (resultsContainer) {
+        fetch("./results.json").then(res => res.json()).then(data => {
+            resultsContainer.innerHTML = data.map((item, index) => `
+                <div class="resultCard" data-aos="zoom-in" data-aos-delay="${index * 100}">
+                    <div class="resultShape"><i class="${item.icon}"></i></div>
+                    <h2 class="title resultStat">${item.stat}</h2>
+                    <p class="subContent resultDesc">${item.description}</p>
+                </div>`).join("");
+        });
+    }
+
+    // Dynamic Team
+    const teamContainer = document.getElementById("team-container");
+    if (teamContainer) {
+        fetch("./team.json").then(res => res.json()).then(data => {
+            teamContainer.innerHTML = data.map(member => `
+                <div class="team-member" data-aos="fade-up">
+                    <img src="${member.image}" alt="${member.name}" />
+                    <p class="teamName">${member.name}</p>
+                    <p class="teamRole content">${member.role}</p>
+                    <a href="${member.xLink}" target="_blank" class="xlogo"><img src="./public/x.png" alt="X" /></a>
+                </div>`).join("");
+        });
+    }
+}

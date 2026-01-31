@@ -1,0 +1,22 @@
+[
+  {
+    "stat": "3+ Years",
+    "description": "Building excellent digital products and delivering perfection.",
+    "icon": "fa-solid fa-calendar-check"
+  },
+  {
+    "stat": "Multiple",
+    "description": "Small scale companies and beginner startups successfully catered to.",
+    "icon": "fa-solid fa-rocket"
+  },
+  {
+    "stat": "Diverse",
+    "description": "Technologies mastered from Frontend to Backend and Cloud.",
+    "icon": "fa-solid fa-microchip"
+  },
+  {
+    "stat": "100%",
+    "description": "Commitment to turning 'what ifs' into functional reality.",
+    "icon": "fa-solid fa-heart"
+  }
+]

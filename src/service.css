@@ -1,318 +1,230 @@
-/* Tech Stack */
-.tech {
-  padding: 20vh 2rem 6vh 2rem;
-  margin-bottom: 0px;
-  background-color: #fde2cf;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* --- Global Service Page Layout --- */
+.services {
+    padding: 20vh 2rem 5vh 2rem;
+    text-align: center;
+    background-color: #fde2cf;
 }
 
-.tech h1 {
-  color: #1e1a16;
-  font-size: 72px;
-  line-height: 1.1em;
-  margin-bottom: 0.8em;
+.services h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: #8f2121;
+    margin-bottom: 1rem;
 }
 
-.techSection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 92vw;
-  height: fit-content;
-  gap: 2em;
-}
-
-.techContainer {
-  background: #f8a720;
-  height: fit-content;
-  width: 39%;
-  border-radius: 1em;
-  padding: 2em 1.5em;
-}
-
-.techContainer h2 {
-  width: 100%;
-  text-align: center;
-  color: #642714;
-  font-size: 35px;
-  letter-spacing: -1.25px;
-  margin-bottom: 0.7em;
-}
-
-.techContainer li {
-  color: #8f2121;
-  font-size: 26px;
-  letter-spacing: -1.25px;
-  line-height: 1.4em;
-}
-
-.techContainer ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-  gap: 1em;
-  width: 80%;
-}
-
-/* Detailed Services */
+/* --- Detail Services Grid - FIXED OVERLAP --- */
 .detailServices {
-  padding: 16vh 5rem 6vh 5rem;
-  margin-bottom: 0px;
-  background-color: #fde2cf;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    padding: 5vh 8vw;
+    background-color: #fde2cf;
 }
 
-.detailServices h1 {
-  color: #1e1a16;
-  font-size: 80px;
-  line-height: 1.1em;
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.detailedServiceTitle {
-  margin-bottom: 0.8em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25em;
+.services-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #1e1a16;
 }
 
-.serviceItem {
-  width: 72vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  margin: 2em 0;
+.services-dashboard-grid {
+    display: grid;
+    /* This ensures cards wrap correctly instead of pushing into each other */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.serviceItem h2 {
-  color: #642714;
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: -1.25px;
+.service-main-card {
+    background: #f8a720;
+    border: 3px solid #642714;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 8px 8px 0px #8f2121;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
 
-.serviceItemList {
-  color: #8e2121;
-  margin: 0 7em;
+.service-main-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #ed6325;
 }
 
-.serviceItemList li {
-  text-align: left;
-  margin: 0.5em 0;
+.service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed #642714;
 }
 
-.serviceItemList h3,
-.serviceItemList p {
-  font-size: 26px;
-  letter-spacing: -1.25px;
-  line-height: 1.4em;
+.service-card-header h2 {
+    font-size: 1.4rem;
+    color: #8f2121;
+    line-height: 1.2;
 }
 
-.boldService {
-  font-weight: 900 !important;
+.service-sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* CTA */
+.service-sub-list h3 {
+    font-size: 1.15rem;
+    color: #642714;
+    margin-bottom: 0.2rem;
+}
+
+.service-sub-list p {
+    font-size: 0.95rem;
+    color: #642714;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* --- Tech Stack - SIZED TO CONTENT --- */
+.tech {
+    padding: 8vh 2rem;
+    background-color: #fde2cf;
+    text-align: center;
+}
+
+.tech-dashboard {
+    display: flex;
+    width: 100%;
+    max-width: 900px; /* Reduced width to prevent "too big" look */
+    margin: 0 auto;
+    background: #f8a720;
+    border-radius: 24px;
+    border: 3px solid #642714;
+    box-shadow: 10px 10px 0px #8f2121;
+    overflow: hidden;
+}
+
+.tech-nav {
+    width: 30%;
+    background: #642714;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-nav-item {
+    padding: 1.2rem 1.5rem;
+    color: #fde2cf;
+    font-family: "VVDS", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-left: 5px solid transparent;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.tech-nav-item.active {
+    background: #ed6325;
+    border-left: 5px solid #fde2cf;
+}
+
+.tech-content-viewport {
+    width: 70%;
+    padding: 2.5rem;
+    background-image: radial-gradient(#64271415 1.5px, transparent 0);
+    background-size: 15px 15px;
+}
+
+.tech-details-container {
+    transition: opacity 0.2s ease;
+}
+
+.tech-details-container h2 {
+    color: #642714;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.tech-details-container ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+.tech-details-container li {
+    background: #ed6325;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid #642714;
+}
+
+/* --- CTA Section - LEFT ALIGNED --- */
+.cta-wrapper {
+    padding: 5vh 5vw;
+    background-color: #fde2cf;
+}
+
 .cta {
-  margin: 6vh 4rem 3vh 4rem;
-  padding: 5em 11.5em;
-  background-color: #f8a720;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  justify-self: center;
-  align-items: start;
-  min-height: 90vh;
-  height: fit-content;
-  width: 91vw;
-  border-radius: 10px;
+    background-color: #f8a720;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 24px;
+    border: 3px solid #642714;
+    box-shadow: 12px 12px 0px #8f2121;
+    text-align: left; /* Strict left alignment */
 }
 
 .cta h1 {
-  color: #8f2121;
-  font-size: 72px;
-  line-height: 1.1em;
-  margin-bottom: 0.3em;
+    color: #8f2121;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
 }
 
-.cta p,
-.cta ul,
-.cta h3 {
-  color: #642714;
-  font-size: 16px;
-  letter-spacing: -0.18px;
+.cta-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
 }
 
-.cta ul {
-  list-style: decimal;
-  margin: 0.5em 1.2em;
-  font-size: 18px;
-}
-
-.cta ul h3 {
-  font-weight: 600;
-}
-
-.aboutContent h3,
-.aboutContent p {
-  line-height: 1.9em !important;
-}
-
-.bold {
-  font-weight: 900 !important;
-}
-
-.btnContainer {
-  width: 45%;
+.cta-list li {
+    margin-bottom: 1.5rem;
 }
 
 .ctaBtn {
-  width: fit-content;
-  border-width: 0px;
-  height: fit-content;
-  background-color: rgba(237, 99, 37, 1);
-  color: #fde2cf;
-  font-weight: 600;
-  border-radius: 86px;
-  font-size: 24px;
-  letter-spacing: -1px;
-  box-shadow: rgb(142, 33, 33) 0px 8px 0px 0px;
-  transition: box-shadow 0.35s;
-  padding: 1em 1.5em;
-  margin-top: 1em;
+    background-color: #ed6325;
+    color: #fde2cf;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0px 6px 0px #8f2121;
+    cursor: pointer;
+    transition: 0.2s;
 }
+
 .ctaBtn:hover {
-  box-shadow: 0 0 0 0;
+    transform: translateY(3px);
+    box-shadow: 0px 3px 0px #8f2121;
 }
 
-@media (max-width: 1055px) {
-  .cta {
-    width: 94vw;
-    padding: 5em 6em;
-  }
+/* --- Responsive Fixes --- */
+@media (max-width: 992px) {
+    .tech-dashboard { flex-direction: column; }
+    .tech-nav { width: 100%; flex-direction: row; overflow-x: auto; }
+    .tech-content-viewport { width: 100%; padding: 1.5rem; }
+    .cta { padding: 2rem; }
 }
 
-@media (max-width: 867px) {
-  .techContainer h2 {
-    font-size: 24px;
-  }
-
-  .techContainer li {
-    font-size: 20px;
-  }
-
-  .techContainer {
-    width: 47%;
-  }
-
-  .detailServices {
-    padding: 16vh 1rem 6vh 1rem;
-  }
-
-  .serviceItem {
-    width: 90%;
-  }
-
-  .serviceItemList {
-    margin: 0 2em;
-  }
-}
-
-@media (max-width: 707px) {
-  .serviceItem {
-    width: 92vw;
-  }
-
-  .serviceItemList {
-    margin: 0 1.5em;
-  }
-
-  .detailServices {
-    padding: 16vh 0.1rem 6vh 0.1rem;
-  }
-
-  .serviceItem h2 {
-    font-size: 24px;
-  }
-
-  .serviceItemList h3 {
-    font-size: 18px;
-  }
-
-  .serviceItemList p {
-    font-size: 16px;
-  }
-
-  .cta {
-    width: 95vw;
-    padding: 5em 1em;
-  }
-
-  .cta h1 {
-    font-size: 60px;
-  }
-
-  .btnContainer {
-    width: fit-content;
-  }
-}
-
-@media (max-width: 525px) {
-  .techSection {
-    gap: 0.5em;
-  }
-
-  .tech h1 {
-    font-size: 60px;
-  }
-
-  .techContainer {
-    width: 95%;
-  }
-
-  .detailServices h1 {
-    font-size: 60px;
-  }
-
-  .cta {
-    width: 95vw;
-    padding: 5em 1em;
-  }
-
-  .cta h1 {
-    font-size: 45px;
-  }
-
-  .ctaBtn {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 465px) {
-  .services h1 {
-    font-size: 48px !important;
-  }
-
-  .services h2 {
-    font-size: 25px;
-    line-height: 1.1em;
-  }
-
-  .detailedServiceTitle {
-    gap: 0.1em;
-  }
+@media (max-width: 768px) {
+    .services-dashboard-grid { grid-template-columns: 1fr; }
 }
