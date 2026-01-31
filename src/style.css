@@ -1029,48 +1029,51 @@ nav {
 
 .footer-logo {
     width: 200px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
+    display: block;
 }
 
 .footer-tagline {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: #fde2cfbb;
+    text-align: center;
+    width: 100%;
 }
 
 .footer-socials {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.footer-socials img {
-    width: 35px;
-    filter: invert(1); /* Makes icons light */
-    transition: 0.3s;
-}
-
-.insta-icon {
-    font-size: 2rem;
+.footer-socials a {
     color: #fde2cf;
-    transition: 0.3s;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-socials a:hover img, 
-.footer-socials a:hover .insta-icon {
-    transform: translateY(-5px);
+.footer-socials a:hover {
     color: #ed6325;
+    transform: translateY(-5px);
 }
 
 .footer-middle h3, .footer-right h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: #ed6325;
+    text-align: center;
 }
 
 .footer-nav-links {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .footer-nav-links li {
@@ -1088,12 +1091,21 @@ nav {
     padding-left: 5px;
 }
 
+.email-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
 .email-link {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 1rem;
     font-size: 0.95rem;
+    justify-content: center;
 }
 
 .email-link a {
@@ -1109,6 +1121,8 @@ nav {
     margin-top: 2rem;
     font-size: 0.85rem;
     color: #fde2cf66;
+    text-align: center;
+    width: 100%;
 }
 
 /* --- Global Responsiveness Fixes --- */
@@ -1314,38 +1328,38 @@ nav {
     justify-content: space-between;
     height: 100%;
     gap: 3em;
+    align-items: center;
+    width: 100%;
   }
 
   .footer-logo {
-    width: 80%;
+    width: 200px;
     height: auto;
+  }
+
+  .footer-tagline {
+    text-align: center;
   }
 
   .footer-socials {
     display: flex;
-    gap: 1rem;
-    margin-left: 0em;
+    gap: 1.5rem;
+    justify-content: center;
   }
 
   .footer-socials a {
-    display: flex;
-    align-items: start;
-  }
-
-  .footer-socials img {
-    height: 38px;
-    width: 38px;
-    padding: 0.4rem;
+    font-size: 1.8rem;
   }
 
   .footer-right {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     gap: 3em;
+    width: 100%;
   }
 
   .footer-nav {

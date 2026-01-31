@@ -53,9 +53,10 @@ function renderFooter() {
                     <img src="./public/cooklight.png" alt="Logo" class="footer-logo"/>
                     <p class="footer-tagline content">Turning 'what if' into 'heck yeah'.</p>
                     <div class="footer-socials">
-                        <a href="https://www.linkedin.com/company/cooketh-company" target="_blank"><img src="./public/linkedin.png" alt="LinkedIn"/></a>
-                        <a href="https://discord.com/invite/fN3X4SMK3T" target="_blank"><img src="./public/disc.png" alt="Discord"/></a>
-                        <a href="https://www.instagram.com/cookethcompany" target="_blank"><i class="fa-brands fa-instagram insta-icon"></i></a>
+                        <a href="https://www.linkedin.com/company/cooketh-company" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://discord.com/invite/fN3X4SMK3T" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.instagram.com/cookethcompany" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/cookethcompany" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
 
@@ -73,8 +74,16 @@ function renderFooter() {
 
                 <div class="footer-right">
                     <h3 class="title">Get in Touch</h3>
-                    <p class="content email-link"><i class="fa-solid fa-envelope"></i> <a href="mailto:cookethcompany@gmail.com">cookethcompany@gmail.com</a></p>
-                    <p class="content email-link"><i class="fa-solid fa-envelope"></i> <a href="mailto:subroto.2003@gmail.com">subroto.2003@gmail.com</a></p>
+                    <div class="email-links">
+                        <div class="email-link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:cookethcompany@gmail.com">cookethcompany@gmail.com</a>
+                        </div>
+                        <div class="email-link">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:subroto.2003@gmail.com">subroto.2003@gmail.com</a>
+                        </div>
+                    </div>
                     <p class="copyright">Copyright © 2025 All rights reserved. <br>@cookethcompany</p>
                 </div>
             </div>
