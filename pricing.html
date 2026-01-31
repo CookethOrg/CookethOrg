@@ -12,227 +12,229 @@
 </head>
 <body>
     <!-- Navigation -->
-    <!-- <div id="navbar"></div> -->
     <div id="navbar-component"></div>
 
     <!-- Pricing Page -->
-    <section class="services">
-      <h1 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1200">SIMPLE, TRANSPARENT <i>PRICING</i> FOR ALL YOUR NEEDS.</h1>
-      <h2 class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500">Pay for clarity, quality, and code that scales with your ambition.</h2>
-    </section>
+    <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+      <section class="services" style="width: 80%; max-width: 1200px; margin: 0 auto;">
+        <h1 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1200">SIMPLE, TRANSPARENT <i>PRICING</i> FOR ALL YOUR NEEDS.</h1>
+        <h2 class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500" style="text-align: center;">Pay for clarity, quality, and code that scales with your ambition.</h2>
+      </section>
 
-    <!-- Our Pricing -->
-    <section class="pricing">
-      <h2 class="title" data-aos="fade-up" data-aos-duration="800">Pricing Tiers</h2>
+      <!-- Our Pricing -->
+      <section class="pricing" style="width: 80%; max-width: 1200px; margin: 0 auto;">
+        <h2 class="title" data-aos="fade-up" data-aos-duration="800" style="text-align: center;">Pricing Tiers</h2>
 
-      <div class="btn-container" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="800">
-        <div class="btn-overlay" id="changeRegionBtn">
-          <button class="btnText" id="pricingBtn"></button>
-        </div>
-      </div>
-
-      <div class="pricingContainer" id="pricingContainer"></div>
-
-      <div>
-        <a href="pricing.html#featureTable"><button class="btn btnText" data-aos="fade-zoom-up" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">Compare Plans <i class="fa-solid fa-down-long"></i></button></a>
-      </div>
-    </section>
-
-    <!-- Tier Descriptions -->
-    <section class="pricing-desc">
-      <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Plans Designed to Match Your Vision</h2>
-      
-      <div class="testimonialContainer">
-        <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
-          <div class="testimonialIte">
-            <h3 class="title">Starter Build</h3>
-            <h4 class="title2">Launch Fast. Validate Smart</h4>
-            <p class="content">Designed for speed and efficiency, this build helps you turn ideas into working products quickly. You get a clean and great interface, essential features, and a smooth deployment flow to test markets, onboard early users, and validate ideas without unnecessary cost or complexity.</p>
+        <div class="btn-container" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="800">
+          <div class="btn-overlay" id="changeRegionBtn">
+            <button class="btnText" id="pricingBtn"></button>
           </div>
         </div>
+
+        <div class="pricingContainer" id="pricingContainer" style="justify-content: center; gap: 2em;"></div>
+
+        <div style="display: flex; justify-content: center; margin-top: 2em;">
+          <a href="pricing.html#featureTable">
+            <button class="btn btnText" data-aos="fade-zoom-up" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">Compare Plans <i class="fa-solid fa-down-long"></i></button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Tier Descriptions -->
+      <section class="pricing-desc">
+        <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Plans Designed to Match Your Vision</h2>
         
-        <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">
-          <div class="testimonialIte">
-            <h3 class="title">Growth Build</h3>
-            <h4>Built to Scale with Real Users</h4>
-            <p class="content">Designed for growing startups, this build transforms MVPs into reliable products. You get strong UI/UX, complete authentication flows, admin controls, integrations, and a polished experience engineered for real users, real data, and confident scaling without architectural limitations.</p>
+        <div class="testimonialContainer">
+          <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
+            <div>
+              <h3 class="title">Starter Build</h3>
+              <h4 class="title2">Launch Fast. Validate Smart</h4>
+              <p class="content">Designed for speed and efficiency, this build helps you turn ideas into working products quickly. You get a clean and great interface, essential features, and a smooth deployment flow to test markets, onboard early users, and validate ideas without unnecessary cost or complexity.</p>
+            </div>
           </div>
-        </div>
+          
+          <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">
+            <div>
+              <h3 class="title">Growth Build</h3>
+              <h4>Built to Scale with Real Users</h4>
+              <p class="content">Designed for growing startups, this build transforms MVPs into reliable products. You get strong UI/UX, complete authentication flows, admin controls, integrations, and a polished experience engineered for real users, real data, and confident scaling without architectural limitations.</p>
+            </div>
+          </div>
 
-        <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
-          <div class="testimonialIte">
-            <h3 class="title">Pro Build</h3>
-            <h4>Enterprise-Grade. Future-Ready.</h4>
-            <p class="content">Designed for ambitious products, this build delivers a full-scale platform foundation. You get a custom backend, production security, payments, dashboards, automation, notifications, and scalable architecture built to support long-term growth and enterprise-level performance demands.</p>
+          <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
+            <div>
+              <h3 class="title">Pro Build</h3>
+              <h4>Enterprise-Grade. Future-Ready.</h4>
+              <p class="content">Designed for ambitious products, this build delivers a full-scale platform foundation. You get a custom backend, production security, payments, dashboards, automation, notifications, and scalable architecture built to support long-term growth and enterprise-level performance demands.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Tier Comparision -->
-    <section class="comparision">
-      <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Choose the right build for your project</h2>
+      </section>
       
-      <div class="compareTable title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
-        <span>Features</span>
-        <span>Starter Build</span>
-        <span>Growth Build</span>
-        <span>Pro Build</span>
-      </div>
+      <!-- Tier Comparision -->
+      <section class="comparision">
+        <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Choose the right build for your project</h2>
+        
+        <div class="compareTable title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
+          <span>Features</span>
+          <span>Starter Build</span>
+          <span>Growth Build</span>
+          <span>Pro Build</span>
+        </div>
 
-      <div class="featureTable" id="featureTable"></div>
-     </section>
+        <div class="featureTable" id="featureTable"></div>
+      </section>
 
-    <!-- Add Ons -->
-    <section class="addons">
-      <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50" data-aos-duration="800"><i class="fa-solid fa-circle-info"></i> Add-ons & Scope Adjustments</h2>
+      <!-- Add Ons -->
+      <section class="addons">
+        <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50" data-aos-duration="800"><i class="fa-solid fa-circle-info"></i> Add-ons & Scope Adjustments</h2>
 
-      <div class="points content">
-        <ul>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Complex Animations</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Additional Screens</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Extra Integrations</li>
+        <div class="points content">
+          <ul>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Complex Animations</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Additional Screens</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Extra Integrations</li>
+          </ul>
+
+          <ul>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="250" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Third-party Auth</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Multiple roles</li>
+            <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="350" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Advanced API work</li>
+          </ul>
+        </div>
+
+        <p class="title addonEnd" data-aos="fade-zoom" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-duration="800"><i class="fa-solid fa-caret-right"></i> Pricing increases proportionally based on scope and complexity.</p>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials pricing" style="width: 80%; max-width: 1200px; margin: 0 auto;">
+        <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">What Our Clients Say!</h2>
+
+        <div class="testimonialContainer" id="testimonialContainer"></div>
+      </section>
+
+      <!-- Payment Options -->
+      <section class="pricing-desc">
+        <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Flexible Payment Options</h2>
+
+        <div class="paymentContainer">
+          <div class="paymentItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
+            <div>
+              <h3 class="title">50/30/20 Split</h3>
+              <h4 class="title2">Most Popular</h4>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>50% upfront - To kickstart development</p>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>30% after mid-milestone - Once core features are completed</p>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>20% on final delivery - After testing & deployment of your product</p>
+            </div>
+          </div>
+
+          <div class="paymentItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">
+            <div>
+              <h3 class="title">Monthly Subscription</h3>
+              <h4>Best for Long Builds</h4>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>2-6 month billing cycles - Flexible monthly payments</p>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Includes development + updates - Continuous improvements</p>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Ideal for evolving products - Scale as you grow</p>
+            </div>
+          </div>
+
+          <div class="paymentItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
+            <div>
+              <h3 class="title">Pay-Per-Feature</h3>
+              <h4>Budget Friendly</h4>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Pay only for what you build - Feature-by-feature development</p>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Flexible roadmap - Develop gradually</p>
+              <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>No long-term commitment - Pause or continue anytime</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">Build Your Dream Product</h2>
+
+        <h3 class="title3" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="800">High-quality apps, clean UI/UX, and reliable backend - delivered fast.</h3>
+
+        <p class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">Whether you're a student founder, a startup, or an enterprise, we turn your ideas into polished, scalable products.</p>
+
+        <ul class="content">
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="250" data-aos-duration="800"><i class="fa-solid fa-check"></i> Free project review within 24 hours</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="350" data-aos-duration="800"><i class="fa-solid fa-check"></i> Transparent pricing</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="450" data-aos-duration="800"><i class="fa-solid fa-check"></i> Zero hidden charges</li>
+          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="550" data-aos-duration="800"><i class="fa-solid fa-check"></i> Pay in milestones</li>
         </ul>
 
-        <ul>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="250" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Third-party Auth</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Multiple roles</li>
-          <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="350" data-aos-duration="800"><i class="fa-solid fa-circle"></i> Advanced API work</li>
-        </ul>
-      </div>
+        <button class="btn btnText" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-duration="800">Start Your Project</button>
+      </section>
 
-      <p class="title addonEnd" data-aos="fade-zoom" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-duration="800"><i class="fa-solid fa-caret-right"></i> Pricing increases proportionally based on scope and complexity.</p>
-    </section>
+      <!-- FAQs -->
+      <section class="faq">
+        <div style="display: flex; justify-content: space-between; width: 100%;" class="faqContentContainer">
+          <h2 class="title" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="800">PRICING <br> <span class="faqHead">FAQS</span></h2>
 
-    <!-- Testimonials -->
-    <section class="testimonials pricing">
-      <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">What Our Clients Say!</h2>
+          <div class="faqContent faqFont" data-aos="fade-left" data-aos-easing="ease-in-back" data-aos-duration="800">
+            <div class="faqItem">
+              <div class="faqQues">
+                <p>Why is Indian pricing cheaper than international?</p>
+                <span>+</span>
+              </div>
 
-      <div class="testimonialContainer" id="testimonialContainer"></div>
-    </section>
-
-    <!-- Payment Options -->
-    <section class="pricing-desc">
-      <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Flexible Payment Options</h2>
-
-      <div class="paymentContainer">
-        <div class="paymentItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">
-          <div>
-            <h3 class="title">50/30/20 Split</h3>
-            <h4 class="title2">Most Popular</h4>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>50% upfront - To kickstart development</p>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>30% after mid-milestone - Once core features are completed</p>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>20% on final delivery - After testing & deployment of your product</p>
-          </div>
-        </div>
-
-        <div class="paymentItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">
-          <div>
-            <h3 class="title">Monthly Subscription</h3>
-            <h4>Best for Long Builds</h4>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>2-6 month billing cycles - Flexible monthly payments</p>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Includes development + updates - Continuous improvements</p>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Ideal for evolving products - Scale as you grow</p>
-          </div>
-        </div>
-
-        <div class="paymentItem" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">
-          <div>
-            <h3 class="title">Pay-Per-Feature</h3>
-            <h4>Budget Friendly</h4>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Pay only for what you build - Feature-by-feature development</p>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>Flexible roadmap - Develop gradually</p>
-            <p class="content paymentPara"><i class="fa-solid fa-caret-right"></i>No long-term commitment - Pause or continue anytime</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-     <section class="cta">
-      <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">Build Your Dream Product</h2>
-
-      <h3 class="title3" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="800">High-quality apps, clean UI/UX, and reliable backend - delivered fast.</h3>
-
-      <p class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-duration="800">Whether you're a student founder, a startup, or an enterprise, we turn your ideas into polished, scalable products.</p>
-
-      <ul class="content">
-        <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="250" data-aos-duration="800"><i class="fa-solid fa-check"></i> Free project review within 24 hours</li>
-        <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="350" data-aos-duration="800"><i class="fa-solid fa-check"></i> Transparent pricing</li>
-        <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="450" data-aos-duration="800"><i class="fa-solid fa-check"></i> Zero hidden charges</li>
-        <li data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="550" data-aos-duration="800"><i class="fa-solid fa-check"></i> Pay in milestones</li>
-      </ul>
-
-      <button class="btn btnText" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-duration="800">Start Your Project</button>
-     </section>
-
-    <!-- FAQs -->
-    <section class="faq">
-      <div style="display: flex; justify-content: space-between; width: 100%;" class="faqContentContainer">
-        <h2 class="title" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="800">PRICING <br> <span class="faqHead">FAQS</span></h2>
-
-        <div class="faqContent faqFont" data-aos="fade-left" data-aos-easing="ease-in-back" data-aos-duration="800">
-          <div class="faqItem">
-            <div class="faqQues">
-              <p>Why is Indian pricing cheaper than international?</p>
-              <span>+</span>
+              <div class="faqAns">
+                <p class="inputFont">Because domestic budgets differ. We keep Indian tiers founder-friendly while staying competitive globally.</p>
+              </div>
             </div>
 
-            <div class="faqAns">
-              <p class="inputFont">Because domestic budgets differ. We keep Indian tiers founder-friendly while staying competitive globally.</p>
-            </div>
-          </div>
+            <div class="faqItem">
+              <div class="faqQues">
+                <p>What if my project doesn't fit exactly into one tier?</p>
+                <span>+</span>
+              </div>
 
-          <div class="faqItem">
-            <div class="faqQues">
-              <p>What if my project doesn’t fit exactly into one tier?</p>
-              <span>+</span>
-            </div>
-
-            <div class="faqAns">
-              <p class="inputFont">No worries - we customize 100%. Your scope defines your tier, not the other way around.</p>
-            </div>
-          </div>
-
-          <div class="faqItem">
-            <div class="faqQues">
-              <p>Do you offer maintenance?</p>
-              <span>+</span>
+              <div class="faqAns">
+                <p class="inputFont">No worries - we customize 100%. Your scope defines your tier, not the other way around.</p>
+              </div>
             </div>
 
-            <div class="faqAns">
-              <p class="inputFont">Yes. Monthly retainers are available for bug fixes, new features, backend support, or design refreshes.</p>
-            </div>
-          </div>
+            <div class="faqItem">
+              <div class="faqQues">
+                <p>Do you offer maintenance?</p>
+                <span>+</span>
+              </div>
 
-          <div class="faqItem">
-            <div class="faqQues">
-              <p>Can I upgrade my tier later?</p>
-              <span>+</span>
-            </div>
-
-            <div class="faqAns">
-              <p class="inputFont">Absolutely. Many clients start at Tier 1 and upgrade once they raise funds or scale.</p>
-            </div>
-          </div>
-
-          <div class="faqItem">
-            <div class="faqQues">
-              <p>How do I know which tier is right for me?</p>
-              <span>+</span>
+              <div class="faqAns">
+                <p class="inputFont">Yes. Monthly retainers are available for bug fixes, new features, backend support, or design refreshes.</p>
+              </div>
             </div>
 
-            <div class="faqAns">
-              <p class="inputFont">Just book a free consultation, and we’ll evaluate your idea, budget, and timeline.</p>
+            <div class="faqItem">
+              <div class="faqQues">
+                <p>Can I upgrade my tier later?</p>
+                <span>+</span>
+              </div>
+
+              <div class="faqAns">
+                <p class="inputFont">Absolutely. Many clients start at Tier 1 and upgrade once they raise funds or scale.</p>
+              </div>
+            </div>
+
+            <div class="faqItem">
+              <div class="faqQues">
+                <p>How do I know which tier is right for me?</p>
+                <span>+</span>
+              </div>
+
+              <div class="faqAns">
+                <p class="inputFont">Just book a free consultation, and we'll evaluate your idea, budget, and timeline.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-     <!-- <div id="footer"></div> -->
-      <div id="footer-component"></div>
+    <div id="footer-component"></div>
 
     <script src="./src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -240,170 +242,170 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       const pricingContainer = document.getElementById("pricingContainer");
-          const priceBtn = document.getElementById("pricingBtn");
+      const priceBtn = document.getElementById("pricingBtn");
     
-    let selectedRegion = "Domestic"; 
-    priceBtn.textContent = "Indian"
-    
-    function renderPricing() {
-      fetch("./pricing.json")
-        .then(res => res.json())
-        .then(data => {
-          const filteredData = data.filter(item => item.region === selectedRegion);
-    
-          pricingContainer.innerHTML = filteredData
-            .map(tier => createTierHTML(tier))
-            .join("");
-        })
-        .catch(err => console.error("Error loading pricing data:", err));
-    }
-    
-    renderPricing();
-    
-    function createTierHTML(tier) {
-      return `
-        <div class="pricingTiers" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay=${tier.delay} data-aos-duration="800">
-          <div class="tierContent title">
-            <h3>Tier ${tier.tier}</h3>
-            <h4>${tier.build} Build</h4>
-          </div>
-    
-          <p class="price title">
-            <strong>${tier.price}</strong>
-          </p>
-    
-          <p class="perfect content">
-            Perfect for - ${tier.perfectFor}
-          </p>
-    
-          <a href="./pricing.html">
-            <button class="btn3 btnText chooseBtn">
-              Choose ${tier.build} Plan
-            </button>
-          </a>
-    
-          <div class="included content">
-              <p>Key Inclusions:</p>
-              <ul class="includeItems">
-                ${tier.included
-                  .map(
-                    item =>
-                      `<li><i class="fa-solid fa-check"></i> ${item}</li>`
-                  )
-                  .join("")}
-              </ul>
-            </div>
-    
-          <p class="perfect info">
-            <strong>
-              <i class="fa-solid fa-circle-exclamation"></i>
-              For add ons price increases proportionally
-            </strong>
-          </p>
-    
-          <p class="perfect content">
-            Ideal For - ${tier.idealFor}
-          </p>
-        </div>
-      `;
-    }
-    
-    const changeRegionBtn = document.getElementById("changeRegionBtn");
-    
-    changeRegionBtn.addEventListener("click", () => {
+      let selectedRegion = "Domestic"; 
+      priceBtn.textContent = "Indian"
       
-      selectedRegion = selectedRegion === "International" ? "Domestic" : "International";
-      priceBtn.textContent = selectedRegion === "International" ? "Overseas" : "Indian";
-    
-      changeRegionBtn.classList.toggle("region-changed");
-    
+      function renderPricing() {
+        fetch("./pricing.json")
+          .then(res => res.json())
+          .then(data => {
+            const filteredData = data.filter(item => item.region === selectedRegion);
+      
+            pricingContainer.innerHTML = filteredData
+              .map(tier => createTierHTML(tier))
+              .join("");
+          })
+          .catch(err => console.error("Error loading pricing data:", err));
+      }
+      
       renderPricing();
-    });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById("testimonialContainer");
-    
-      if (!container) {
-        console.error("testimonials-container not found");
-        return;
-      }
-    
-      fetch("./testimonial.json")
-        .then(res => res.json())
-        .then(data => {
-          container.innerHTML = data
-            .map(item => createTestimonialHTML(item))
-            .join("");
-        })
-        .catch(err =>
-          console.error("Error loading testimonials data:", err)
-        );
-    });
-    
-    function createTestimonialHTML(item) {
-      return `
-        <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay=${item.delay} data-aos-duration="800">
-          <h1 class="quotes title">
-            <i class="fa-solid fa-quote-right"></i>
-          </h1>
-    
-          <p class="content">
-            "${item.testimonial}"
-          </p>
-    
-          <div class="reviewer">
-            <div class="content">
-              <img 
-                src="${item.image}" 
-                alt="${item.client}" 
-                class="testImg"
-              />
-              <div class="user">
-                <h3>${item.client}</h3>
-                <p>${item.profession}</p>
-              </div>
+      
+      function createTierHTML(tier) {
+        return `
+          <div class="pricingTiers" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay=${tier.delay} data-aos-duration="800">
+            <div class="tierContent title">
+              <h3>Tier ${tier.tier}</h3>
+              <h4>${tier.build} Build</h4>
             </div>
-    
-            <a href="${item.social}" target="_blank" rel="noopener">
-              <i class="fa-regular fa-share-from-square"></i>
+      
+            <p class="price title">
+              <strong>${tier.price}</strong>
+            </p>
+      
+            <p class="perfect content">
+              Perfect for - ${tier.perfectFor}
+            </p>
+      
+            <a href="./pricing.html">
+              <button class="btn3 btnText chooseBtn">
+                Choose ${tier.build} Plan
+              </button>
             </a>
+      
+            <div class="included content">
+                <p>Key Inclusions:</p>
+                <ul class="includeItems">
+                  ${tier.included
+                    .map(
+                      item =>
+                        `<li><i class="fa-solid fa-check"></i> ${item}</li>`
+                    )
+                    .join("")}
+                </ul>
+              </div>
+      
+            <p class="perfect info">
+              <strong>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                For add ons price increases proportionally
+              </strong>
+            </p>
+      
+            <p class="perfect content">
+              Ideal For - ${tier.idealFor}
+            </p>
           </div>
-        </div>
-      `;
-    }
+        `;
+      }
+      
+      const changeRegionBtn = document.getElementById("changeRegionBtn");
+      
+      changeRegionBtn.addEventListener("click", () => {
+        
+        selectedRegion = selectedRegion === "International" ? "Domestic" : "International";
+        priceBtn.textContent = selectedRegion === "International" ? "Overseas" : "Indian";
+      
+        changeRegionBtn.classList.toggle("region-changed");
+      
+        renderPricing();
+      });
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById("featureTable");
-    
-      if (!container) {
-        console.error("feature table not found");
-        return;
+        const container = document.getElementById("testimonialContainer");
+      
+        if (!container) {
+          console.error("testimonials-container not found");
+          return;
+        }
+      
+        fetch("./testimonial.json")
+          .then(res => res.json())
+          .then(data => {
+            container.innerHTML = data
+              .map(item => createTestimonialHTML(item))
+              .join("");
+          })
+          .catch(err =>
+            console.error("Error loading testimonials data:", err)
+          );
+      });
+      
+      function createTestimonialHTML(item) {
+        return `
+          <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay=${item.delay} data-aos-duration="800">
+            <h1 class="quotes title">
+              <i class="fa-solid fa-quote-right"></i>
+            </h1>
+      
+            <p class="content">
+              "${item.testimonial}"
+            </p>
+      
+            <div class="reviewer">
+              <div class="content">
+                <img 
+                  src="${item.image}" 
+                  alt="${item.client}" 
+                  class="testImg"
+                />
+                <div class="user">
+                  <h3>${item.client}</h3>
+                  <p>${item.profession}</p>
+                </div>
+              </div>
+      
+              <a href="${item.social}" target="_blank" rel="noopener">
+                <i class="fa-regular fa-share-from-square"></i>
+              </a>
+            </div>
+          </div>
+        `;
       }
-    
-      fetch("./features.json")
-        .then(res => res.json())
-        .then(data => {
-          container.innerHTML = data
-            .map(item => createFeatureHTML(item))
-            .join("");
-        })
-        .catch(err =>
-          console.error("Error loading features data:", err)
-        );
-    });
-    
-    function createFeatureHTML(item) {
-      return `
-        <div class="featureItem">
-          <span class="content">${item.Feature}</span>
-          <span class="content">${item.Starter}</span>
-          <span class="content">${item.Growth}</span>
-          <span class="content">${item.Pro}</span>
-        </div>
-      `;
-    }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("featureTable");
+      
+        if (!container) {
+          console.error("feature table not found");
+          return;
+        }
+      
+        fetch("./features.json")
+          .then(res => res.json())
+          .then(data => {
+            container.innerHTML = data
+              .map(item => createFeatureHTML(item))
+              .join("");
+          })
+          .catch(err =>
+            console.error("Error loading features data:", err)
+          );
+      });
+      
+      function createFeatureHTML(item) {
+        return `
+          <div class="featureItem">
+            <span class="content">${item.Feature}</span>
+            <span class="content">${item.Starter}</span>
+            <span class="content">${item.Growth}</span>
+            <span class="content">${item.Pro}</span>
+          </div>
+        `;
+      }
     </script>
     <script>
       AOS.init({ once: true });
