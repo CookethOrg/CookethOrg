@@ -32,7 +32,7 @@
   position: relative;
   width: 38vw;
   height: 100%;
-  border: 1px solid#ed6325;
+  border: 1px solid #ed6325;
   border-radius: 28px;
   display: flex;
   flex-direction: column;
@@ -87,12 +87,8 @@
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 button:disabled {
@@ -164,7 +160,8 @@ button:disabled {
   justify-content: center;
   padding: 20px 24px;
   line-height: 1.4em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
 .faqQues {
@@ -172,20 +169,31 @@ button:disabled {
   font-weight: 500 !important;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
+.faqQues span {
+  transition: transform 0.3s ease;
+  font-size: 24px;
+}
+
 .faqAns {
-  height: 0;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  margin-top: 1.1em;
-  font-size: 17px;
-  line-height: 2em !important;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faqItem.active .faqAns {
-  height: 150px;
+  max-height: 300px; /* Increased to accommodate text */
+  opacity: 1;
+  margin-top: 1.1em;
+  padding-bottom: 10px;
+}
+
+.faqItem.active .faqQues span {
+  transform: rotate(45deg);
 }
 
 @media (max-width: 1055px) {
@@ -194,86 +202,33 @@ button:disabled {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .contact-left {
-    width: 50vw;
-    text-align: left;
-  }
-
-  .contact-right {
-    width: 100%;
-  }
+  .contact-left { width: 50vw; text-align: left; }
+  .contact-right { width: 100%; }
 }
 
 @media (max-width: 867px) {
-  .contact-left h1 {
-    width: 70%;
-  }
-
-  .faq {
-    padding: 5em 3em;
-  }
+  .contact-left h1 { width: 70%; }
+  .faq { padding: 5em 3em; }
 }
 
 @media (max-width: 707px) {
-  .contact {
-    padding: 30vh 2rem 10vh 2rem;
-  }
-
-  .contact-left {
-    width: 70vw;
-    text-align: left;
-  }
-
-  .contact-left h1 {
-    width: 80%;
-  }
-
-  .faq {
-    padding: 5em 1.2em;
-  }
-
-  .faqContentContainer {
-    flex-direction: column;
-  }
-
-  .faqContent {
-    width: 98%;
-    margin-top: 1.2em;
-    align-self: center;
-  }
+  .contact { padding: 30vh 2rem 10vh 2rem; }
+  .contact-left { width: 70vw; }
+  .contact-left h1 { width: 80%; }
+  .faq { padding: 5em 1.2em; }
+  .faqContentContainer { flex-direction: column; }
+  .faqContent { width: 98%; margin-top: 1.2em; align-self: center; }
 }
 
 @media (max-width: 525px) {
-  .faqContent {
-    padding: 24px 10px;
-  }
-
-  .faqItem {
-    padding: 20px 6px;
-  }
-
-  .faqQues {
-    font-size: 16px;
-  }
-
-  .faqAns {
-    font-size: 14px;
-    line-height: 1.5em !important;
-  }
+  .faqContent { padding: 24px 10px; }
+  .faqItem { padding: 20px 6px; }
+  .faqQues { font-size: 16px; }
+  .faqAns { font-size: 14px; line-height: 1.5em !important; }
 }
 
 @media (max-width: 465px) {
-  .contact {
-    padding: 30vh 1.5rem 10vh 1.5rem;
-  }
-
-  .contact-left {
-    width: 100%;
-    text-align: left;
-  }
-
-  .contact-left h1 {
-    width: 100%;
-  }
+  .contact { padding: 30vh 1.5rem 10vh 1.5rem; }
+  .contact-left { width: 100%; }
+  .contact-left h1 { width: 100%; }
 }
