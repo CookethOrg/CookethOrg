@@ -230,166 +230,168 @@
     <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <script>
-      // Accordion Logic
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqItems = document.querySelectorAll(".faqItem");
-        
-        faqItems.forEach(item => {
-          const question = item.querySelector(".faqQues");
-          question.addEventListener("click", () => {
-            // Optional: Close other items when one is opened
-            faqItems.forEach(otherItem => {
-              if (otherItem !== item) otherItem.classList.remove("active");
-            });
-            
-            item.classList.toggle("active");
-          });
-        });
-      });
-
-      // Pricing Logic
-      const pricingContainer = document.getElementById("pricingContainer");
-      const priceBtn = document.getElementById("pricingBtn");
+    <!-- Updated FAQ Accordion JavaScript in pricing.html -->
+<script>
+  // Accordion Logic - UPDATED TO MATCH CONTACT PAGE
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faqItem");
     
-      let selectedRegion = "Domestic"; 
-      priceBtn.textContent = "Indian"
-      
-      function renderPricing() {
-        fetch("./pricing.json")
-          .then(res => res.json())
-          .then(data => {
-            const filteredData = data.filter(item => item.region === selectedRegion);
-      
-            pricingContainer.innerHTML = filteredData
-              .map(tier => createTierHTML(tier))
-              .join("");
-          })
-          .catch(err => console.error("Error loading pricing data:", err));
-      }
-      
-      renderPricing();
-      
-      function createTierHTML(tier) {
-        return `
-          <div class="pricingTiers" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay=${tier.delay} data-aos-duration="800">
-            <div class="tierContent title">
-              <h3>Tier ${tier.tier}</h3>
-              <h4>${tier.build} Build</h4>
+    faqItems.forEach(item => {
+      const question = item.querySelector(".faqQues");
+      question.addEventListener("click", () => {
+        // Close other open items
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+        
+        // Toggle current item
+        item.classList.toggle("active");
+      });
+    });
+  });
+
+  // Pricing Logic - KEEP THIS AS IS
+  const pricingContainer = document.getElementById("pricingContainer");
+  const priceBtn = document.getElementById("pricingBtn");
+
+  let selectedRegion = "Domestic"; 
+  priceBtn.textContent = "Indian"
+  
+  function renderPricing() {
+    fetch("./pricing.json")
+      .then(res => res.json())
+      .then(data => {
+        const filteredData = data.filter(item => item.region === selectedRegion);
+  
+        pricingContainer.innerHTML = filteredData
+          .map(tier => createTierHTML(tier))
+          .join("");
+      })
+      .catch(err => console.error("Error loading pricing data:", err));
+  }
+  
+  renderPricing();
+  
+  function createTierHTML(tier) {
+    return `
+      <div class="pricingTiers" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay=${tier.delay} data-aos-duration="800">
+        <div class="tierContent title">
+          <h3>Tier ${tier.tier}</h3>
+          <h4>${tier.build} Build</h4>
+        </div>
+  
+        <p class="price title">
+          <strong>${tier.price}</strong>
+        </p>
+  
+        <p class="perfect content">
+          Perfect for - ${tier.perfectFor}
+        </p>
+  
+        <a href="./pricing.html">
+          <button class="btn3 btnText chooseBtn">
+            Choose ${tier.build} Plan
+          </button>
+        </a>
+  
+        <div class="included content">
+            <p>Key Inclusions:</p>
+            <ul class="includeItems">
+              ${tier.included
+                .map(
+                  item =>
+                    `<li><i class="fa-solid fa-check"></i> ${item}</li>`
+                )
+                .join("")}
+            </ul>
+          </div>
+  
+        <p class="perfect info">
+          <strong>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            For add ons price increases proportionally
+          </strong>
+        </p>
+  
+        <p class="perfect content">
+          Ideal For - ${tier.idealFor}
+        </p>
+      </div>
+    `;
+  }
+  
+  const changeRegionBtn = document.getElementById("changeRegionBtn");
+  
+  changeRegionBtn.addEventListener("click", () => {
+    selectedRegion = selectedRegion === "International" ? "Domestic" : "International";
+    priceBtn.textContent = selectedRegion === "International" ? "Overseas" : "Indian";
+    changeRegionBtn.classList.toggle("region-changed");
+    renderPricing();
+  });
+
+  // Testimonial Logic
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("testimonialContainer");
+    if (!container) return;
+  
+    fetch("./testimonial.json")
+      .then(res => res.json())
+      .then(data => {
+        container.innerHTML = data
+          .map(item => createTestimonialHTML(item))
+          .join("");
+      })
+      .catch(err => console.error("Error loading testimonials data:", err));
+  });
+  
+  function createTestimonialHTML(item) {
+    return `
+      <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay=${item.delay} data-aos-duration="800">
+        <h1 class="quotes title"><i class="fa-solid fa-quote-right"></i></h1>
+        <p class="content">"${item.testimonial}"</p>
+        <div class="reviewer">
+          <div class="content">
+            <img src="${item.image}" alt="${item.client}" class="testImg"/>
+            <div class="user">
+              <h3>${item.client}</h3>
+              <p>${item.profession}</p>
             </div>
-      
-            <p class="price title">
-              <strong>${tier.price}</strong>
-            </p>
-      
-            <p class="perfect content">
-              Perfect for - ${tier.perfectFor}
-            </p>
-      
-            <a href="./pricing.html">
-              <button class="btn3 btnText chooseBtn">
-                Choose ${tier.build} Plan
-              </button>
-            </a>
-      
-            <div class="included content">
-                <p>Key Inclusions:</p>
-                <ul class="includeItems">
-                  ${tier.included
-                    .map(
-                      item =>
-                        `<li><i class="fa-solid fa-check"></i> ${item}</li>`
-                    )
-                    .join("")}
-                </ul>
-              </div>
-      
-            <p class="perfect info">
-              <strong>
-                <i class="fa-solid fa-circle-exclamation"></i>
-                For add ons price increases proportionally
-              </strong>
-            </p>
-      
-            <p class="perfect content">
-              Ideal For - ${tier.idealFor}
-            </p>
           </div>
-        `;
-      }
-      
-      const changeRegionBtn = document.getElementById("changeRegionBtn");
-      
-      changeRegionBtn.addEventListener("click", () => {
-        selectedRegion = selectedRegion === "International" ? "Domestic" : "International";
-        priceBtn.textContent = selectedRegion === "International" ? "Overseas" : "Indian";
-        changeRegionBtn.classList.toggle("region-changed");
-        renderPricing();
-      });
+          <a href="${item.social}" target="_blank" rel="noopener">
+            <i class="fa-regular fa-share-from-square"></i>
+          </a>
+        </div>
+      </div>
+    `;
+  }
 
-      // Testimonial Logic
-      document.addEventListener("DOMContentLoaded", () => {
-        const container = document.getElementById("testimonialContainer");
-        if (!container) return;
-      
-        fetch("./testimonial.json")
-          .then(res => res.json())
-          .then(data => {
-            container.innerHTML = data
-              .map(item => createTestimonialHTML(item))
-              .join("");
-          })
-          .catch(err => console.error("Error loading testimonials data:", err));
-      });
-      
-      function createTestimonialHTML(item) {
-        return `
-          <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay=${item.delay} data-aos-duration="800">
-            <h1 class="quotes title"><i class="fa-solid fa-quote-right"></i></h1>
-            <p class="content">"${item.testimonial}"</p>
-            <div class="reviewer">
-              <div class="content">
-                <img src="${item.image}" alt="${item.client}" class="testImg"/>
-                <div class="user">
-                  <h3>${item.client}</h3>
-                  <p>${item.profession}</p>
-                </div>
-              </div>
-              <a href="${item.social}" target="_blank" rel="noopener">
-                <i class="fa-regular fa-share-from-square"></i>
-              </a>
-            </div>
-          </div>
-        `;
-      }
+  // Features Table Logic
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("featureTable");
+    if (!container) return;
+  
+    fetch("./features.json")
+      .then(res => res.json())
+      .then(data => {
+        container.innerHTML = data
+          .map(item => createFeatureHTML(item))
+          .join("");
+      })
+      .catch(err => console.error("Error loading features data:", err));
+  });
+  
+  function createFeatureHTML(item) {
+    return `
+      <div class="featureItem">
+        <span class="content">${item.Feature}</span>
+        <span class="content">${item.Starter}</span>
+        <span class="content">${item.Growth}</span>
+        <span class="content">${item.Pro}</span>
+      </div>
+    `;
+  }
 
-      // Features Table Logic
-      document.addEventListener("DOMContentLoaded", () => {
-        const container = document.getElementById("featureTable");
-        if (!container) return;
-      
-        fetch("./features.json")
-          .then(res => res.json())
-          .then(data => {
-            container.innerHTML = data
-              .map(item => createFeatureHTML(item))
-              .join("");
-          })
-          .catch(err => console.error("Error loading features data:", err));
-      });
-      
-      function createFeatureHTML(item) {
-        return `
-          <div class="featureItem">
-            <span class="content">${item.Feature}</span>
-            <span class="content">${item.Starter}</span>
-            <span class="content">${item.Growth}</span>
-            <span class="content">${item.Pro}</span>
-          </div>
-        `;
-      }
-
-      AOS.init({ once: true });
-    </script>
+  AOS.init({ once: true });
+</script>
 </body>
 </html>
