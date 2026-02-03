@@ -90,6 +90,7 @@ function renderFooter() {
 }
 
 function initDynamicComponents() {
+    
     // Dynamic Results
     const resultsContainer = document.getElementById("results-container");
     if (resultsContainer) {

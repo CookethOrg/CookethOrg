@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooketh Company</title>
-  <link rel="icon" type="image/png" href="./public/icon.png" />
-  <link rel="stylesheet" href="./src/style.css" />
-  <link rel="stylesheet" href="./src/contact.css" />
-  <link rel="stylesheet" href="./src/pricing.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Cooketh Company | Pricing</title>
+    <link rel="icon" type="image/png" href="./public/icon.png" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/contact.css" />
+    <link rel="stylesheet" href="./src/pricing.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <div id="navbar-component"></div>
 
-    <!-- Pricing Page -->
     <main style="width: 100%; display: flex; flex-direction: column; align-items: center;">
       <section class="services" style="width: 80%; max-width: 1200px; margin: 0 auto;">
         <h1 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1200">SIMPLE, TRANSPARENT <i>PRICING</i> FOR ALL YOUR NEEDS.</h1>
         <h2 class="content" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500" style="text-align: center;">Pay for clarity, quality, and code that scales with your ambition.</h2>
       </section>
 
-      <!-- Our Pricing -->
       <section class="pricing" style="width: 80%; max-width: 1200px; margin: 0 auto;">
         <h2 class="title" data-aos="fade-up" data-aos-duration="800" style="text-align: center;">Pricing Tiers</h2>
 
@@ -40,7 +37,6 @@
         </div>
       </section>
 
-      <!-- Tier Descriptions -->
       <section class="pricing-desc">
         <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Plans Designed to Match Your Vision</h2>
         
@@ -71,7 +67,6 @@
         </div>
       </section>
       
-      <!-- Tier Comparision -->
       <section class="comparision">
         <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Choose the right build for your project</h2>
         
@@ -85,7 +80,6 @@
         <div class="featureTable" id="featureTable"></div>
       </section>
 
-      <!-- Add Ons -->
       <section class="addons">
         <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50" data-aos-duration="800"><i class="fa-solid fa-circle-info"></i> Add-ons & Scope Adjustments</h2>
 
@@ -106,14 +100,12 @@
         <p class="title addonEnd" data-aos="fade-zoom" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-duration="800"><i class="fa-solid fa-caret-right"></i> Pricing increases proportionally based on scope and complexity.</p>
       </section>
 
-      <!-- Testimonials -->
       <section class="testimonials pricing" style="width: 80%; max-width: 1200px; margin: 0 auto;">
         <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">What Our Clients Say!</h2>
 
         <div class="testimonialContainer" id="testimonialContainer"></div>
       </section>
 
-      <!-- Payment Options -->
       <section class="pricing-desc">
         <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-duration="800">Flexible Payment Options</h2>
 
@@ -150,7 +142,6 @@
         </div>
       </section>
 
-      <!-- CTA -->
       <section class="cta">
         <h2 class="title" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="800">Build Your Dream Product</h2>
 
@@ -168,7 +159,6 @@
         <button class="btn btnText" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-duration="800">Start Your Project</button>
       </section>
 
-      <!-- FAQs -->
       <section class="faq">
         <div style="display: flex; justify-content: space-between; width: 100%;" class="faqContentContainer">
           <h2 class="title" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-duration="800">PRICING <br> <span class="faqHead">FAQS</span></h2>
@@ -233,14 +223,32 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <div id="footer-component"></div>
 
     <script src="./src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/8b897771ea.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
+      // Accordion Logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const faqItems = document.querySelectorAll(".faqItem");
+        
+        faqItems.forEach(item => {
+          const question = item.querySelector(".faqQues");
+          question.addEventListener("click", () => {
+            // Optional: Close other items when one is opened
+            faqItems.forEach(otherItem => {
+              if (otherItem !== item) otherItem.classList.remove("active");
+            });
+            
+            item.classList.toggle("active");
+          });
+        });
+      });
+
+      // Pricing Logic
       const pricingContainer = document.getElementById("pricingContainer");
       const priceBtn = document.getElementById("pricingBtn");
     
@@ -313,23 +321,16 @@
       const changeRegionBtn = document.getElementById("changeRegionBtn");
       
       changeRegionBtn.addEventListener("click", () => {
-        
         selectedRegion = selectedRegion === "International" ? "Domestic" : "International";
         priceBtn.textContent = selectedRegion === "International" ? "Overseas" : "Indian";
-      
         changeRegionBtn.classList.toggle("region-changed");
-      
         renderPricing();
       });
-    </script>
-    <script>
+
+      // Testimonial Logic
       document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("testimonialContainer");
-      
-        if (!container) {
-          console.error("testimonials-container not found");
-          return;
-        }
+        if (!container) return;
       
         fetch("./testimonial.json")
           .then(res => res.json())
@@ -338,35 +339,22 @@
               .map(item => createTestimonialHTML(item))
               .join("");
           })
-          .catch(err =>
-            console.error("Error loading testimonials data:", err)
-          );
+          .catch(err => console.error("Error loading testimonials data:", err));
       });
       
       function createTestimonialHTML(item) {
         return `
           <div class="testimonialItem" data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay=${item.delay} data-aos-duration="800">
-            <h1 class="quotes title">
-              <i class="fa-solid fa-quote-right"></i>
-            </h1>
-      
-            <p class="content">
-              "${item.testimonial}"
-            </p>
-      
+            <h1 class="quotes title"><i class="fa-solid fa-quote-right"></i></h1>
+            <p class="content">"${item.testimonial}"</p>
             <div class="reviewer">
               <div class="content">
-                <img 
-                  src="${item.image}" 
-                  alt="${item.client}" 
-                  class="testImg"
-                />
+                <img src="${item.image}" alt="${item.client}" class="testImg"/>
                 <div class="user">
                   <h3>${item.client}</h3>
                   <p>${item.profession}</p>
                 </div>
               </div>
-      
               <a href="${item.social}" target="_blank" rel="noopener">
                 <i class="fa-regular fa-share-from-square"></i>
               </a>
@@ -374,15 +362,11 @@
           </div>
         `;
       }
-    </script>
-    <script>
+
+      // Features Table Logic
       document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("featureTable");
-      
-        if (!container) {
-          console.error("feature table not found");
-          return;
-        }
+        if (!container) return;
       
         fetch("./features.json")
           .then(res => res.json())
@@ -391,9 +375,7 @@
               .map(item => createFeatureHTML(item))
               .join("");
           })
-          .catch(err =>
-            console.error("Error loading features data:", err)
-          );
+          .catch(err => console.error("Error loading features data:", err));
       });
       
       function createFeatureHTML(item) {
@@ -406,8 +388,7 @@
           </div>
         `;
       }
-    </script>
-    <script>
+
       AOS.init({ once: true });
     </script>
 </body>

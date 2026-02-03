@@ -8,19 +8,19 @@
         "delay": 100
     },
     {
-        "testimonial": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore, provident non doloremque expedita delectus totam officiis facere voluptates consectetur.",
-        "image": "./public/team/SK.png",
-        "client": "Client Mr. Abcd Xyz",
-        "profession": "Professor, IIIT Kalyani",
-        "social": "https://www.linkedin.com/in/swarnabha-khamrui-396353321/",
+        "testimonial": "Cooketh delivers top-tier technical solutions with impressive speed and precision. Their team combines deep expertise with a transparent approach, making them a highly reliable partner for any complex project. We truly value the trust and quality they bring to the table.",
+        "image": "./public/team/UK.png",
+        "client": "Utkarsh Kumar",
+        "profession": "SDE @Optimally Me",
+        "social": "https://www.linkedin.com/in/utk0702/",
         "delay": 200
     },
     {
-        "testimonial": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore, provident non doloremque expedita delectus totam officiis facere voluptates consectetur.",
-        "image": "./public/team/SK.png",
-        "client": "Client Mr. Abcd Xyz",
-        "profession": "Professor, IIIT Kalyani",
-        "social": "https://www.linkedin.com/in/swarnabha-khamrui-396353321/",
+        "testimonial": "Cooketh provides exceptional technical expertise at a price point that makes high-end development accessible. They strike the perfect balance between cost-efficiency and premium quality, ensuring you get maximum value without compromising on performance.",
+        "image": "./public/team/HA.png",
+        "client": "Hamdaan Ali Qatil",
+        "profession": "Associate SDE @314e",
+        "social": "https://www.linkedin.com/in/hamdaanali/",
         "delay": 300
     }
 ]
