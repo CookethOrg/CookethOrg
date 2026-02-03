@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     renderNavbar();
     renderFooter();
-    // Re-run other dynamic injectors
     initDynamicComponents();
 });
 
@@ -35,7 +34,7 @@ function renderNavbar() {
 function setupHamburger() {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
-    if (hamburger) {
+    if (hamburger && navLinks) {
         hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("navActive");
         });
@@ -90,7 +89,6 @@ function renderFooter() {
 }
 
 function initDynamicComponents() {
-    // Dynamic Results
     const resultsContainer = document.getElementById("results-container");
     if (resultsContainer) {
         fetch("./results.json").then(res => res.json()).then(data => {
@@ -100,10 +98,9 @@ function initDynamicComponents() {
                     <h2 class="title resultStat">${item.stat}</h2>
                     <p class="subContent resultDesc">${item.description}</p>
                 </div>`).join("");
-        });
+        }).catch(err => console.log("Results not found"));
     }
 
-    // Dynamic Team
     const teamContainer = document.getElementById("team-container");
     if (teamContainer) {
         fetch("./team.json").then(res => res.json()).then(data => {
@@ -114,6 +111,6 @@ function initDynamicComponents() {
                     <p class="teamRole content">${member.role}</p>
                     <a href="${member.xLink}" target="_blank" class="xlogo"><img src="./public/x.png" alt="X" /></a>
                 </div>`).join("");
-        });
+        }).catch(err => console.log("Team not found"));
     }
 }

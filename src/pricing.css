@@ -1,3 +1,5 @@
+/* Pricing.css - UPDATED */
+
 /* Tier Description Section */
 .testimonials {
   padding: 20vh 0 6vh 0;
@@ -334,15 +336,115 @@
   text-align: center;
 }
 
-/* Pricing FAQ */
+/* Pricing FAQ - UPDATED TO MATCH CONTACT PAGE */
 .faq {
-  width: 80% !important;
+  background: #ed6325;
+  width: 80%;
   max-width: 1200px;
-  margin: 20vh auto 0;
+  height: fit-content;
+  margin: 16vh auto 0;
+  border-radius: 32px;
+  padding: 5em 7em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.faq h2 {
+  font-size: 72px;
+  line-height: 1.1em;
+  color: #fde2cf;
+}
+
+.faqContent {
+  background: #fde2cf;
+  padding: 24px 38px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 60%;
+  height: fit-content;
+}
+
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 24px;
+  line-height: 1.4em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.faqQues {
+  font-size: 20px;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faqQues span {
+  transition: transform 0.3s ease;
+  font-size: 24px;
+}
+
+.faqAns {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faqItem.active .faqAns {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 1.1em;
+  padding-bottom: 10px;
+}
+
+.faqItem.active .faqQues span {
+  transform: rotate(45deg);
 }
 
 .faqHead {
   font-size: 115px !important;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.faqContentContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ADDED: Pricing Tiers Container Fix */
+.pricingContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2em;
+  width: 100%;
+}
+
+.pricingTiers {
+  background: #ed6325;
+  color: #fde2cf;
+  width: 31%;
+  min-width: 300px;
+  height: auto;
+  margin: 1.5em 0;
+  border-radius: 32px;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
 }
 
 /* Responsive Design */
@@ -363,6 +465,15 @@
   
   .points {
     gap: 2rem;
+  }
+  
+  .pricingTiers {
+    width: 45%;
+    min-width: 280px;
+  }
+  
+  .pricingContainer {
+    flex-wrap: wrap;
   }
 }
 
@@ -391,6 +502,16 @@
   
   .cta h3 {
     font-size: 22px;
+  }
+  
+  .faq {
+    padding: 4em 5em;
+  }
+}
+
+@media (max-width: 867px) {
+  .faq {
+    padding: 5em 3em;
   }
 }
 
@@ -457,6 +578,32 @@
     align-items: center;
     text-align: center;
   }
+  
+  .pricingContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricingTiers {
+    width: 90%;
+    min-width: auto;
+  }
+  
+  .faqContentContainer {
+    flex-direction: column;
+  }
+  
+  .faqContent {
+    width: 98%;
+    margin-top: 1.2em;
+    align-self: center;
+  }
+}
+
+@media (max-width: 707px) {
+  .faq {
+    padding: 5em 1.2em;
+  }
 }
 
 @media (max-width: 576px) {
@@ -488,80 +635,27 @@
   .faqHead {
     font-size: 80px !important;
   }
+  
+  .faq h2 {
+    font-size: 60px;
+  }
 }
 
-/* ADDED: Pricing Tiers Container Fix */
-.pricingContainer {
-  display: flex;
-  flex-wrap: nowrap; /* Changed from wrap to nowrap */
-  justify-content: center;
-  align-items: stretch;
-  gap: 2em;
-  width: 100%;
-}
-
-.pricingTiers {
-  background: #ed6325;
-  color: #fde2cf;
-  width: 31%; /* Changed from 30vw to percentage */
-  min-width: 300px;
-  height: auto;
-  margin: 1.5em 0;
-  border-radius: 32px;
-  padding: 3em 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 1; /* Added to make them equal width */
-}
-
-/* Responsive adjustments for pricing tiers */
-@media (max-width: 1200px) {
-  .pricingTiers {
-    width: 45%;
-    min-width: 280px;
+@media (max-width: 525px) {
+  .faqContent {
+    padding: 24px 10px;
   }
   
-  .pricingContainer {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 768px) {
-  .pricingContainer {
-    flex-direction: column;
-    align-items: center;
+  .faqItem {
+    padding: 20px 6px;
   }
   
-  .pricingTiers {
-    width: 90%;
-    min-width: auto;
+  .faqQues {
+    font-size: 16px;
   }
-}
-
-/* ADDED: Pricing Tiers Container Fix */
-.pricingContainer {
-  display: flex;
-  flex-wrap: nowrap; /* Changed from wrap to nowrap */
-  justify-content: center;
-  align-items: stretch;
-  gap: 2em;
-  width: 100%;
-}
-
-.pricingTiers {
-  background: #ed6325;
-  color: #fde2cf;
-  width: 31%; /* Changed from 30vw to percentage */
-  min-width: 300px;
-  height: auto;
-  margin: 1.5em 0;
-  border-radius: 32px;
-  padding: 3em 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 1; /* Added to make them equal width */
+  
+  .faqAns {
+    font-size: 14px;
+    line-height: 1.5em !important;
+  }
 }
