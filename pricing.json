@@ -2,7 +2,7 @@
     {
         "tier": "1",
         "build": "Starter",
-        "price": "₹15,000 - ₹30,000",
+        "price": "₹10,000 - ₹25,000",
         "perfectFor": "early-stage founders, student startups, small businesses",
         "included": ["5-8 screens/pages", "Simple UI or clean custom UI", "Basic authentication", "BaaS backend (Firebase / Supabase)", "CRUD features (Optional)", "Basic testing", "Website and App Deployment", "1 week free support"],
         "idealFor": "MVPs, simple apps, landing-page backed tools",
@@ -12,7 +12,7 @@
     {
         "tier": "2",
         "build": "Growth",
-        "price": "₹40,000 - ₹60,000",
+        "price": "₹30,000 - ₹50,000",
         "perfectFor": "founders ready to scale, startups in MVP → v1 stage",
         "included": ["9-15 screens/pages","Strong UI/UX","Full authentication system","Custom API integration (or BaaS)","Simple admin panel","Testing + launch support","Database design","1-2 weeks post-launch support"],
         "idealFor": "more complex apps, SaaS dashboards, multi-role apps",
@@ -22,7 +22,7 @@
     {
         "tier": "3",
         "build": "Pro",
-        "price": "₹1,00,000 onwards",
+        "price": "₹65,000 onwards",
         "perfectFor": "funded startups, enterprise clients, founders with long-term vision",
         "included": ["Unlimited screens","Premium UI/UX","Role management","Custom backend","Dashboard / CMS","Production-level security","Payment + advanced integrations","1-2 months free support"],
         "idealFor": "full-scale products, SaaS, marketplace apps, consumer platforms",
@@ -32,7 +32,7 @@
     {
         "tier": "1",
         "build": "Starter",
-        "price": "$1200 - $2000",
+        "price": "$1000 - $1800",
         "perfectFor": "early-stage founders, student startups, small businesses",
         "included": ["5-8 screens/pages", "Simple UI or clean custom UI", "Basic authentication", "BaaS backend (Firebase / Supabase)", "CRUD features (Optional)", "Basic testing", "Website and App Deployment", "1 week free support"],
         "idealFor": "MVPs, simple apps, landing-page backed tools",
@@ -42,7 +42,7 @@
     {
         "tier": "2",
         "build": "Growth",
-        "price": "$2500 - $5000",
+        "price": "$2200 - $4000",
         "perfectFor": "founders ready to scale, startups in MVP → v1 stage",
         "included": ["9-15 screens/pages","Strong UI/UX","Full authentication system","Custom API integration (or BaaS)","Simple admin panel","Testing + launch support","Database design","1-2 weeks post-launch support"],
         "idealFor": "more complex apps, SaaS dashboards, multi-role apps",
@@ -52,7 +52,7 @@
     {
         "tier": "3",
         "build": "Pro",
-        "price": "$8000 onwards",
+        "price": "$5000 onwards",
         "perfectFor": "funded startups, enterprise clients, founders with long-term vision",
         "included": ["Unlimited screens","Premium UI/UX","Role management","Custom backend","Dashboard / CMS","Production-level security","Payment + advanced integrations","1-2 months free support"],
         "idealFor": "full-scale products, SaaS, marketplace apps, consumer platforms",
